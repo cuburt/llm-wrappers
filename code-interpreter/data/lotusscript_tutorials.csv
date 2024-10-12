@@ -1,0 +1,700 @@
+﻿Text
+"
+Lesson 1: Printing the title of a database
+
+
+Lesson 1 creates a script that displays the title of a
+database when a user clicks an action. You should already have created
+a sample discussion database called ""Learning LotusScript®.""
+ Step
+A: Create an action  The script that you create in this
+lesson will run whenever the user clicks the action. 
+Open the ""Learning LotusScript®""
+database if it does not appear in the Design pane.   
+Select ""Forms"" in the Design pane, then open the ""Main Topic""
+form in the Work pane. The form appears at the beginning of the Work
+pane. The Programmer's pane appears.
+Choose Create - Action. The Action properties box appears.
+In the Action properties box, name the action ""Display title.""
+Close the properties box.   
+Select LotusScript® from
+the Run menu in the Programmer's pane.
+Select ""Click"" from the list of programmable events on the Objects
+tab if it is not already selected.
+ 
+ Step
+B: Access the Reference tab  The Info List appears in the
+Programmer's pane. It contains two tabs, the Objects tab and the Reference
+tab. If you can't see the Reference tab, drag the bar separating the
+two sides of the Programmer's pane. The Objects tab contains events
+and objects that can be programmed and the Reference tab contains
+information about using Notes® classes,
+properties, methods, and the LotusScript® language.
+In this step you learn that: 
+A Notes® class is a way
+of representing something from the ""real world"" within a script. For
+example, a database is something from the real world that interacts
+with Notes®; to represent it
+in a script, you use the NotesDatabase class.
+A property is an attribute of a class. For example, all databases
+have a title, so the NotesDatabase class has a Title property.
+A method is a behavior or action of a class. For example, a database
+can replicate with another database, so the NotesDatabase class has
+a Replicate method. When you use a particular class, its properties
+and methods are available to you.
+The LotusScript® language
+is related to, but not the same as, the Notes® classes. The classes provide an interface
+to Domino® from within a script.
+The language provides you with a syntax for declaring variables, creating
+conditionals and loops, and performing operations such as arithmetic.
+Without the Notes® classes, LotusScript® is unable to
+access anything in Notes®.
+ The following steps do not create anything. They are just
+to familiarize you with the Domino® classes. 
+In the Programmer's pane, click the Reference tab.
+Drag the edges of the Info List if you want to make the pane larger.
+Select ""Domino®: Classes""
+from the drop-down menu. The Reference tab displays the classes available. 
+Use the scroll bars to look at the classes available to you. You
+should recognize many of the class names as things you have used in Domino®.
+Expand the NotesDatabase class by clicking the twistie.
+Expand Properties under NotesDatabase class.   
+Expand Methods under NotesDatabase class.
+Now select ""LotusScript® Language""
+from the drop-down menu.
+Expand All. The Reference tab displays different parts of the LotusScript® language. 
+Scroll through the list of LotusScript® functions.
+Find Dim and Messagebox.
+ 
+ Step
+C: Enter the script  You're ready to enter the script. Go
+to the Programmer's pane and edit the subroutine so that it looks
+exactly like this. Case does not matter, but the Programmer's pane
+enforces initial capitals for LotusScript® keywords
+(but not the names of classes, properties, and methods). The consecutive
+quotation marks (a set of two on line 3 and two sets of four on line
+4) have no intervening spaces. Sub Click(Source As Button)
+    Dim db As NotesDatabase
+    Set db = New NotesDatabase( """", ""Learning LotusScript.nsf"" )
+    Messagebox """""""" + db.Title + """""""",, ""Title of database""
+End Sub This is how the code looks in the Programmer's
+pane.    
+ Step
+D: Compile and test the script  Compiling is the process
+by which a script is translated into executable code. Domino® compiles the action script when you
+save, or close and save the document it's on.  
+Choose File - Save.
+If you get the message ""Data not saved due to script error(s),""
+check the error at the end of the Programmer's pane, then double-check
+your typing to make sure that the script looks exactly like the one
+in Step C.
+Choose Design - Preview in Notes®.
+Alternatively, you can open the database in the Notes® client and open or create a document
+based on the ""Main Topic"" form.
+Click the ""Display title"" action on the action bar. Notes® displays a dialog box that says ""Title
+of database"" and ""Learning LotusScript®.""
+Success!A common error is to not specify the name of the database
+correctly. If you do that, ""db"" will represent an empty NotesDatabase
+object. If the Title property displays as an empty string, ensure
+that the file name of the database in the script is correct and the
+server name is two consecutive quotation marks (no spaces). Fix the
+script, recompile, and test it again. 
+When you are finished, go back to Domino® Designer
+and close the ""Main Topic"" form.
+ 
+ Step
+E: Edit the script  You may not need to edit your script
+after saving it, but if you do, here's how. 
+Open the ""Learning LotusScript®""
+database if it does not appear in the Design pane.
+Select ""Forms"" in the Design pane, then open the ""Main Topic""
+form in the Work pane.
+If the actions do not appear, adjust the edge of the pane until
+you can see the names of the actions.
+Select the ""Display title"" action.
+ 
+ Review:
+How did the script work?  The lines of script you entered
+mean: I want to access the ""Learning LotusScript®.nsf"" database on my local
+computer, and I want to use the name ""db"" to refer to this database.
+Then I want to display the title of the database. 
+ Line
+1: Begin a subroutine  Sub Click(Source As Button) defines
+the beginning of the subroutine. Domino® creates
+this line for you. 
+ Line
+2: Declare an object variable  Dim db As NotesDatabase declares
+a variable called db as an instance of the NotesDatabase class. Whenever
+a variable is declared as an instance of a class, it's called an object.
+The variable name db is your invention. 
+Dim tells LotusScript® that
+you are declaring an object variable. You use Dim (along with As)
+any time you declare a variable. For example: Dim x As Integer Dim
+name As String Dim view as NotesView
+db is the name of the object.
+NotesDatabase is the name of the class.
+ 
+ Line
+3: Set the value of the object   Set db = New NotesDatabase(
+"""", ""Learning LotusScript®.nsf"")
+sets the value of the object db so that it refers to the ""Learning LotusScript®.nsf"" database
+on the local computer. 
+Set db = tells LotusScript® that
+you want to set db equal to the value returned by New.
+New tells LotusScript® that
+you want to construct a new object.
+NotesDatabase tells LotusScript® that
+the new object should be an instance of the NotesDatabase class.
+"""" and ""Learning LotusScript®.nsf""
+are parameters that tell New how to create the object you want. The
+first parameter is the name of the server; here it's an empty string,
+which means that the database is on your local computer. The second
+parameter is the file name of the database.
+ 
+ Line
+4: Display a property of the object in a dialog box  Messagebox
+"""""""" + db.Title + """""""",, ""Title of database"" gets the title of the
+database and displays it in a dialog box. 
+Messagebox is a LotusScript® language
+statement. The commas separate parameters. The plus signs concatenate
+strings. Messagebox displays the first parameter in a dialog box and
+displays the third parameter as a header for the box. The second parameter
+is not used.
+db.Title returns a string containing the title of the database.
+Title is a property defined in the NotesDatabase class. To access
+or modify a property in a script, you need three things:
+The name of the object, such as db
+A dot, or period (.)
+The name of the property, such as Title
+ 
+"""""""" + db.Title + """""""" puts quotation marks around the title.
+Quotation marks delineate string literals. If you want a quotation
+mark inside a string literal, you double it. The plus sign means concatenation.
+So this means one quotation mark followed by the title followed by
+one quotation mark.
+""Title of database"" is a string literal. It will appear as the
+header of the dialog box.
+ 
+ Line
+5: End the subroutine  End Sub defines the end of a subroutine.
+This is where the script finishes. Domino® creates
+this line for you. 
+ Do
+it on the Web  LotusScript® cannot
+run in a browser. If you preview the ""Main Topic"" form in a browser,
+you will see that the ""Display title"" action is missing. This is because
+it is in LotusScript® and Domino® will not transmit it to
+a browser. The only way you can run LotusScript® through a browser is to write
+a Domino® agent and activate
+it from the browser with the RunAgent or ToolsRunMacro @commands or
+the OpenAgent URL command. However, it is important to know that the
+agent executes on the Domino® server
+containing the agent, not in the browser. 
+ Create
+an agent  Agents constitute another category of design elements,
+independent from forms. 
+Select ""Agents"" in the Design pane, then click ""New Agent."" The
+Agent Properties box appears. The Programmer's pane appears next to
+it.
+Name the agent ""Display title.""
+Select the ""Shared"" option.
+In the Runtime section click the ""On event"" trigger and select
+""Agent list selection"" from the drop-down box.
+Select ""None"" for the target.
+Select LotusScript® from
+the Run menu in the Programmer's pane.
+Select ""Initialize"" from the list of programmable events on the
+Objects tab.
+ 
+ Enter
+the script  Edit the subroutine so that it looks exactly
+like this. Sub Initialize
+    Dim db As NotesDatabase
+    Set db = New NotesDatabase( """", ""Learning LotusScript.nsf"" )
+    Print ""<B>Title of database<HR>"""""" + db.Title + """"""</B>""
+End Sub In an agent, use Sub Initialize for the executable
+code. The Dim and Set lines are the same as in the action you wrote
+to run on the Notes® client.
+The Print line differs. When you activate a LotusScript® agent from a browser, its
+Print statements write back to the browser on a new page. The Print
+statement in this script: 
+Opens a new page in the browser
+Displays in bold ""Title of database"" followed by the title of
+the database on the next line. Since this text is going to a browser,
+the HTML tags <B> (bold), <HR> (hard return), and </B>
+(end bold) are interpreted.
+ 
+ Adjust
+the agent properties  You should adjust several properties
+for Web agents. 
+Save and close the agent. Notice that the name of the agent is
+""(Display title)."" The title is in parentheses because the agent is
+hidden from the user, the result of selecting the trigger ""Agent list
+selection.""
+Ensure that the agent is highlighted and choose Agent - Agent
+Properties. The properties box for the agent opens.
+Click the Design tab.
+Check ""Run Agent as Web user."" For identification and security,
+you usually want the agent to run with the browser login name. This
+is Anonymous or a user name in the Domino® Directory.
+Otherwise, the agent runs with the name of its creator.
+Close the Agent properties box.
+ 
+ Create
+an action  Now you need to create the form action. 
+Open the ""Main Topic"" form.
+Choose Create - Action.
+In the Action properties box, name the action ""Display title.""
+(You can have multiple actions with the same name.)
+On the ""Action Hide When"" tab, check ""Notes® R4.6 or later"" so this action does not
+show up in the Notes® client.
+Close or move the properties box.
+Select Formula from the Run menu in the Programmer's pane.
+Add the following formula to the Programmer's pane. Ensure that
+the name of the agent is exact and includes the parentheses.@Command([Runagent]; ""(Display title)"") 
+ 
+ Test
+it on the Web  You can test a local database in a browser
+by using ""localhost"" for the host name. If you use a proxy server,
+ensure that ""localhost"" is on the list of hosts that do not use the
+proxy server. 
+Choose File - Save.
+If you get an error at the end of the Programmer's pane, double-check
+your typing to make sure that the formula is correct.
+Choose File - Database - Access Control. Select ""Anonymous"" from
+the list of people, servers, and groups. Change the access to ""Author""
+and check ""Create documents."" Click OK.
+Choose Design - Preview in Web and the name of your browser. Alternatively,
+you can open the browser and enter the OpenForm URL command, for example: http://localhost/Learning+LotusScript.nsf/MainTopic?OpenForm You
+may have to use Design - Preview twice or follow the URL command with
+one Design - Preview to force the browser to access your test database. 
+Click the ""Display title"" action on the action bar. The browser
+opens a new page that says ""Title of database"" and ""Learning LotusScript®."" Success!
+ 
+ Challenge:
+Displaying the file name of a database  Using what you have
+learned, write a script that prints the file name of the ""Learning LotusScript®"" database. 
+Open the ""Main Topic"" form in the ""Learning LotusScript®"" database.
+Create an action and give it a name.
+In the Programmer's pane, select LotusScript® from the Run menu.
+On the Reference tab, select Domino®:
+Classes.
+Find a property in the NotesDatabase class that allows you to
+get the file name of a database.
+Using what you have learned, write the script.
+ 
+ Solution:
+Displaying the file name of a database  The FileName property
+in the NotesDatabase class provides you with the information you need.
+You can access it the same way that you accessed the Title property:
+with an object, followed by a dot, followed by the property name.
+One way to complete the script is like this: Sub Click(Source As Button)
+    Dim db As NotesDatabase
+    Set db = New NotesDatabase( """", ""Learning LotusScript.nsf"" )
+    Messagebox db.Filename,, ""File name of database""
+End Sub 
+
+
+"
+"
+Lesson 2: Counting the documents in a view category
+
+
+This is the second of three lessons designed to introduce
+you to using the LotusScript® language
+in Domino®. You should already
+have completed Lesson 1.
+Lesson 2 helps you create a script that counts the number of documents
+in one category of the ""By Category"" view of the ""Learning LotusScript®"" database. The
+script runs from an agent.
+ Step
+A: Add documents to the test database  Add three documents
+to your test database so your agent script will have something to
+work with. 
+In the Notes® client, open
+the ""Learning LotusScript®""
+database that you created in Lesson 1. (Or in Domino® Designer, you can preview a view of
+the database.)
+Create and save three or more new ""Main Topic"" documents. Be sure
+to fill in the Subject and Category fields. Use names like ""Subject
+1"" and ""Category 1."" Use the same category for several documents.
+ 
+ Step
+B: Create an agent  The script runs whenever an agent runs,
+so begin by creating the agent. In Domino® Designer: 
+Select ""Agents"" in the Design pane, then click ""New Agent."" The
+Agent Properties box appears. The Programmer's pane appears next to
+it.
+Name the agent ""Count documents.""
+Select the ""Shared"" option.
+In the Runtime section click the ""On event"" trigger and select
+""Action menu selection"" from the drop-down box.
+Select ""All documents in database"" for the target.
+Select LotusScript® from
+the Run menu in the Programmer's pane.
+Select Initialize from the list of programmable events on the
+Objects tab.
+ 
+ Step
+C: Access the Reference tab  The following steps do not
+create anything. They are just to familiarize you with the Domino® classes. 
+In the Info List, click the Reference tab.
+Select ""Domino®: Classes""
+and expand NotesDatabase.
+Under NotesDatabase, expand Methods. You looked at methods before,
+and now you're ready to use them in a script.
+Scroll until you find the GetView method. The type of value that
+a method returns is indicated after ""As"" at the end of the method.
+The GetView method returns a NotesView object.
+Under ""Domino®: Classes,""
+expand NotesView. This class represents a view of a database.
+Under NotesView, expand Methods and then scroll until you find
+the methods that start with CreateViewNav. These methods return a
+NotesViewNavigator object.
+Under NotesViewNavigator expand Methods and then scroll until
+you find the GetFirstDocument method. This method returns a NotesViewEntry
+object.
+Scroll until you find the GetNextDocument method. It, too, returns
+a NotesViewEntry object.
+ 
+ Step
+D: Enter the script  You're ready to enter the script. Edit
+the subroutine so that it looks exactly like this with one exception.
+Substitute the name of an actual category for ""Category 1""if necessary. Sub Initialize
+    Dim db As NotesDatabase
+    Dim view As NotesView
+    Dim nav As NotesViewNavigator
+    Dim entry As NotesViewEntry
+    Dim count As Integer
+    Set db = New NotesDatabase( """", ""Learning LotusScript.nsf"" )
+    Set view = db.GetView( ""By Category"" )
+    view.AutoUpdate = False
+    Set nav = view.CreateViewNavFromCategory( ""Category 1"" )
+    Set entry = nav.GetFirstDocument
+    count = 0
+    ' begin counting documents
+    ' stop when there are no more documents
+    Do Until entry Is Nothing
+        count = count + 1
+        Set entry = nav.GetNextDocument( entry )
+    Loop
+    Messagebox ""Number of documents = "" & count,, ""Category 1""
+End Sub 
+ Step
+E: Compile and test the script  
+Choose File - Save.
+If you get the message ""Data not saved due to script error(s),""
+check the error at the end of the Programmer's pane, then double-check
+your typing to make sure that the script looks exactly like the one
+in Step D.
+Choose File - Close.
+Ensure that your agent is highlighted and choose Actions - Run. Domino® displays a dialog box
+that tells you the number of documents in ""Category 1"" (or the specified
+category).If the number of documents is 0 or an unexpected number,
+ensure that CreateNavFromCategory in your script specifies the correct
+category name. Recompile and save if necessary. Also ensure that you
+have sample documents in the specified category. Another common
+error is to not specify the name of the view correctly. If you do
+that, ""view"" is not associated with an actual NotesView object because
+none is set. When you try to use ""view"" as an object name, you will
+get the error, ""Object variable not set."" If you get this error, check
+the statements in your script that set object variables. Fix the script,
+recompile, and test it again. 
+ 
+ Step
+F: Edit the script  You may not need to edit your script
+after saving it, but if you do, here's how. 
+Open the ""Learning LotusScript®""
+database if it does not appear in the Design pane.
+Select ""Agents"" in the Design pane.
+Open the ""Count documents"" agent.
+Select Initialize from the Objects tab.
+ 
+ Review:
+How did the script work?  The lines of script you entered
+mean:  
+I want to access the ""Learning LotusScript®.nsf"" database on my local
+drive, and I want to use the name db to refer to this database.
+Next, I want to access the ""By Category"" view in the database,
+and I want to use the name view to refer to this view. Note that the
+script accesses the ""By Category"" view on disk -- therefore,
+it does not matter what view is open in the user interface when you
+run the agent. Setting AutoUpdate to False keeps the view static for
+your processing.
+Next I want to build a view navigator that contains all the entries
+categorized under ""Category 1"" and I want to use the name nav to refer
+to this navigator.
+Next, I want to access the first document entry in the view navigator,
+and I want to use the name entry to refer to it.
+Next, I want to assign a value of 0 to the integer called count.
+I want to count how many documents are in the view navigator by getting
+each document and incrementing count until every document has been
+counted.
+Last, I want to display the count in a dialog box on the screen.
+ 
+ Line
+1: Begin a subroutine  Sub Initialize defines the beginning
+of the subroutine. Domino® creates
+this line for you. 
+ Lines
+2 to 6: Declare variables  Dim db As NotesDatabase declares
+an object called db. It is an instance of the NotesDatabase class. Dim
+view As NotesView declares an object called view. It is an instance
+of the NotesView class. Dim nav As NotesViewNavigator declares
+an object called nav. It is an instance of the NotesViewNavigator
+class. Dim entry As NotesViewEntry declares an object called
+entry. It is an instance of the NotesViewEntry class. Dim count
+As Integer declares a variable called count. It is an integer. 
+ Lines
+7 to 11: Set the values of the variables  Set db = New NotesDatabase(
+"""", ""Learning LotusScript®.nsf""
+) sets the value of db so that it refers to the ""Learning LotusScript®.nsf"" database
+on the local computer. Set view = db.GetView( ""By Category""
+) sets view equal to the value returned by GetView. GetView is a method
+defined in the NotesDatabase class that returns a NotesView object.
+The parameter,""By Category,"" indicates which view you want.
+Since you use db to call it, GetView returns an object representing
+a view in ""Learning LotusScript®.nsf."" View.AutoUpdate
+= False turns off automatic updating of the view object when changes
+occur in the view. This improves performance and ensures that the
+view navigator does not encounter unexpected entries. Set nav
+= view.CreateViewNavFromCategory( ""Category 1"" ) sets nav equal to
+the value returned by CreateViewNavFromCategory. CreateViewNavFromCategory
+is a method defined in the NotesView class that returns a NotesViewNavigator
+object. The parameter, which should be the name of a category in the
+database, says that you want the navigator to consist of all the entries
+categorized there. Set entry = nav.GetFirstDocument sets entry
+equal to the value returned by GetFirstDocument. GetFirstDocument
+is a method defined in the NotesViewNavigator class that returns a
+NotesViewEntry object. It returns the first view entry that represents
+a document rather than a category. count = 0 sets count equal
+to 0. You must use Set to set the value of an object, but you must not use
+Set to set the value of an integer or any other plain data type. In
+Lesson 1, you learned about properties, which represent the attributes
+of an object. In this lesson, you're also using methods, which represent
+the behavior of an object. To use a method in a script, you need four
+things: 
+The name of the object, such as db, view, or nav
+A dot, or period (.)
+The name of the method, such as GetView, CreateViewNavFromCategory,
+or GetFirstDocument
+Any parameters required by the method
+ Like a property, a method is only useful if you know which
+object it pertains to -- that's why you need an object to use
+it. For example, the GetView method is only useful if you know which
+database it pertains to, which is why you use the db object to access
+it. Similarly, the GetFirstDocument method is only useful if you know
+which view it pertains to, which is why you use the view object to
+access it. Some methods are like functions and return values.
+Other methods are like subroutines and don't return values.  
+ Lines
+12 to 13: Insert comments  ' begin counting documents
+' stop when there are no more documents These are in-line
+comments that explain what's happening in the script. LotusScript® ignores any line that begins
+with an apostrophe ( ' ) or the keyword REM. 
+ Lines
+14 to 17: Count the documents in the view  Do Until entry
+Is Nothing defines the beginning of a loop, and specifies what condition
+causes the loop to stop. The loop will execute zero, one, or multiple
+times, until the entry object is Nothing. Loop defines the
+end of the loop. The lines between Do Until entry Is Nothing and Loop
+are called the body of the loop: 
+count = count + 1 increments the current value of count by one.
+The script does this each time it gets a new document, so that it
+maintains a current count of documents in the view.
+Set entry = nav.GetNextDocument( entry ) assigns the next entry
+in the view that is a document to entry. If there are no more documents
+in the view, it assigns Nothing to entry.
+ Nothing is a LotusScript® keyword
+that means you have a null, or empty, object. For example, the entry
+object is Nothing when it's first declared, until you assign a value
+to it. The GetNextDocument method returns Nothing when you send it
+the last document in the view as a parameter, because there are no
+documents after the last one. In this script, this means stop counting. If
+there are no documents at all in the ""By Category"" view, the loop
+body never runs. If there is one document in the view, the loop body
+runs once; if there are two documents, the loop body runs twice, and
+so on. 
+ Line
+18: Display the result in a dialog box  Messagebox ""Number
+of documents = "" & count,, ""Category 1"" displays the value of
+count in a dialog box on the screen. 
+ Line
+19: End the subroutine  End Sub defines the end of a subroutine. 
+ Challenge:
+Counting the categories in a view  Using what you have learned,
+write a script that counts the categories in the ""By Category"" view
+of the ""Learning LotusScript®""
+database. The script should create a view navigator that represents
+all the entries in the view. The script should count the first entry,
+which always represents a category in a categorized view, and then
+each next entry that represents a category, stopping when there are
+no more category entries to count. Use the Reference tab to find the
+methods or properties you need. 
+ Solution:
+Counting the categories in a view  The methods you need
+are CreateViewNav in the NotesView class, and GetFirst and GetNextCategory,
+both in the NotesViewNavigator class. CreateViewNav, which has no
+parameters, creates a NotesViewNavigator object that represents the
+entire view. One correct solution is as follows: Sub Initialize
+    Dim db As NotesDatabase
+    Dim view As NotesView
+    Dim nav As NotesViewNavigator
+    Dim entry As NotesViewEntry
+    Dim count As Integer
+    Set db = New NotesDatabase( """", ""Learning LotusScript.nsf"" )
+    Set view = db.GetView( ""By Category"" )
+    view.AutoUpdate = False
+    Set nav = view.CreateViewNav( )
+    Set entry = nav.GetFirst
+    count = 0
+    ' begin counting categories
+    ' stop when there are no more categories
+    Do Until entry Is Nothing
+        count = count + 1
+        Set entry = nav.GetNextCategory( entry )
+    Loop
+    Messagebox ""Number of categories = "" & count,, ""By Category""
+End Sub 
+
+
+"
+"
+Lesson 3: Sending an e-mail message
+
+
+This is the third of three lessons designed to introduce
+you to using the LotusScript® language
+in Domino®. You should already
+have completed Lessons 1 and 2.
+Lesson 3 helps you create a script that makes and sends an e-mail
+message. The script runs when a user chooses an action on a form.
+ Step
+A: Create a form action  Users can invoke a form action
+any time a document is displayed with the form. 
+Open the ""Learning LotusScript®""
+database if it does not appear in the Design pane.
+Select ""Forms"" in the Design pane, then open the ""Main Topic""
+form in the Work pane. The form appears at the beginning of the Work
+pane. The Programmer's pane appears.
+Choose Create - Action. The actions appear on the screen, and
+the Action properties box appears.
+In the Action properties box, name the action ""Request more info.""
+Close or move the properties box.
+Select LotusScript® from
+the Run menu in the Programmer's pane.
+Select ""Click"" from the list of programmable events on the Objects
+tab if it is not already selected.
+ 
+ Step
+B: Enter the script  
+Edit the subroutine so that it looks exactly like this (except
+for capitalization, which does not matter).Sub Click(Source As Button)
+    Dim db As NotesDatabase
+    Dim doc As NotesDocument
+    ' get the database
+    Set db = New NotesDatabase( """", ""Learning LotusScript.nsf"" )
+    ' create a new document in the database
+    Set doc = New NotesDocument( db )
+    ' set the new document's form so it'll be readable as a mail memo
+    doc.Form = ""Memo""
+    ' set the new document's subject
+    doc.Subject = ""Request for info""
+    ' set the new document's body
+    doc.Body = ""Please send me more information about this.""
+    ' mail the new document
+    Call doc.Send( False, ""Reuben Jordan"" )
+End Sub 
+In the second-to-last line of the script, change the second parameter
+of the Send method from ""Reuben Jordan"" to your name.
+ 
+ Step
+C: Compile and test the script  Do the following: 
+Choose File - Save.
+If you get the message ""Data not saved due to script error(s),""
+check the error at the end of the Programmer's pane, then double-check
+your typing to make sure that the script looks exactly like the one
+in Step B.
+Choose Design - Preview in Notes®.
+Alternatively, you can open the database in the Notes® client and open or create a document
+based on the ""Main Topic"" form.
+Click the ""Request more info"" action on the action bar. The script
+sends mail to you.
+Check your mail database to make sure the memo is sent. This may
+take awhile depending on your mail system.
+ 
+ Step
+D: Edit the script  You may not need to edit your script
+after saving it, but if you do, here's how. 
+Open the ""Learning LotusScript®""
+database if it does not appear in the Design pane.
+Select ""Forms"" in the Design pane, then open the ""Main Topic""
+form in the Work pane.
+If the actions do not appear, drag the outline edge of the pane
+to the left until you can see the names of the actions.
+Select the ""Request more info"" action.
+ 
+ Review:
+How did the script work?  The script you just created means:
+""I want to create a new document in the database, set the value of
+some of its items, and mail it."" The script is commented in
+Step B. In addition, notice the following: 
+The script responds to a click event on a form action. It will
+also respond to a user who chooses the action from the Notes® client menu.
+Using New with the NotesDocument class actually creates a new
+document. This behavior is different from that of NotesDatabase, where
+New does not actually create a new database.
+The script creates and sets the value of several items on the
+doc object by treating their names as properties of doc. For example,
+doc.Form = ""Memo"" creates an item called Form on the new document
+and sets its value to ""Memo."" The item is of type text, since ""Memo""
+is a string. If a Form item already existed on the document, this
+statement changes its value to ""Memo.""
+Send is a method in the NotesDocument class that mails a document.
+It does not have a return value so you call it as a subroutine.
+ 
+ Challenge:
+Sending an e-mail message to the author of the current document  The
+script you just wrote sends mail to you, regardless of what document
+is currently open in the database. Modify the script so that it sends
+mail to the author of the current document. To do this, you
+need a way to access the current document (the one that's open on
+the workspace when the user clicks the ""Request more info"" button
+on the action bar). So far, you've used the NotesDocument class to
+represent documents stored in a database. This class can be used to
+access any document that's stored in the database. Domino® uses a different class (with different
+properties and methods) to represent the document that's currently
+open on the workspace. Using the Reference tab, find the classes,
+methods, and properties required to: 
+Access the current document
+Access the From field on the current document (this is where the
+author's name is stored)
+ If you need a hint, look under NotesUIWorkspace class. 
+ Solution:
+Sending an e-mail message to the author of the current document  One
+correct way to write the script is as follows: Sub Click(Source As Button)
+    ' NEW: access the document that's currently open on the workspace
+    Dim workspace As New NotesUIWorkspace
+    Dim uidoc As NotesUIDocument
+    Set uidoc = workspace.CurrentDocument
+    ' UNCHANGED from previous script
+    Dim db As NotesDatabase
+    Dim doc As NotesDocument
+    ' get the database
+    Set db = New NotesDatabase( """", ""Learning LotusScript.nsf"" )
+    ' create a new document in the database
+    Set doc = New NotesDocument( db )
+    ' set the new document's form so it'll be readable as a mail memo
+    doc.Form = ""Memo""
+    ' set the new document's subject
+    doc.Subject = ""Request for info""
+    ' set the new document's body
+    doc.Body = ""Please send me more information about this.""
+    ' mail the new document
+    ' NEW: use the NotesUIDocument object
+    ' to get the value of the From field
+    Call doc.Send (False, uidoc.FieldGetText( ""From"" ))
+End Sub 
+
+
+"

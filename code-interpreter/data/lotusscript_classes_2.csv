@@ -1,0 +1,9283 @@
+﻿Text3,Text4,Text1,Text2,Text
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+Click (Button class - LotusScript®)
+
+
+Occurs when the user selects the action, action hotspot,
+or button.
+
+ Defined
+in   Button class  
+ Syntax   Click(Source
+As Button)  
+ Parameters   Source  Button.
+Read-only. The action, action hotspot, or button. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in. 
+
+
+
+",,,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ACL level
+
+
+Where used:
+ 
+ CreateACLEntry in
+NotesACL
+ InternetLevel in
+NotesACL
+ NotesACLEntry 
+ CurrentAccessLevel in
+NotesDatabase
+ Level in NotesACLEntry
+ GrantAccess in
+NotesDatabase
+ QueryAccess in
+NotesDatabase
+ Constants: 
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_MANAGER (6)
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_READER (2)
+ 
+
+
+
+","
+CreateACLEntry (NotesACL - LotusScript®)
+
+
+Creates an entry in the ACL with the name and level that
+you specify. When used with OLE automation, this method allows you
+to create a NotesACLEntry object without using New.
+
+ Defined
+in   NotesACL  
+ Syntax   Set  notesACLEntry  =  notesACL .CreateACLEntry(  name$ , level% )  
+Parameters   name$  String.
+The name of the person, group, or server for whom you want to create
+an entry in the ACL.  level%  Constant. The level
+you want to assign to this person, group, or server in the ACL. May
+be any of the following: 
+
+
+ Level 
+ Description 
+
+
+
+
+ ACLLEVEL_NOACCESS (0) 
+ No access 
+
+
+
+ ACLLEVEL_DEPOSITOR (1) 
+ Depositor access 
+
+
+
+ ACLLEVEL_READER (2) 
+ Reader access 
+
+
+
+ ACLLEVEL_AUTHOR (3) 
+ Author access 
+
+
+
+ ACLLEVEL_EDITOR (4) 
+ Editor access 
+
+
+
+ ACLLEVEL_DESIGNER (5) 
+ Designer access 
+
+
+
+ ACLLEVEL_MANAGER (6) 
+ Manager access 
+
+    
+ Return
+value   notesACLEntry   NotesACLEntry. The newly
+created entry. 
+ Usage  You
+must call Save on the ACL if you want the modified ACL to be saved
+to disk. For more information, see the ""NotesACLEntry class."" 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ACL level
+
+
+Where used:
+ 
+ CreateACLEntry in
+NotesACL
+ InternetLevel in
+NotesACL
+ NotesACLEntry 
+ CurrentAccessLevel in
+NotesDatabase
+ Level in NotesACLEntry
+ GrantAccess in
+NotesDatabase
+ QueryAccess in
+NotesDatabase
+ Constants: 
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_MANAGER (6)
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_READER (2)
+ 
+
+
+
+","
+InternetLevel (NotesACL - LotusScript®)
+
+
+Read-write. Indicates the maximum Internet access level
+for this database.
+ Note: This property is new with Release 5.0. 
+ Defined
+in   NotesACL  
+ Data
+type  Integer 
+ Syntax  To
+get: level%  =  notesACL .InternetLevel  To
+set: notesACL .InternetLevel = level%  
+ Legal
+values  
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_READER (2)
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_MANAGER (6)   
+ 
+ Usage  After
+setting this property, you must call Save for
+the changes to take effect. If you do not call Save, your changes
+to the ACL are lost. 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ACL level
+
+
+Where used:
+ 
+ CreateACLEntry in
+NotesACL
+ InternetLevel in
+NotesACL
+ NotesACLEntry 
+ CurrentAccessLevel in
+NotesDatabase
+ Level in NotesACLEntry
+ GrantAccess in
+NotesDatabase
+ QueryAccess in
+NotesDatabase
+ Constants: 
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_MANAGER (6)
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_READER (2)
+ 
+
+
+
+","
+NotesACLEntry (LotusScript®)
+
+
+Represents a single entry in an access control list. An
+entry may be for a person, a group, or a server.
+
+ Containment  Contained
+by: NotesACL  Contains: NotesName  
+ Properties   CanCreateDocuments   CanCreateLSOrJavaAgent   CanCreatePersonalAgent   CanCreatePersonalFolder   CanCreateSharedFolder   CanDeleteDocuments   CanReplicateOrCopyDocuments   IsAdminReaderAuthor   IsAdminServer   IsGroup   IsPerson   IsPublicReader   IsPublicWriter   IsServer   Level   Name   NameObject   Parent   Roles   UserType  
+ Methods   DisableRole   EnableRole   IsRoleEnabled  New  Remove  
+ Creation  To
+create a new NotesACLEntry object, use one of the following: 
+New
+ Note: The New method is not supported in COM. 
+CreateACLEntry method in NotesACL
+ New creates an entry in an ACL with the name and level that
+you specify. You must call Save on the ACL if you want the
+modified ACL to be saved to disk. 
+ Syntax   Dim  variableName As
+New NotesACLEntry(  notesACL ,  name$ ,  level%  )  or  Set  notesACLEntry  =
+New NotesACLEntry(  notesACL ,  name$ ,  level%  )  
+Parameters   notesACL  The
+ACL that contains the entry you're creating.  name$  String.
+The name of the person, group, or server for whom you want to create
+an entry in the ACL.  level%  Constant. The level
+you want to assign to this person, group, or server in the ACL. May
+be any of the following: 
+
+
+ ACLLEVEL_NOACCESS (0) 
+ No access 
+
+
+
+
+ ACLLEVEL_DEPOSITOR (1) 
+ Depositor access 
+
+
+
+ ACLLEVEL_READER (2) 
+ Reader access 
+
+
+
+ ACLLEVEL_AUTHOR (3) 
+ Author access 
+
+
+
+ ACLLEVEL_EDITOR (4) 
+ Editor access 
+
+
+
+ ACLLEVEL_DESIGNER (5) 
+ Designer access 
+
+
+
+ ACLLEVEL_MANAGER (6) 
+ Manager access 
+
+ 
+ Access  NotesACL
+provides three ways to access an existing NotesACLEntry. 
+To access an entry in an ACL when you know its name, use GetEntry.
+To access the first entry in the ACL, use GetFirstEntry.
+To access entries after the first one, use GetNextEntry.
+ 
+
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ACL level
+
+
+Where used:
+ 
+ CreateACLEntry in
+NotesACL
+ InternetLevel in
+NotesACL
+ NotesACLEntry 
+ CurrentAccessLevel in
+NotesDatabase
+ Level in NotesACLEntry
+ GrantAccess in
+NotesDatabase
+ QueryAccess in
+NotesDatabase
+ Constants: 
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_MANAGER (6)
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_READER (2)
+ 
+
+
+
+","
+CurrentAccessLevel (NotesDatabase - LotusScript®)
+
+
+Read-only. The current user's access level to a database.
+
+ Defined
+in   NotesDatabase  
+ Data
+type  Constant of type integer 
+ Syntax  To
+get: level%  =  notesDatabase .CurrentAccessLevel  
+Legal
+values  
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_READER (2)
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_MANAGER (6)   
+ 
+ Usage  
+If a script runs on a workstation, the CurrentAccessLevel is determined
+by the access level of the current user. 
+If a script runs on a server, the CurrentAccessLevel is determined
+by the access level of the person who last saved the script (the script
+owner).
+ The database must be open to use this property. 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ACL level
+
+
+Where used:
+ 
+ CreateACLEntry in
+NotesACL
+ InternetLevel in
+NotesACL
+ NotesACLEntry 
+ CurrentAccessLevel in
+NotesDatabase
+ Level in NotesACLEntry
+ GrantAccess in
+NotesDatabase
+ QueryAccess in
+NotesDatabase
+ Constants: 
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_MANAGER (6)
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_READER (2)
+ 
+
+
+
+","
+Level (NotesACLEntry - LotusScript®)
+
+
+Read-write. The access level this entry has for this database.
+
+ Defined
+in   NotesACLEntry  
+ Data
+type  Constant of type integer 
+ Syntax  To
+get: level%  =  notesACLEntry .Level  To
+set: notesACLEntry .Level =  level%  
+ Legal
+values  
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_READER (2)
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_MANAGER (6)   
+ 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ACL level
+
+
+Where used:
+ 
+ CreateACLEntry in
+NotesACL
+ InternetLevel in
+NotesACL
+ NotesACLEntry 
+ CurrentAccessLevel in
+NotesDatabase
+ Level in NotesACLEntry
+ GrantAccess in
+NotesDatabase
+ QueryAccess in
+NotesDatabase
+ Constants: 
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_MANAGER (6)
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_READER (2)
+ 
+
+
+
+","
+GrantAccess (NotesDatabase - LotusScript®)
+
+
+Modifies a database access control list to provide the
+specified level of access to a person, group, or server.
+
+ Defined
+in   NotesDatabase  
+ Syntax   Call  notesDatabase .GrantAccess( name$ ,  level%  )  
+ Parameters   name$  String.
+The name of the person, group, or server for which you want to provide
+or change the access level.  level%  Integer
+constant. The level of access you're granting. This parameter is one
+of the following constants: 
+
+
+ Level% 
+ Meaning 
+
+
+
+
+ ACLLEVEL_NOACCESS (0) 
+ No access 
+
+
+
+ ACLLEVEL_DEPOSITOR (1) 
+ Depositor access 
+
+
+
+ ACLLEVEL_READER (2) 
+ Reader access 
+
+
+
+ ACLLEVEL_AUTHOR (3) 
+ Author access 
+
+
+
+ ACLLEVEL_EDITOR (4) 
+ Editor access 
+
+
+
+ ACLLEVEL_DESIGNER (5) 
+ Designer access 
+
+
+
+ ACLLEVEL_MANAGER (6) 
+ Manager access 
+
+    
+ Usage  This
+method changes any existing NotesACL or NotesACLEntry object associated
+with the database. If the name$ already exists in the
+ACL, this method updates it with the access level%. Otherwise,
+the name is added to the ACL with level%.  You can also
+use this method to deny access to a person, group, or server by assigning
+ACLLEVEL_NOACCESS. This method sets ACL roles to their default
+values. 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ACL level
+
+
+Where used:
+ 
+ CreateACLEntry in
+NotesACL
+ InternetLevel in
+NotesACL
+ NotesACLEntry 
+ CurrentAccessLevel in
+NotesDatabase
+ Level in NotesACLEntry
+ GrantAccess in
+NotesDatabase
+ QueryAccess in
+NotesDatabase
+ Constants: 
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_MANAGER (6)
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_READER (2)
+ 
+
+
+
+","
+QueryAccess (NotesDatabase - LotusScript®)
+
+
+Returns the current access level of a person, group, or
+server to a database.
+
+ Defined
+in   NotesDatabase  
+ Syntax   level%  =  notesDatabase .QueryAccess(  name$  )  
+ Parameters   name$  String.
+The name of the person, group, or server. 
+ Return
+value   level%  Integer constant. Indicates
+the current access level. One of the following: 
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_READER (2)
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_MANAGER(6)
+ 
+ Usage  If
+the name you specify is listed explicitly in the ACL, QueryAccess
+returns the access level for that ACL entry and does not check groups. If
+the name you specify is not listed explicitly in the ACL, QueryAccess
+checks to see if the name is a member of a group in the primary address
+book where the program is running: on a workstation the Personal Address
+Book; on a server the Domino® Directory.
+QueryAccess returns the highest access level among those groups. If
+the name you specify is not listed in the ACL either individually
+or as part of a group, QueryAccess returns the default access level
+for the ACL. 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ACL type
+
+
+Where used:
+ 
+ UserType in
+NotesACLEntry
+ Constants: 
+ACLTYPE_MIXED_GROUP (3)
+ACLTYPE_PERSON (1)
+ACLTYPE_PERSON_GROUP (4)
+ACLTYPE_SERVER (2)
+ACLTYPE_SERVER_GROUP (5)
+ACLTYPE_UNSPECIFIED (0)
+ 
+
+
+
+","
+UserType (NotesACLEntry - LotusScript®)
+
+
+Read-write. Indicates the type of user for a particular
+entry.
+ Note: This property is new with Release 5. 
+ Defined
+in   NotesACLEntry  
+ Data
+type  Constant of type integer 
+ Syntax  To
+get: usertype%  =  notesACLEntry .UserType  To
+set: notesACLEntry .UserType = usertype%  
+Legal
+values  
+ACLTYPE_UNSPECIFIED (0)
+ACLTYPE_PERSON (1)
+ACLTYPE_SERVER (2)
+ACLTYPE_MIXED_GROUP (3)
+ACLTYPE_PERSON_GROUP (4)
+ACLTYPE_SERVER_GROUP (5)
+ 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+align
+
+
+Where used:
+ 
+ Alignment in
+NotesRichTextParagraphStyle
+ Constants: 
+ALIGN_CENTER (3)
+ALIGN_FULL (2)
+ALIGN_LEFT (0)
+ALIGN_NOWRAP (4)
+ALIGN_RIGHT (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+compact
+
+
+Where used:
+ 
+ CompactWithOptions in
+NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+CMPC_ARCHIVE_DELETE_COMPACT (1)
+CMPC_ARCHIVE_DELETE_ONLY (2)
+CMPC_CHK_OVERLAP (32768)
+CMPC_COPYSTYLE (16)
+CMPC_DISABLE_DOCTBLBIT_OPTMZN (128)
+CMPC_DISABLE_LARGE_UNKTBL (4096)
+CMPC_DISABLE_RESPONSE_INFO (512)
+CMPC_DISABLE_TRANSACTIONLOGGING (262144)
+CMPC_DISABLE_UNREAD_MARKS (1048576)
+CMPC_DISCARD_VIEW_INDICES (32)
+CMPC_ENABLE_DOCTBLBIT_OPTMZN (64)
+CMPC_ENABLE_LARGE_UNKTBL (2048)
+CMPC_ENABLE_RESPONSE_INFO (256)
+CMPC_ENABLE_TRANSACTIONLOGGING (131072)
+CMPC_ENABLE_UNREAD_MARKS (524288)
+CMPC_IGNORE_COPYSTYLE_ERRORS (1024)
+CMPC_MAX_4GB (16384)
+CMPC_NO_LOCKOUT (8192)
+CMPC_RECOVER_INPLACE (8)
+CMPC_RECOVER_REDUCE_INPLACE (4)
+CMPC_REVERT_FILEFORMAT (65536)
+ 
+
+
+
+","
+CompactWithOptions (NotesDatabase - LotusScript®)
+
+
+Compacts a local database allowing the submission of options.
+ Note: This method is new with Release 6. 
+ Defined
+in   NotesDatabase  
+ Syntax   sizeDelta&  =  notesDatabase .CompactWithOptions(  options$  )   sizeDelta&  =  notesDatabase .CompactWithOptions(  options& [,  spaceThreshold$ ] )  
+ Parameters   options$  String.
+One or more command-line options supported by the Compact server task
+without the minus signs. Spaces are insignificant except that a space
+cannot be placed in the S option between the number and the final
+K, k, M, or m. Options are processed in their order of specification.  options&  Constant
+of type Long. One or more of the following constants. Combine constants
+by adding. 
+CMPC_ARCHIVE_DELETE_COMPACT (1) a (archive and delete, then compact)
+CMPC_ARCHIVE_DELETE_ONLY (2) A (archive and delete with no compact;
+supersedes a)
+CMPC_CHK_OVERLAP (32768) o and O (check overlap)
+CMPC_COPYSTYLE (16) c and C (copy style; supersedes b and B)
+CMPC_DISABLE_DOCTBLBIT_OPTMZN (128) f (disable document table
+bit map optimization)
+CMPC_DISABLE_LARGE_UNKTBL (4096) k (disable large unknown table)
+CMPC_DISABLE_RESPONSE_INFO (512) H (disable ""Don't support specialized
+response hierarchy"")
+CMPC_DISABLE_TRANSACTIONLOGGING (262144) t (disable transaction
+logging)
+CMPC_DISABLE_UNREAD_MARKS (1048576) U (disable ""Don't maintain
+unread marks"")
+CMPC_DISCARD_VIEW_INDICES (32) d and D (discard view indexes)
+CMPC_ENABLE_DOCTBLBIT_OPTMZN (64) F (enable document table bit
+map optimization; supersedes f)
+CMPC_ENABLE_LARGE_UNKTBL (2048) K (enable large unknown table;
+supersedes k)
+CMPC_ENABLE_RESPONSE_INFO (256) h (enable ""Don't support specialized
+response hierarchy""; supersedes H)
+CMPC_ENABLE_TRANSACTIONLOGGING (131072) T (enable transaction
+logging; supersedes t)
+CMPC_ENABLE_UNREAD_MARKS (524288) u (enable ""Don't maintain unread
+marks""; supersedes U)
+CMPC_IGNORE_COPYSTYLE_ERRORS (1024) i (ignore copy-style errors)
+CMPC_MAX_4GB (16384) m and M (set maximum database size at 4 gigabytes)
+CMPC_NO_LOCKOUT (8192) l and L (do not lock out users)
+CMPC_RECOVER_INPLACE (8) B (recover unused space in-place and
+reduce file size; supersedes b)
+CMPC_RECOVER_REDUCE_INPLACE (4) b (recover unused space in-place
+without reducing file size)
+CMPC_REVERT_FILEFORMAT (65536) r and R (do not convert old file
+format)
+  spaceThreshold$  String. Optional. The value
+of the S option (compact if specified percent or amount of unused
+space) without the S, for example, ""10"" for 10 percent, ""10K"" for
+10 kilobytes, or ""10M"" for 10 megabytes. 
+ Return
+value   sizeDelta&  Long. The difference
+in bytes between the size of the database before and after compacting. 
+ Usage  This
+method must be run where the database is located, or it will produce
+an error. If the database is on the server, or accessible to that
+server via a mapped drive, the method must be run from the server.
+If the database resides on the Notes® client,
+the method must be run in the Notes® client.
+The method can not be run on one server to compact databases on another
+server. A script cannot compact the current database (the database
+in which the script is running) or the desktop.dsk file. The
+options are those that you can use with the Compact server task. For
+more information, see ""Compact options"" in Administration Help. CompactWithOptions
+does not support the e or E option. 
+   Example   
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+convert rich text
+
+
+Where used:
+ 
+ConvertToMime in
+NotesDocument
+ Constants: 
+CONVERT_RT_TO_HTML (2)
+CONVERT_RT_TO_PLAINTEXT (1)
+CONVERT_RT_TO_PLAINTEXT_AND_HTML (3)
+ 
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+color
+
+
+Where used:
+ 
+ NotesColorObject 
+ NotesColor in
+NotesRichTextStyle
+ BackgroundColor in
+NotesView
+ FontColor in
+NotesViewColumn
+ HeaderFontColor in
+NotesViewColumn
+ Constants: 
+COLOR_BLACK (0)
+COLOR_BLUE (4)
+COLOR_CYAN (7)
+COLOR_DARK_BLUE (10)
+COLOR_DARK_CYAN (13)
+COLOR_DARK_GREEN (9)
+COLOR_DARK_MAGENTA (11)
+COLOR_DARK_RED (8)
+COLOR_DARK_YELLOW (12)
+COLOR_GRAY (14)
+COLOR_GREEN (3)
+COLOR_LIGHT_GRAY (15)
+COLOR_MAGENTA (5)
+COLOR_RED (2)
+COLOR_WHITE (1)
+COLOR_YELLOW (6)
+ 
+
+
+
+","NotesColorObject (LotusScript®)
+
+Represents a color.
+
+Note: This class is new with Release 6.
+Containment
+
+Contained by: NotesRichTextSection, NotesRichTextTable, NotesSession
+
+Properties
+
+Blue
+
+Green
+
+Hue
+
+Luminance
+
+NotesColor
+
+Red
+
+Saturation
+
+Methods
+
+SetHSL
+
+SetRGB
+
+Creation
+
+To create a NotesColorObject object, use the Position method of NotesSession.
+
+Usage
+
+Domino® defines colors numbered 0 through 240, as reflected in the read-write property NotesColor. Each Domino® color maps to RGB (red, green, and blue) values in the range 0-255 and HSL (hue, saturation, and luminance) values in the range 0-240, as reflected in the remaining, read-only properties.
+
+NotesColor can be used as the value for the following properties: NotesColor in NotesRichTextStyle; BackgroundColor in NotesView; Position and HeaderFontColor in NotesViewColumn.
+
+The following table lists the values for the first 16 Domino® colors, which are defined by LotusScript® constants. See the example for code to generate the values for all 241 colors.
+
+Notes®
+
+	
+
+Red
+
+	
+
+Green
+
+	
+
+Blue
+
+	
+
+Hue
+
+	
+
+Sat
+
+	
+
+Lum
+
+	
+
+Constant
+
+
+
+
+0
+
+	
+
+0
+
+	
+
+0
+
+	
+
+0
+
+	
+
+160
+
+	
+
+0
+
+	
+
+0
+
+	
+
+COLOR_BLACK
+
+
+
+
+1
+
+	
+
+255
+
+	
+
+255
+
+	
+
+255
+
+	
+
+160
+
+	
+
+0
+
+	
+
+240
+
+	
+
+COLOR_WHITE
+
+
+
+
+2
+
+	
+
+255
+
+	
+
+0
+
+	
+
+0
+
+	
+
+0
+
+	
+
+240
+
+	
+
+120
+
+	
+
+COLOR_RED
+
+
+
+
+3
+
+	
+
+0
+
+	
+
+255
+
+	
+
+0
+
+	
+
+80
+
+	
+
+240
+
+	
+
+120
+
+	
+
+COLOR_GREEN
+
+
+
+
+4
+
+	
+
+0
+
+	
+
+0
+
+	
+
+255
+
+	
+
+160
+
+	
+
+240
+
+	
+
+120
+
+	
+
+COLOR_BLUE
+
+
+
+
+5
+
+	
+
+255
+
+	
+
+0
+
+	
+
+255
+
+	
+
+200
+
+	
+
+240
+
+	
+
+120
+
+	
+
+COLOR_MAGENTA
+
+
+
+
+6
+
+	
+
+255
+
+	
+
+255
+
+	
+
+0
+
+	
+
+40
+
+	
+
+240
+
+	
+
+120
+
+	
+
+COLOR_YELLOW
+
+
+
+
+7
+
+	
+
+0
+
+	
+
+255
+
+	
+
+255
+
+	
+
+120
+
+	
+
+240
+
+	
+
+120
+
+	
+
+COLOR_CYAN
+
+
+
+
+8
+
+	
+
+128
+
+	
+
+0
+
+	
+
+0
+
+	
+
+0
+
+	
+
+240
+
+	
+
+60
+
+	
+
+COLOR_DARK_RED
+
+
+
+
+9
+
+	
+
+0
+
+	
+
+128
+
+	
+
+0
+
+	
+
+80
+
+	
+
+240
+
+	
+
+60
+
+	
+
+COLOR_DARK_GREEN
+
+
+
+
+10
+
+	
+
+0
+
+	
+
+0
+
+	
+
+128
+
+	
+
+160
+
+	
+
+240
+
+	
+
+60
+
+	
+
+COLOR_DARK_BLUE
+
+
+
+
+11
+
+	
+
+128
+
+	
+
+0
+
+	
+
+128
+
+	
+
+200
+
+	
+
+240
+
+	
+
+60
+
+	
+
+COLOR_DARK_MAGENTA
+
+
+
+
+12
+
+	
+
+128
+
+	
+
+128
+
+	
+
+0
+
+	
+
+40
+
+	
+
+240
+
+	
+
+60
+
+	
+
+COLOR_DARK_YELLOW
+
+
+
+
+13
+
+	
+
+0
+
+	
+
+128
+
+	
+
+128
+
+	
+
+120
+
+	
+
+240
+
+	
+
+60
+
+	
+
+COLOR_DARK_CYAN
+
+
+
+
+14
+
+	
+
+128
+
+	
+
+128
+
+	
+
+128
+
+	
+
+160
+
+	
+
+0
+
+	
+
+120
+
+	
+
+COLOR_GRAY
+
+
+
+
+15
+
+	
+
+192
+
+	
+
+192
+
+	
+
+192
+
+	
+
+160
+
+	
+
+0
+
+	
+
+181
+
+	
+
+COLOR_LIGHT_GRAY
+
+Example",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+database access privileges
+
+
+    Where
+used: 
+ QueryAccessPrivileges in
+NotesDbDirectory
+ Constants: 
+DBACL_CREATE_DOCUMENTS (1)
+DBACL_DELETE_DOCUMENTS (2)
+DBACL_CREATE_PRIV_AGENTS (4)
+DBACL_CREATE_PRIV_FOLDERS_VIEWS (8)
+DBACL_CREATE_SHARED_FOLDERS_VIEWS (16)
+DBACL_CREATE_SCRIPT_AGENTS (32)
+DBACL_READ_PUBLIC_DOCUMENTS (64)
+DBACL_WRITE_PUBLIC_DOCUMENTS (128)
+DBACL_REPLICATE_COPY_DOCUMENTS (256)
+ 
+
+
+","
+QueryAccessPrivileges (NotesDatabase - LotusScript®)
+
+
+    Returns
+the privileges of a person, group, or server in a database. Note: This method is new with Release 6.5. 
+ Defined
+in   NotesDatabase  
+ Syntax   privileges&  =  notesDatabase .QueryAccessPrivileges(  name$  )  
+ Parameters   name$  String.
+The name of the person, group, or server. For a hierarchical name,
+the full name must be specified but can be in abbreviated format. 
+ Return
+value   privileges&  Long constant. The
+current access privileges, a combination of the following: 
+DBACL_CREATE_DOCUMENTS (1)
+DBACL_DELETE_DOCUMENTS (2)
+DBACL_CREATE_PRIV_AGENTS (4)
+DBACL_CREATE_PRIV_FOLDERS_VIEWS (8)
+DBACL_CREATE_SHARED_FOLDERS_VIEWS (16)
+DBACL_CREATE_SCRIPT_AGENTS (32)
+DBACL_READ_PUBLIC_DOCUMENTS (64)
+DBACL_WRITE_PUBLIC_DOCUMENTS (128)
+DBACL_REPLICATE_COPY_DOCUMENTS (256)
+ Individual privileges can be discerned through bitwise operations. 
+ Usage  If
+the name you specify is listed explicitly in the ACL, then QueryAccessPrivileges
+returns the privileges for that ACL entry and does not check groups. If
+the name you specify is not listed explicitly in the ACL, QueryAccessPrivileges
+checks to see if the name is a member of a group in the primary address
+book where the program is running: on a workstation the Personal Address
+Book; on a server the Domino® Directory. 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+database directory
+
+
+Where used:
+ 
+ GetFirstDatabase in
+NotesDbDirectory
+ Constants: 
+DATABASE (1247)
+REPLICA_CANDIDATE (1245)
+TEMPLATE  (1248)
+TEMPLATE_CANDIDATE (1246)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+database option
+
+
+Where used:
+ 
+ GetOption in NotesDatabase
+ SetOption in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+DBOPT_LZCOMPRESSION (65)
+DBOPT_MAINTAINLASTACCESSED (44)
+DBOPT_MOREFIELDS (54)
+DBOPT_NOHEADLINEMONITORS (46)
+DBOPT_NOOVERWRITE (36)
+DBOPT_NORESPONSEINFO (38)
+DBOPT_NOTRANSACTIONLOGGING (45)
+DBOPT_NOUNREAD (37)
+DBOPT_OPTIMIZATION (41)
+DBOPT_REPLICATEUNREADMARKSTOANY (71)   Note: This option is new with Release 6.5. 
+DBOPT_REPLICATEUNREADMARKSTOCLUSTER (70)Note: This
+option is new with Release 6.5. 
+DBOPT_SOFTDELETE (49)
+ 
+
+
+
+","
+GetOption (NotesDatabase - LotusScript®)
+
+
+Gets the value of a database option.
+ Note: This method is new with Release 6. 
+ Defined
+in   NotesDatabase  
+ Syntax   flag  =  notesDatabase .GetOption(  optionName%  )  
+ Parameters   optionName%  Integer.
+Constant. One of the following: 
+DBOPT_LZCOMPRESSION (65) uses LZ1 compression for attachments
+DBOPT_MAINTAINLASTACCESSED (44) maintains LastAccessed property   
+DBOPT_MOREFIELDS (54) allows more fields in database
+DBOPT_NOHEADLINEMONITORS (46) doesn't allow headline monitoring
+DBOPT_NOOVERWRITE (36) doesn't overwrite free space
+DBOPT_NORESPONSEINFO (38) doesn't support specialized response
+hierarchy
+DBOPT_NOTRANSACTIONLOGGING (45) disables transaction logging
+DBOPT_NOUNREAD (37) doesn't maintain unread marks
+DBOPT_OPTIMIZATION (41) enables document table bitmap optimization
+DBOPT_REPLICATEUNREADMARKSTOANY (71) replicates unread marks to
+all servers   Note: This option is new
+with Release 6.5. 
+DBOPT_REPLICATEUNREADMARKSTOCLUSTER (70) replicates unread marks
+to clustered servers onlyNote: This option is new with
+Release 6.5. 
+DBOPT_SOFTDELETE (49) allows soft deletions
+ 
+ Return
+value   flag  Boolean. 
+True if the option is enabled.
+False if the option is disabled.
+ 
+ Usage  See setOption for setting a database
+option. 
+   Example   
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+database option
+
+
+Where used:
+ 
+ GetOption in NotesDatabase
+ SetOption in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+DBOPT_LZCOMPRESSION (65)
+DBOPT_MAINTAINLASTACCESSED (44)
+DBOPT_MOREFIELDS (54)
+DBOPT_NOHEADLINEMONITORS (46)
+DBOPT_NOOVERWRITE (36)
+DBOPT_NORESPONSEINFO (38)
+DBOPT_NOTRANSACTIONLOGGING (45)
+DBOPT_NOUNREAD (37)
+DBOPT_OPTIMIZATION (41)
+DBOPT_REPLICATEUNREADMARKSTOANY (71)   Note: This option is new with Release 6.5. 
+DBOPT_REPLICATEUNREADMARKSTOCLUSTER (70)Note: This
+option is new with Release 6.5. 
+DBOPT_SOFTDELETE (49)
+ 
+
+
+
+","
+SetOption (NotesDatabase - LotusScript®)
+
+
+Sets the value of a database option.
+ Note: This method is new with Release 6. 
+ Defined
+in   NotesDatabase  
+ Syntax   Call  notesDatabase .SetOption(  optionName%  , flag ) 
+ Parameters   optionName%  Integer.
+Constant. One of the following: 
+DBOPT_LZCOMPRESSION (65) uses LZ1 compression for attachments
+DBOPT_MAINTAINLASTACCESSED (44) maintains LastAccessed property
+DBOPT_MOREFIELDS (54) allows more fields in database
+DBOPT_NOHEADLINEMONITORS (46) doesn't allow headline monitoring
+DBOPT_NOOVERWRITE (36) doesn't overwrite free space
+DBOPT_NORESPONSEINFO (38) doesn't support specialized response
+hierarchy
+DBOPT_NOTRANSACTIONLOGGING (45) disables transaction logging
+DBOPT_NOUNREAD (37) doesn't maintain unread marks
+DBOPT_OPTIMIZATION (41) enables document table bitmap optimization
+DBOPT_REPLICATEUNREADMARKSTOANY (71) replicates unread marks to
+all servers   Note: This option is new
+with Release 6.5. 
+DBOPT_REPLICATEUNREADMARKSTOCLUSTER (70) replicates unread marks
+to clustered servers onlyNote: This option is new with
+Release 6.5. 
+DBOPT_SOFTDELETE (49) allows soft deletions
+  flag  Boolean. 
+True to enable the option.
+False to disable the option.
+ 
+ Usage  Compact
+the database to ensure that the option takes effect. See Compact. See GetOption for getting a database
+option. Setting DBOPT_REPLICATEUNREADMARKSTOANY True also sets
+DBOPT_REPLICATEUNREADMARKSTOCLUSTER True. Setting DBOPT_REPLICATEUNREADMARKSTOCLUSTER
+True sets DBOPT_REPLICATEUNREADMARKSTOANY False. Setting both options
+False means unread marks are never replicated.    The database must be
+open. Otherwise this method raises lsERR_NOTES_DATABASE_NOTOPEN (4063).    
+   Example   
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+database modified documents
+
+
+       Where
+used: 
+ GetModifiedDocuments in
+NotesDatabase
+ Constants: Note: These constants are new
+with Release 7. 
+DBMOD_DOC_ACL (64)
+DBMOD_DOC_AGENT (512)
+DBMOD_DOC_ALL (32767)
+DBMOD_DOC_DATA (1)
+DBMOD_DOC_FORM (4)
+DBMOD_DOC_HELP (256)
+DBMOD_DOC_ICON (16)
+DBMOD_DOC_REPLFORMULA (2048)
+DBMOD_DOC_SHAREDFIELD (1024)
+DBMOD_DOC_VIEW (8)
+ 
+
+
+","
+GetModifiedDocuments (NotesDatabase - LotusScript®)
+
+
+       Gets
+the documents in a database that are modified since a specified time. Note: This method is new with Release 7. 
+ Defined
+in   NotesDatabase  
+ Syntax   Set notesDocumentCollection  =  notesDatabase .GetModifiedDocuments( [ since ]  ,  [ noteClass% ] )  
+ Parameters   since   NotesDateTime.
+The start time for collecting the modified documents. Defaults to
+the creation time of the database effectively returning all documents.  noteClass%  Integer.
+Constant. One of the following to specify the type or types of document
+collected. You can combine types with a logical or. Defaults to DBMOD_DOC_DATA
+which collects only data documents. 
+DBMOD_DOC_ACL (64)
+DBMOD_DOC_AGENT (512)
+DBMOD_DOC_ALL (32767)
+DBMOD_DOC_DATA (1)
+DBMOD_DOC_FORM (4)
+DBMOD_DOC_HELP (256)
+DBMOD_DOC_ICON (16)
+DBMOD_DOC_REPLFORMULA (2048)
+DBMOD_DOC_SHAREDFIELD (1024)
+DBMOD_DOC_VIEW (8)
+ 
+ Return
+value   noteDocumentCollection   NotesDocumentCollection.
+A collection containing the modified documents. 
+ Usage  The
+end time for the collection is the current database time, which is
+posted to the UntilTime property
+of the returned NotesDocumentCollection object. This time should be
+specified as the ""since"" time in a subsequent call to GetModifiedDocuments
+where you want to get all modified documents since the most recent
+call. Do not rely on the system time, which may differ from the database
+time. This method raises lsERR_NOTES_NOSUCH_DBGETMODDOCS
+(4698) ""Not a valid GetModifiedDocuments constant"" if the noteClass
+parameter is invalid. 
+
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+database replication priority
+
+
+Where used:
+ 
+Priority in
+NotesReplication
+ Constants: 
+DB_REPLICATION_PRIORITY_HIGH (1549)
+DB_REPLICATION_PRIORITY_LOW (1547)
+DB_REPLICATION_PRIORITY_MED (1548)
+DB_REPLICATION_PRIORITY_NOTSET (1565)Note: This constant
+is obsolete in Release 5.0.1 
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+database sign
+
+
+Where used:
+ 
+ Sign in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+DBSIGN_DOC_ACL (64)
+DBSIGN_DOC_AGENT (512)
+DBSIGN_DOC_ALL (32767)
+DBSIGN_DOC_DATA (1)
+DBSIGN_DOC_FORM (4)
+DBSIGN_DOC_HELP (256)
+DBSIGN_DOC_ICON (16)
+DBSIGN_DOC_REPLFORMULA (2048)
+DBSIGN_DOC_SHAREDFIELD (1024)
+DBSIGN_DOC_VIEW (8)
+ 
+
+
+
+","
+Sign (NotesDatabase - LotusScript®)
+
+
+Signs elements in a database with the signature of the
+current user.  This method programmatically mimics the use of the
+Sign Database dialog in the Notes® Domino® Admin client.
+    Note: This
+method is new with Release 6. 
+ Defined
+in   NotesDatabase  
+ Syntax   Call  notesDatabase .Sign( [ documentType% ][ , existingSigsOnly ]
+[ , nameStr$] [ , nameStrIsNoteID ] )  
+ Parameters      documentType%  Integer.
+Optional. One of the following constants. 
+DBSIGN_DOC_ACL (64) signs the ACL
+DBSIGN_DOC_AGENT (512) signs all agents
+DBSIGN_DOC_ALL (32767) (default) signs all elements except data
+documents' active content   
+DBSIGN_DOC_DATA (1) signs all data documents' active content (hotspots)
+DBSIGN_DOC_FORM (4) signs all forms
+DBSIGN_DOC_HELP (256) signs the ""About Database"" and ""Using Database""
+documents
+DBSIGN_DOC_ICON (16) signs the icon
+DBSIGN_DOC_REPLFORMULA (2048) signs the replication formula
+DBSIGN_DOC_SHAREDFIELD (1024) signs all shared fields
+DBSIGN_DOC_VIEW (8) signs all views
+  existingSigsOnly  Boolean. Optional. 
+True to sign only elements with existing signatures.
+False (default) to sign all elements.
+  nameStr  String. Optional. Programmatic name
+or note ID of a single design element.If this parameter is
+not specified, all design elements of type parameter 1 are signed.     nameStrIsNoteID  Boolean.
+Optional. 
+True if parameter 3 represents a note ID.
+False (default) if parameter 3 represents a programmatic name.
+ 
+ Usage  This
+method signs all design elements of the specified type if you specify
+parameter 1 and do not specify parameter 3. If you specify
+parameter 3, this method signs one design element. You can also specify
+parameter 1 to positively define the design element. If more than
+one design element has the same name and parameter 1 is not specified,
+this method signs the first design element with the specified name. To
+sign all elements of a data document, including active content (hotspots),
+the method must be performed twice, once specifying parameter 1 of
+DBSIGN_DOC_ALL and once specifying parameter 1 of DBSIGN_DOC_DATA. This
+method executes only on a client.    
+   Example   
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+database type
+
+
+Where used:
+ 
+ Type in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+DBTYPE_ADDR_BOOK (10)
+DBTYPE_IMAP_SVR_PROXY (6)
+DBTYPE_LIBRARY (12)
+DBTYPE_LIGHT_ADDR_BOOK (9)
+DBTYPE_MAILBOX (3)
+DBTYPE_MAILFILE (2)
+DBTYPE_MULTIDB_SRCH (8)
+DBTYPE_NEWS_SVR_PROXY (5)
+DBTYPE_PERS_JOURNAL (11)
+DBTYPE_PORTFOLIO (7)
+DBTYPE_STANDARD (13)
+DBTYPE_SUBSCRIPTIONS (4)
+DBTYPE_WEB_APP (1)
+ 
+
+
+
+","
+Type (NotesDatabase - LotusScript®)
+
+
+Read-only. Database type.
+ Note: This property is new with Release 6. 
+ Defined
+in   NotesDatabase  
+ Data
+type  Constant of type Integer 
+ Syntax  To
+get: type%  =  notesDatabase .Type  
+Legal
+values  
+DBTYPE_ADDR_BOOK (10) - Domino® Directory
+or Personal Address Book
+DBTYPE_IMAP_SVR_PROXY (6) - IMAP server proxy
+DBTYPE_LIBRARY (12) - database library
+DBTYPE_LIGHT_ADDR_BOOK (9) - Directory Catalog
+DBTYPE_MAILBOX (3) - mailbox
+DBTYPE_MAILFILE (2) - mail file
+DBTYPE_MULTIDB_SRCH (8) - Domain Catalog
+DBTYPE_NEWS_SVR_PROXY (5) - news server proxy
+DBTYPE_PERS_JOURNAL (11) - Personal Journal
+DBTYPE_PORTFOLIO (7) - portfolio
+DBTYPE_STANDARD (13) - standard
+DBTYPE_SUBSCRIPTIONS (4) - subscriptions
+DBTYPE_WEB_APP (1) - Web application
+ 
+ Usage  The
+database must be open to use this property. 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+DOM node type
+
+
+Where used:
+ 
+ NodeType in
+NotesDOMNode
+ Constants: Note: These constants are new
+with Release 6. 
+DOMNODETYPE_ATTRIBUTE_NODE (2)
+DOMNODETYPE_CDATASECTION_NODE (4)
+DOMNODETYPE_COMMENT_NODE (8)
+DOMNODETYPE_DOCUMENT_NODE (9)
+DOMNODETYPE_DOCUMENTFRAGMENT_NODE (11)
+DOMNODETYPE_DOCUMENTTYPE_NODE (10)
+DOMNODETYPE_ELEMENT_NODE (1)
+DOMNODETYPE_ENTITY_NODE (6)
+DOMNODETYPE_ENTITYREFERENCE_NODE (5)
+DOMNODETYPE_NOTATION_NODE (12)
+DOMNODETYPE_PROCESSINGINSTRUCTION_NODE (7)
+DOMNODETYPE_TEXT_NODE (3)
+DOMNODETYPE_UNKNOWN_NODE (0)
+DOMNODETYPE_XMLDECL_NODE (13)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+DXL import option
+
+
+Where used:
+ 
+ ACLImportOption in
+NotesDXLImporter   
+ DesignImportOption in
+NotesDXLImporter
+ DocumentImportOption in
+NotesDXLImporter
+ Constants: Note: These constants are new
+with Release 6. 
+DXLIMPORTOPTION_CREATE (1)
+DXLIMPORTOPTION_IGNORE (2)
+DXLIMPORTOPTION_REPLACE_ELSE_IGNORE (5)
+DXLIMPORTOPTION_REPLACE_ELSE_CREATE (6)
+DXLIMPORTOPTION_UPDATE_ELSE_IGNORE (9)
+DXLIMPORTOPTION_UPDATE_ELSE_CREATE (10)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+DXL log option
+
+
+    Where
+used: 
+UnknownTokenLogOption in NotesDXLImporter
+ Constants: Note: These constants are new
+with Release 6. 
+DXLLOGOPTION_ERROR (3)
+DXLLOGOPTION_FATALERROR (4)
+DXLLOGOPTION_IGNORE (1)
+DXLLOGOPTION_WARNING (2)
+ 
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+effects
+
+
+Where used:
+ 
+ Effects in
+NotesRichTextStyle
+ Constants: 
+EFFECTS_EMBOSS (4)
+EFFECTS_EXTRUDE (5)
+EFFECTS_NONE (0)
+EFFECTS_SHADOW (3)
+EFFECTS_SUBSCRIPT (2)
+EFFECTS_SUPERSCRIPT (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+embedded object type
+
+
+Where used:
+ 
+ Type in
+NotesEmbeddedObject
+ EmbedObject in
+NotesRichTextItem
+ Constants: 
+EMBED_ATTACHMENT (1454)
+EMBED_OBJECT (1453)
+EMBED_OBJECTLINK (1452)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+encoding
+
+
+Where used:
+ 
+ Encoding in
+NotesMIMEEntity
+ EncodeContent in
+NotesMIMEEntity
+ SetContentFromBytes in
+NotesMIMEEntity
+ SetContentFromText in
+NotesMIMEEntity
+ Constants: Note: These constants are new
+with Release 6. 
+ENC_BASE64 (1727)
+ENC_EXTENSION (1731)
+ENC_IDENTITY_7BIT (1728)
+ENC_IDENTITY_8BIT (1729)
+ENC_IDENTITY_BINARY (1730)
+ENC_NONE (1725)
+ENC_QUOTED_PRINTABLE (1726)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+event
+
+
+Where used:
+ 
+ LogEvent in
+NotesLog
+ Constants: 
+EV_ALARM (8)
+EV_COMM (1)
+EV_MAIL (3)
+EV_MISC (6)
+EV_REPLICA (4)
+EV_RESOURCE (5)
+EV_SECURITY (2)
+EV_SERVER (7)
+EV_UNKNOWN (0)
+EV_UPDATE (9)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+fixup
+
+
+Where used:
+ 
+ Fixup in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+FIXUP_INCREMENTAL (4)
+FIXUP_NODELETE (16)
+FIXUP_NOVIEWS (64)
+FIXUP_QUICK (2)
+FIXUP_REVERT (32)
+FIXUP_TXLOGGED (8)
+FIXUP_VERIFY (1)
+ 
+
+
+
+","
+Fixup (NotesDatabase - LotusScript®)
+
+
+Runs the Fixup task on a database.
+ Note: This method is new with Release 6. 
+ Defined
+in   NotesDatabase  
+ Syntax   Call  notesDatabase .Fixup( [ options& ] )  
+ Parameter   options&  Long.
+Optional. One or more of the following. Add options to combine them. 
+FIXUP_INCREMENTAL (4) checks only documents since last Fixup
+FIXUP_NODELETE (16) prevents Fixup from deleting corrupted documents
+FIXUP_NOVIEWS (64) does not check views
+FIXUP_QUICK (2) checks documents more quickly but less thoroughly
+FIXUP_REVERT (32) reverts ID tables to the previous release format
+FIXUP_TXLOGGED (8) includes databases enabled for transaction
+logging
+FIXUP_VERIFY (1) makes no modifications
+ 
+   Example   
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+font
+
+
+Where used:
+ 
+ NotesFont in
+NotesRichTextStyle
+ Constants: 
+FONT_COURIER (4)
+FONT_HELV (1)
+FONT_ROMAN (0)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+full-text index create
+
+
+Where used:
+ 
+ CreateFTIndex in
+NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+FTINDEX_ALL_BREAKS (4)
+FTINDEX_ATTACHED_BIN_FILES (16)
+FTINDEX_ATTACHED_FILES (1)
+FTINDEX_CASE_SENSITIVE (8)
+FTINDEX_ENCRYPTED_FIELDS (2)
+ 
+
+
+
+","
+CreateFTIndex (NotesDatabase - LotusScript®)
+
+
+Creates a full-text index for a database.
+ Note: This method is new with Release 6. 
+ Defined
+in   NotesDatabase  
+ Syntax   Call  notesDatabase .CreateFTIndex(  options&  ,  recreate  )  
+ Parameters   options&  Constant
+of type Long. Combine options with addition. 
+FTINDEX_ALL_BREAKS (4) to index sentence and paragraph breaks
+FTINDEX_ATTACHED_BIN_FILES (16) to index attached files (binary)
+FTINDEX_ATTACHED_FILES (1) to index attached files (raw text)
+FTINDEX_CASE_SENSITIVE (8) to enable case-sensitive searches
+FTINDEX_ENCRYPTED_FIELDS (2) to index encrypted fields
+  recreate  Boolean. Removes any existing full-text
+index before creating one. If this parameter is False and an index
+exists, no action is taken. 
+ Usage  This
+method works only for local databases.          
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+full-text index frequency
+
+
+Where used:
+ 
+ FTIndexFrequency in
+NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+FTINDEX_DAILY (1)
+FTINDEX_HOURLY (3)
+FTINDEX_IMMEDIATE (4)
+FTINDEX_SCHEDULED (2)
+ 
+
+
+
+","
+FTIndexFrequency (NotesDatabase - LotusScript®)
+
+
+Read-write. Update frequency of a database's full-text
+index.
+ Note: This property is new with Release 6. 
+ Defined
+in   NotesDatabase  
+ Data
+type  Constant of type Integer 
+ Syntax  To
+get: frequency%  =  notesDatabase .FTIndexFrequency  To
+set: notesDatabase .FTIndexFrequency  =  frequency%  
+Legal
+values  
+FTINDEX_DAILY (1)
+FTINDEX_HOURLY (3)
+FTINDEX_IMMEDIATE (4)
+FTINDEX_SCHEDULED (2)
+ 
+Usage  This
+property applies only to databases on servers. The database
+must have a full-text index. The database must be open to use
+this property. 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+full-text search
+
+
+Where used:
+ 
+ FTDomainSearch in
+NotesDatabase
+ FTSearch in NotesDatabase
+ UnprocessedFTSearch in
+NotesDatabase
+ Constants: 
+FT_DATABASE (8192)
+FT_DATE_ASC (64)
+FT_DATE_DES (32)
+FT_DATECREATED_ASC (1543)
+FT_DATECREATED_DES (1542)
+FT_FILESYSTEM (4096)
+FT_FUZZY (16384)
+FT_SCORES (8)
+FT_STEMS (512)
+FT_THESAURUS (1024)
+ 
+
+
+
+","
+FTDomainSearch (NotesDatabase - LotusScript®)
+
+
+Conducts a Domain Search, that is, a full-text search of
+all databases configured in the Domain Catalog database and marked
+as included for multi-database indexing.
+ Note: This method is new with Release 5. 
+ Defined
+in   NotesDatabase  
+ Syntax   Set  notesDocument =  notesDatabase .FTDomainSearch( query$ , maxDocs% , [ sortoptions%], [ otheroptions%], [ start&], [ count%], [ entryform$ ] )  
+ Parameters   query$  String.
+The full-text query.  maxDocs%  Integer. The
+maximum number of documents you want returned from the query. Set
+this parameter to 0 to receive all matching documents.  sortoptions% Integer.
+Optional. Sorting options. Combine options by adding. 
+FT_DATE_ASC (64) sorts by document creation date in ascending
+order.
+FT_DATE_DES (32) sorts by document creation date in descending
+order.
+FT_SCORES (8) sorts by relevance score (default).
+  otheroptions% Integer. Optional. Search options.
+Combine options by adding. 
+FT_DATABASE (8192) includes Domino® databases.
+FT_FUZZY (16384) searches for related words. Need not be an exact
+match.
+FT_FILESYSTEM (4096) includes files that are not Domino® databases.
+FT_STEMS (512) uses stem words as the basis of the search.
+FT_THESAURUS (1024) uses thesaurus synonyms.
+  start& Long. Optional. The starting page
+to return.  count%  Integer. Optional. The number
+of pages to return.  entryform$  The name of
+the search form in the domain catalog. 
+ Return
+value   notesDocument  A NotesDocument with
+a rich text field named ""Body"" that contains a table of matching document
+titles. 
+ Usage  The
+databases you want included in the search must have the property ""Include
+in multi-database indexing"" set to TRUE. The current NotesDatabase
+object must represent a Domain Catalog. If you don't specify
+any sort options, you get the documents sorted by relevance score.
+If you ask for a sort by date, you don't get relevance scores. 
+ Query
+syntax  To search for a word or phrase, enter the word or
+phrase as is, except for search keywords must be enclosed in quotes.
+Remember to escape quotes if you are inside a literal. Wildcards,
+operators, and other syntax are permitted. For the complete syntax
+rules, see ""Refining a search query using operators"" in Notes® Help. Search for ""query syntax"" in the Domino® Designer Eclipse help
+system or information center (for example, http://publib.boulder.ibm.com/infocenter/domhelp/v8r0/index.jsp),
+both of which include Notes®.    
+
+   Example   
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+full-text search
+
+
+Where used:
+ 
+ FTDomainSearch in
+NotesDatabase
+ FTSearch in NotesDatabase
+ UnprocessedFTSearch in
+NotesDatabase
+ Constants: 
+FT_DATABASE (8192)
+FT_DATE_ASC (64)
+FT_DATE_DES (32)
+FT_DATECREATED_ASC (1543)
+FT_DATECREATED_DES (1542)
+FT_FILESYSTEM (4096)
+FT_FUZZY (16384)
+FT_SCORES (8)
+FT_STEMS (512)
+FT_THESAURUS (1024)
+ 
+
+
+
+","
+FTSearch (NotesDatabase - LotusScript®)
+
+
+Conducts a full-text search of all the documents in a database.
+
+ Defined
+in   NotesDatabase  
+ Syntax   Set  notesDocumentCollection =  notesDatabase .FTSearch( query$ , maxdocs% , [ sortoptions% ], [ otheroptions% ] )  
+ Parameters   query$  String.
+The full-text query. See the following for the syntax.  maxdocs%  Integer.
+The maximum number of documents you want returned from the query.
+Set this parameter to 0 to retrieve all documents (up to 5,000 - see
+the Usage section for more details) that meet the search criteria.  sortoptions% Integer.
+Optional. Sorting options. Choose one. 
+FT_DATE_ASC (64) sorts by document date in ascending order.
+FT_DATE_DES (32) sorts by document date in descending order.
+FT_DATECREATED_ASC (1543) sorts by document creation date in ascending
+order.
+FT_DATECREATED_DES (1542) sorts by document creation date in descending
+order.
+FT_SCORES (8) sorts by relevance score (default).
+  otheroptions% Integer. Optional. Search options.
+Combine options by adding. 
+FT_DATABASE (8192) includes Domino® databases.
+FT_FUZZY (16384) searches for related words. Need not be an exact
+match.
+FT_FILESYSTEM (4096) includes files that are not Domino® databases.
+FT_STEMS (512) uses stem words as the basis of the search.
+FT_THESAURUS (1024) uses thesaurus synonyms.
+ 
+ Return
+value   notesDocumentCollection   NotesDocumentCollection.
+A collection of documents that match the full-text query, sorted by
+the selected option. 
+ Usage  This
+method is the same as FTSearchRange less
+the start parameter. If the database is not full-text indexed,
+this method works, but less efficiently. To test for an index, use
+the IsFTIndexed property
+in NotesDatabase. If the full-text is not updated after changes are
+made, it does not fully reflect the content of the database. To create
+or update an index on a local database, use the UpdateFTIndex method. This
+method returns a maximum of 5,000 documents by default. The Notes®.ini variable FT_MAX_SEARCH_RESULTS
+overrides this limit for indexed databases or databases that are not
+indexed but that are running in an agent on the client. For a database
+that is not indexed and is running in an agent on the server, you
+must set the TEMP_INDEX_MAX_DOC Notes®.ini
+variable as well. The absolute maximum is 2,147,483,647. This
+method searches all of the documents in a database. To search only
+documents found in a particular view, use the FTSearch method
+in NotesView. To search only documents found in a particular document
+collection, use the FTSearch method in NotesDocumentCollection. If you don't specify
+any sort options, the documents are sorted by relevance score. When
+the collection is sorted by relevance the highest relevance appears
+first. To access the relevance score of each document in the collection,
+use FTSearchScore in
+NotesDocument. If you ask for a sort by date, you don't get
+relevance scores. If you pass the resulting DocumentCollection to
+a NotesNewsletter object,
+it formats its doclink report with either the document creation date
+or the relevance score, depending on the sort options. If
+the database has a multi-database index, you get a multi-database
+search. Navigation through the resulting document collection may be
+slow, but you can create a newsletter from the collection. If
+the collection is empty, the Count property for the returned NotesCollection
+is 0. 
+ Query
+syntax  To search for a word or phrase, enter the word or
+phrase as is, except that search keywords must be enclosed in quotes.
+Remember to escape quotes if you are inside a literal. Wildcards,
+operators, and other syntax are permitted. For the complete syntax
+rules, see ""Refining a search query using operators"" in Notes® Help. Search for ""query syntax"" in the Domino® Designer Eclipse help
+system or information center (for example, http://publib.boulder.ibm.com/infocenter/domhelp/v8r0/index.jsp),
+both of which include Notes®.    
+
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+full-text search
+
+
+Where used:
+ 
+ FTDomainSearch in
+NotesDatabase
+ FTSearch in NotesDatabase
+ UnprocessedFTSearch in
+NotesDatabase
+ Constants: 
+FT_DATABASE (8192)
+FT_DATE_ASC (64)
+FT_DATE_DES (32)
+FT_DATECREATED_ASC (1543)
+FT_DATECREATED_DES (1542)
+FT_FILESYSTEM (4096)
+FT_FUZZY (16384)
+FT_SCORES (8)
+FT_STEMS (512)
+FT_THESAURUS (1024)
+ 
+
+
+
+","UnprocessedFTSearch (NotesDatabase - LotusScript®)
+
+Conducts a full-text search of the documents in a database that the current agent considers to be unprocessed.
+
+Note: This method is not implemented in COM.
+Defined in
+
+NotesDatabase
+
+Syntax
+
+Set notesDocumentCollection = notesDatabase .UnprocessedFTSearch( query$ , maxdocs% , [ sortoptions% ], [ otheroptions% ] )
+
+Parameters
+
+query$
+
+String. The full-text query.
+
+maxdocs%
+
+Integer. The maximum number of documents you want returned from the query. Set this parameter to 0 to retrieve all documents (up to 5,000. See Full-text indexes section as follows.) that match the search criteria.
+
+sortoptions%
+
+Integer. Optional. Sorting options. Choose one.
+
+FT_DATE_ASC (64) sorts by document date in ascending order.
+FT_DATE_DES (32) sorts by document date in descending order.
+FT_DATECREATED_ASC (1543) sorts by document creation date in ascending order.
+FT_DATECREATED_DES (1542) sorts by document creation date in descending order.
+FT_SCORES (8) sorts by relevance score (default).
+
+otheroptions%
+
+Integer. Optional. Search options. Combine options by adding.
+
+FT_DATABASE (8192) includes Domino® databases.
+FT_FUZZY (16384) searches for related words. Need not be an exact match.
+FT_FILESYSTEM (4096) includes files that are not Domino® databases.
+FT_STEMS (512) uses stem words as the basis of the search.
+FT_THESAURUS (1024) uses thesaurus synonyms.
+Return value
+
+notesDocumentCollection
+
+NotesDocumentCollection. A collection of documents that were unprocessed and match the full-text query, sorted by the selected option.
+
+Usage
+
+This method is the same as UnprocessedFTSearchRange less the start parameter.
+
+This method is valid only for agent scripts and view actions and may be invoked only on NotesDatabase objects obtained from the CurrentDatabase property in NotesSession. In scripts that are not a part of an agent or view action, this method returns a NotesDocumentCollection with zero documents. When invoked on a NotesDatabase object that was not obtained from the CurrentDatabase property, this method raises an error.
+
+How does it work?
+
+This method works in two parts:
+
+First, it finds a collection of documents that the agent considers to be ""unprocessed."" The type of agent or view action determines which documents are considered to be unprocessed. This document collection is identical to that returned by the UnprocessedDocuments property.
+Next, it conducts a full-text search on the unprocessed documents and returns a collection of those documents that match the query.
+
+For example, in an agent that runs on all selected documents in the view, UnprocessedFTSearch searches only the selected documents, and returns those that match the query. In an agent that runs on documents that have been created or modified since last run, UnprocessedFTSearch searches only the documents that have not been marked by the UpdateProcessedDoc method in NotesSession, and returns those that match the query.
+
+What documents are returned?
+
+The following table describes the documents that are returned by the UnprocessedFTSearch method. Document selection occurs once, before the agent runs.
+
+Agent runs on
+
+	
+
+UnprocessedFTSearch returns documents that meet all of these requirements
+
+
+
+
+All documents in database
+
+	
+
+Meet the search criteria specified in Agent Properties box
+
+Meet the full-text search criteria specified in this method
+
+
+
+
+All new & modified documents
+
+	
+
+Not processed by this agent with UpdateProcessedDoc
+
+Created or modified since the agent last ran
+
+Meet the search criteria specified in Agent Properties box
+
+Meet the full-text search criteria specified in this method
+
+
+
+
+All unread documents in view
+
+	
+
+Are unread and in the view
+
+Meet the search criteria specified in Agent Properties box
+
+Meet the full-text search criteria specified in this method
+
+
+
+
+All documents in view
+
+	
+
+Are in the view
+
+Meet the search criteria specified in Agent Properties box
+
+Meet the full-text search criteria specified in this method
+
+
+
+
+All selected documents
+
+or
+
+View action
+
+	
+
+Are selected in the view
+
+Meet the search criteria specified in Agent Properties box
+
+Meet the full-text search criteria specified in this method
+
+
+
+
+Run once
+
+	
+
+Is the current document
+
+
+
+
+Newly received mail documents
+
+	
+
+Not processed by this agent with UpdateProcessedDoc
+
+Mailed to the database since the agent last ran
+
+Meet the search criteria specified in Agent Properties box
+
+Meet the full-text search criteria specified in this method
+
+
+
+
+Newly modified documents
+
+	
+
+Not processed by this agent with UpdateProcessedDoc
+
+Modified since the agent last ran
+
+Meet the search criteria specified in Agent Properties box
+
+Meet the full-text search criteria specified in this method
+
+
+
+
+Pasted documents
+
+	
+
+Have not been processed by this agent with UpdateProcessedDoc
+
+Pasted into the database since the agent last ran
+
+Meet the search criteria specified in Agent Properties box
+
+Meet the full-text search criteria specified in this method
+
+Using UpdateProcessedDoc
+
+For agents that run on new and modified documents, newly received mail documents, pasted documents, or newly modified documents, you must use the UpdateProcessedDoc method in NotesSession to mark each document as ""processed,"" which ensures that a document gets processed by the agent only once (unless it's modified, mailed, or pasted again). If you do not call this method for each document, the agent processes the same documents the next time it runs.
+
+UpdateProcessedDoc marks a document as processed only for the particular agent from which it is called. Using UpdateProcessedDoc in one agent has no effect on the documents that another agent processes.
+
+In all other agents and view actions, UpdateProcessedDoc has no effect.
+
+View actions
+
+When used in a view action, UnprocessedFTSearch returns the same documents as an agent that runs on selected documents.
+
+Full-text indexes
+
+If the database is not full-text indexed, this method works, but less efficiently. To test for an index, use the IsFTIndexed property in NotesDatabase. If the full-text is not updated after changes are made, it does not fully reflect the content of the database. To create or update an index on a local database, use the UpdateFTIndex method.
+
+This method returns a maximum of 5,000 documents by default. The Notes®.ini variable FT_MAX_SEARCH_RESULTS overrides this limit for indexed databases or databases that are not indexed but that are running in an agent on the client. For a database that is not indexed and is running in an agent on the server, you must set the TEMP_INDEX_MAX_DOC Notes®.ini variable as well. The absolute maximum is 2,147,483,647.
+
+Options
+
+If you don't specify any sort options, the documents are sorted by relevance score. When the collection is sorted by relevance the highest relevance appears first. To access the relevance score of each document in the collection, use FTSearchScore in NotesDocument.
+
+If you ask for a sort by date, you don't get relevance scores. If you pass the resulting DocumentCollection to a NotesNewsletter object, it formats its doclink report with either the document creation date or the relevance score, depending on the sort options.
+
+Query syntax
+
+To search for a word or phrase, enter the word or phrase as is, except that search keywords must be enclosed in quotes. Remember to escape quotes if you are inside a literal.
+
+Wildcards, operators, and other syntax are permitted. For the complete syntax rules, see ""Finding documents in a database"" in Notes® Help.
+
+Example",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ID type
+
+
+Where used:
+ 
+ IDType in
+NotesRegistration
+ Constants: 
+ID_CERTIFIER (173)
+ID_FLAT (171)
+ID_HIERARCHICAL (172)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+item type
+
+
+Where used:
+ 
+ Type in
+NotesItem
+ Constants: 
+ACTIONCD (16)
+ASSISTANTINFO (17)
+ATTACHMENT  (1084)
+AUTHORS (1076)COLLATION (2)Note: This constant is
+new with Release 6. 
+DATETIMES (1024)
+EMBEDDEDOBJECT (1090)
+ERRORITEM (256)
+FORMULA (1536)
+HTML (21)
+ICON (6)
+LSOBJECT (20)
+MIME_PART (25)Note: This constant is new with Release
+5 
+NAMES (1074)
+NOTELINKS (7)
+NOTEREFS (4)
+NUMBERS (768)
+OTHEROBJECT (1085)
+QUERYCD (15)
+READERS (1075)
+RFC822TEXT (1282)   
+RICHTEXT (1)
+SIGNATURE (8)
+TEXT (1280)
+UNAVAILABLE (512)
+UNKNOWN (0)
+USERDATA (14)
+USERID (1792)
+VIEWMAPDATA (18)
+VIEWMAPLAYOUT (19)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+mail file
+
+
+Where used:
+ 
+ DeleteUser in
+NotesAdministrationProcess
+ Constants: Note: These constants are new
+with Release 6. 
+MAILFILE_DELETE_ALL (2)
+MAILFILE_DELETE_HOME (1)
+MAILFILE_DELETE_NONE (0)
+ 
+
+
+
+","
+DeleteUser (NotesAdministrationProcess - LotusScript®)
+
+
+Enters a request in the Administration Requests database
+to delete a user.
+
+ Defined
+in   NotesAdministrationProcess  
+ Syntax   noteID$  =  notesAdministrationProcess .DeleteUser(  username$  ,  immediate ,  mailfileaction% ,  denygroup$ [ ,  deletewindowsuser ] )  
+ Parameters   username$  String.
+The hierarchical name of the user in canonical or abbreviated form.  immediate  Boolean. 
+True deletes all references to the user in the Domino® Directory before issuing an administration
+process request.
+False lets the administration process make all deletions.Note: A True setting may impact performance. 
+  mailfileaction% Constant of type Integer.
+Indicates the disposition of the user's mail file: 
+MAILFILE_DELETE_ALL (2) deletes the mail file on the user's home
+server and all replicas.
+MAILFILE_DELETE_HOME (1) deletes the mail file on the user's home
+server.
+MAILFILE_DELETE_NONE (0) leaves the user's mail file.
+  denygroup$  String. The name of an existing
+group of type ""Deny List Only"" to which the name of the deleted user
+is added. The empty string means do not add the user name to any group.  deletewindowsuser  Boolean.
+Optional. 
+True also deletes the correspondong Windows™ user.
+False (default) does not delete the corresponding Windows™ user.
+ 
+ Return
+value   noteID$  String. The note ID of an
+entry created in the Administration Requests database. 
+ Usage  This
+method triggers ""Delete person in Domino® Directory,""
+""Delete in Person documents,"" ""Delete in Access Control List,"" ""Delete
+in Reader / Author fields,"" ""Get information for deletion,"" ""Approve
+file deletion,"" ""Request file deletion,"" ""Delete mail file,"" ""Delete
+unlinked mail file,"" ""Approve deletion of Private Design Elements,""
+""Request to delete Private Design Elements,"" and ""Delete Private Design
+Elements"" administration process requests. 
+   Example   
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants: Notes® client
+
+
+Where used:
+ 
+ RegisterNewUser in
+NotesRegistration
+ Constants: 
+NOTES_DESKTOP_CLIENT (175)
+NOTES_FULL_CLIENT (176)
+NOTES_LIMITED_CLIENT (174)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+outline entry class
+
+
+Where used:
+ 
+ EntryClass in
+NotesOutlineEntry
+ Constants: Note: These constants are new
+with Release 5. 
+OUTLINE_CLASS_DATABASE (2194)
+OUTLINE_CLASS_DOCUMENT (2190)
+OUTLINE_CLASS_FOLDER (2197)
+OUTLINE_CLASS_FORM (2192)
+OUTLINE_CLASS_FRAMESET (2195)
+OUTLINE_CLASS_NAVIGATOR (2193)
+OUTLINE_CLASS_PAGE (2196)
+OUTLINE_CLASS_UNKNOWN (2189)
+OUTLINE_CLASS_VIEW (2191)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+outline entry type
+
+
+Where used:
+ 
+ Type in
+NotesOutlineEntry
+ Constants: Note: These constants are new
+with Release 5. 
+OUTLINE_OTHER_FOLDERS_TYPE (1589)
+OUTLINE_OTHER_UNKNOWN_TYPE (1591)
+OUTLINE_OTHER_VIEWS_TYPE (1588)
+OUTLINE_TYPE_ACTION (2188)
+OUTLINE_TYPE_NAMEDELEMENT (2187)
+OUTLINE_TYPE_NOTELINK (2186)
+OUTLINE_TYPE_URL (2185)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+paginate
+
+
+Where used:
+ 
+ Pagination in
+NotesRichTextParagraphStyle
+ Constants: Note: These constants are new
+with Release 5. 
+PAGINATE_BEFORE (1)
+PAGINATE_DEFAULT (0)
+PAGINATE_KEEP_TOGETHER (4)
+PAGINATE_KEEP_WITH_NEXT (2)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+participant
+
+
+Where used:
+ 
+ GetParticipants in
+NotesUIScheduler
+ Constants: Note: These constants are new
+with Release 6. 
+OPTIONAL_PEOPLE (2)
+OPTIONAL_RESOURCES (32)
+OPTIONAL_ROOMS (8)
+REQUIRED_PEOPLE (1)
+REQUIRED_RESOURCES (16)
+REQUIRED_ROOMS (4)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+participant role
+
+
+Where used:
+ 
+ AddParticipant in
+NotesUIScheduler
+ Constants: Note: These constants are new
+with Release 6. 
+PARTICIPANTROLE_CHAIR (3)
+PARTICIPANTROLE_DELEGEE (12)
+PARTICIPANTROLE_FYIATT (10)
+PARTICIPANTROLE_MAILINDB (60)
+PARTICIPANTROLE_OPTATT (9)
+PARTICIPANTROLE_REMOVED (99)
+PARTICIPANTROLE_REQATT (6)
+PARTICIPANTROLE_RESOURCE (18)
+PARTICIPANTROLE_ROOM (15)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+participant status
+
+
+Where used:
+ 
+ AddParticipant in
+NotesUIScheduler
+ Constants: Note: These constants are new
+with Release 6. 
+PARTICIPANTSTATUS_ACCEPT (6)
+PARTICIPANTSTATUS_COMPLETE (3)
+PARTICIPANTSTATUS_COUNTER (12)
+PARTICIPANTSTATUS_DECLINE (9)
+PARTICIPANTSTATUS_DELEGATE (15)
+PARTICIPANTSTATUS_PENCILIN (7)
+PARTICIPANTSTATUS_REMOVED (24)
+PARTICIPANTSTATUS_WAITING (18)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+participant type
+
+
+Where used:
+ 
+ AddParticipant in
+NotesUIScheduler
+ Constants: Note: These constants are new
+with Release 6. 
+PPARTICIPANTTYPE_PERSON (0)
+PARTICIPANTTYPE_RESOURCE (54)
+PARTICIPANTTYPE_ROOM (53)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+password check
+
+
+Where used:
+ 
+ SetUserPasswordSettings in
+NotesAdministrationProcess
+ Constants: Note: These constants are new
+with Release 6. 
+PWD_CHK_CHECKPASSWORD (1)
+PWD_CHK_DONTCHECKPASSWORD (0)
+PWD_CHK_LOCKOUT (2)
+ 
+
+
+
+","
+SetUserPasswordSettings (NotesAdministrationProcess - LotusScript®)
+
+
+Enters a request in the Administration Requests database
+to change the password management settings on the Administration tab
+of the user's person document.
+
+ Defined
+in   NotesAdministrationProcess  
+ Syntax   noteID$  =  notesAdministrationProcess .SetUserPasswordSettings(  username$ [ ,  notespasswordchecksetting% ]
+[ ,  notespasswordchangeinterval% ] [ ,  notespasswordgraceperiod% ]
+[ ,  internetpasswordforcechange ] )  
+ Parameters   username$  String.
+The full hierarchical name (can be abbreviated) of the user.  notespasswordchecksetting%  Constant
+of type Integer. Optional. Check password setting. 
+PWD_CHK_CHECKPASSWORD (1)Requires the user to enter a password
+when authenticating with servers that have password checking enabled. 
+PWD_CHK_DONTCHECKPASSWORD (0)Does not require the user to enter
+a password when authenticating with other servers. 
+PWD_CHK_LOCKOUT (2)Prevents the user from accessing servers
+that have password checking enabled. 
+ Defaults to Don't check password.  notespasswordchangeinterval%  Integer.
+Optional. Required change interval - number of days at which the user
+must supply a new password. Defaults to zero.  notespasswordgraceperiod%  Integer.
+Optional. Grace period (in days) for changing the password. Defaults
+to zero.  internetpasswordforcechange  Boolean.
+Optional. 
+True indicates to force the user to change the password on next
+login.
+False indicates not to force the user to change the password.
+ Defaults to False. 
+ Return
+value   noteID$  String. The note ID of an
+entry created in the Administration Requests database. 
+ Usage  At
+least one optional parameter must be specified. 
+   Example   
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+picklist
+
+
+Where used:
+ 
+ PickListCollection in
+NotesUIWorkspace
+PickListStrings  in
+NotesUIWorkspace
+ Constants: Note: These constants are new
+with Release 5. 
+PICKLIST_CUSTOM (3)
+PICKLIST_NAMES (0)
+PICKLIST_RESOURCES (2)
+PICKLIST_ROOMS (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+prompt
+
+
+Where used:
+ 
+ Prompt in
+NotesUIWorkspace
+ Constants: Note: These constants are new
+with Release 5. 
+PROMPT_OK (1)
+PROMPT_OKCANCELCOMBO (5)
+PROMPT_OKCANCELEDIT (3)
+PROMPT_OKCANCELEDITCOMBO (6)
+PROMPT_OKCANCELLIST (4)
+PROMPT_OKCANCELLISTMULT (7)
+PROMPT_PASSWORD (10)
+PROMPT_YESNO (2)
+PROMPT_YESNOCANCEL (11)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+register mail owner ACL
+
+
+Where used:
+ 
+ MailOwnerAccess in
+NotesRegistration
+ Constants: Note: These constants are new
+with Release 6. 
+REG_MAIL_OWNER_ACL_DESIGNER (1)
+REG_MAIL_OWNER_ACL_EDITOR (2)
+REG_MAIL_OWNER_ACL_MANAGER (0)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+register mail system
+
+
+Where used:
+ 
+ MailSystem in
+NotesRegistration
+ Constants: Note: These constants are new
+with Release 6. 
+REG_MAILSYSTEM_IMAP (2)
+REG_MAILSYSTEM_INOTES (3)
+REG_MAILSYSTEM_INTERNET (4)
+REG_MAILSYSTEM_NONE (6)
+REG_MAILSYSTEM_NOTES (0)
+REG_MAILSYSTEM_OTHER (5)
+REG_MAILSYSTEM_POP (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+rich text element
+
+
+Where used:
+ 
+FindFirstElement  in
+NotesRichTextNavigator
+ FindLastElement in
+NotesRichTextNavigator
+ FindNextElement in
+NotesRichTextNavigator
+FindNthElement  in
+NotesRichTextNavigator
+GetFirstElement  in
+NotesRichTextNavigator
+GetLastElement  in
+NotesRichTextNavigator
+ GetNextElement in
+NotesRichTextNavigator
+ GetNthElement in
+NotesRichTextNavigator
+ Type in
+NotesRichTextRange
+ Constants: Note: These constants are new
+with Release 6. 
+RTELEM_TYPE_DOCLINK (5)
+RTELEM_TYPE_FILEATTACHMENT (8)
+RTELEM_TYPE_OLE (9)
+RTELEM_TYPE_SECTION (6)
+RTELEM_TYPE_TABLE (1)
+RTELEM_TYPE_TABLECELL (7)
+RTELEM_TYPE_TEXTPARAGRAPH (4)
+RTELEM_TYPE_TEXTRUN (3)
+ The following constants are used only in Type in NotesRichTextRange: 
+RTELEM_TYPE_TEXTPOSITION (10)
+RTELEM_TYPE_TEXTSTRING (11)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+rich text find
+
+
+Where used:
+ 
+ FindAndReplace in
+NotesRichTextRange
+ FindFirstString in
+NotesRichTextNavigator
+FindNextString in
+NotesRichTextNavigator
+ Constants: Note: These constants are new
+with Release 6. 
+RT_FIND_ACCENTINSENSITIVE (4)
+RT_FIND_CASEINSENSITIVE (1)
+RT_FIND_PITCHINSENSITIVE (2)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+rich text replace
+
+
+Where used:
+ 
+ FindAndReplace in
+NotesRichTextRange
+ Constants: Note: These constants are new
+with Release 6. 
+RT_REPL_ALL (16)
+RT_REPL_PRESERVECASE (8)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+roaming cleanup
+
+
+Where used:
+ 
+ RoamingCleanupSetting in
+NotesRegistration
+ Constants: Note: These constants are new
+with Release 6. 
+ROAMING_CLEANUP_AT_SHUTDOWN (2)
+ROAMING_CLEANUP_EVERY_NDAYS (1)
+ROAMING_CLEANUP_NEVER (0)
+ROAMING_CLEANUP_PROMPT (3)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+ruler
+
+
+Where used:
+ 
+ AppendTable in
+NotesRichTextItem
+ FirstLineLeftMargin in
+NotesRichTextParagraphStyle
+ LeftMargin in
+NotesRichTextParagraphStyle
+ RightMargin in
+NotesRichTextParagraphStyle
+ SetTab in
+NotesRichTextParagraphStyle
+ SetTabs in
+NotesRichTextParagraphStyle
+ Position in
+NotesRichTextTab
+ Constants: Note: These constants are new
+with Release 5. 
+RULER_ONE_CENTIMETER (567)
+RULER_ONE_INCH (1440)
+ The unit of measure used by the preceding constants is a
+""twip,"" where one centimeter is 567 twips and one inch is 1440 twips.
+You can apply arithmetic to the constants to obtain other measurements.
+For example, RULER_ONE_CENTIMETER * 2 for two centimeters or RULER_ONE_INCH
+* 0.75 for three-quarters of an inch. 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+search
+
+
+Where used:
+ 
+ GetNextEntity in
+NotesMIMEEntity
+GetPrevEntity  in
+NotesMIMEEntity
+ Constants: Note: These constants are new
+with Release 6. 
+SEARCH_BREADTH (1723)
+SEARCH_DEPTH (1724)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+severity
+
+
+Where used:
+ 
+ LogEvent in
+NotesLog
+ Constants: 
+SEV_FAILURE (2)
+SEV_FATAL (1)
+SEV_NORMAL (5)
+SEV_WARNING1 (3)
+SEV_WARNING2 (4)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+spacing
+
+
+Where used:
+ 
+ InterLineSpacing in
+NotesRichTextParagraphStyle
+ SpacingAbove in
+NotesRichTextParagraphStyle
+ SpacingBelow in
+NotesRichTextParagraphStyle
+ Constants: 
+SPACING_DOUBLE (4)Note: This constant is new with
+Release 5. 
+SPACING_ONE_POINT_25 (1)Note: This constant is new
+with Release 6. 
+SPACING_ONE_POINT_50 (2)Note: This constant is new
+with Release 5. 
+SPACING_ONE_POINT_75 (3)Note: This constant is new
+with Release 6. 
+SPACING_SINGLE (0)Note: This constant is new with
+Release 5. 
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+stream read
+
+
+Where used:
+ 
+ ReadText in
+NotesStream
+ Constants: Note: This constant is new with
+Release 6. 
+STMREAD_LINE (0)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+style no change
+
+
+Where used:
+ 
+ Bold in NotesRichTextStyle
+ Effects in
+NotesRichTextStyle
+ FontSize in
+NotesRichTextStyle
+ Italic in
+NotesRichTextStyle
+ NotesColor in
+NotesRichTextStyle
+ NotesFont in
+NotesRichTextStyle
+ PassThruHTML in
+NotesRichTextStyle
+ Strikethrough in
+NotesRichTextStyle
+ Underline in
+NotesRichTextStyle
+ Constants: Note: This constant is new with
+Release 5. 
+STYLE_NO_CHANGE (255)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+tab
+
+
+Where used:
+ 
+ SetTab in
+NotesRichTextParagraphStyle
+ SetTabs in
+NotesRichTextParagraphStyle
+Type  in
+NotesRichTextTab
+ Constants: Note: These constants are new
+with Release 5. 
+TAB_CENTER (3)
+TAB_DECIMAL (2)
+TAB_LEFT (0)
+TAB_RIGHT (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+table style
+
+
+Where used:
+ 
+ Style in
+NotesRichTextTable
+ Constants: Note: These constants are new
+with Release 6. 
+TABLESTYLE_ALTERNATINGCOLS (4)
+TABLESTYLE_ALTERNATINGROWS (5)
+TABLESTYLE_LEFT (3)
+TABLESTYLE_LEFTTOP (1)
+TABLESTYLE_NONE (0)
+TABLESTYLE_RIGHT (7)
+TABLESTYLE_RIGHTTOP (6)
+TABLESTYLE_SOLID (8)
+TABLESTYLE_TOP (2)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+target
+
+
+Where used:
+ 
+ Target in
+NotesAgent
+ Constants: Note: These constants are new
+with Release 5. 
+TARGET_ALL_DOCS (1)
+TARGET_ALL_DOCS_IN_VIEW (5)
+TARGET_NEW_DOCS (2)
+TARGET_NEW_OR_MODIFIED_DOCS (3)
+TARGET_NONE (0)
+TARGET_RUN_ONCE (8)
+TARGET_SELECTED_DOCS (4)
+TARGET_UNREAD_DOCS_IN_VIEW (6)
+ 
+
+
+
+","
+Target (NotesAgent - LotusScript®)
+
+
+Read-only. Indicates which documents on which this agent
+acts.
+ Note: This property is new with Release 5. 
+ Defined
+in   NotesAgent  
+ Data
+type  Boolean or Constant of type integer 
+ Syntax  To
+get: flagIntegerConstant = notesAgent. Target  
+ Usage  This
+property corresponds to the Target option in the Runtime section of
+the Agent Properties box. The trigger limits the
+target possibilities. The TARGET_NONE targets are the only possibilities
+for their corresponding triggers. 
+ Legal
+values  
+TARGET_ALL_DOCS (1) means ""All documents in database""
+TARGET_ALL_DOCS_IN_VIEW (5) means ""All documents in view""
+TARGET_NEW_DOCS (2) is not used
+TARGET_NEW_OR_MODIFIED_DOCS (3) means ""All new & modified
+documents""
+TARGET_NONE (0) means ""Each incoming mail document,"" ""Newly received
+mail documents,"" ""Newly modified documents,"" or ""Pasted documents""
+TARGET_SELECTED_DOCS (4) means ""All selected documents""
+TARGET_UNREAD_DOCS_IN_VIEW (6) means ""All unread documents in
+view""
+TARGET_RUN_ONCE (8) means ""None""Note: This constant
+is new with Release 5.01. 
+ 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+trigger
+
+
+Where used:
+ 
+ Trigger in
+NotesAgent   
+ Constants: Note: These constants are new
+with Release 5. 
+TRIGGER_AFTER_MAIL_DELIVERY (2)
+TRIGGER_BEFORE_MAIL_DELIVERY (6)
+TRIGGER_DOC_PASTED (3)
+TRIGGER_DOC_UPDATE (5)
+TRIGGER_MANUAL (4)
+TRIGGER_NONE (0)
+TRIGGER_SCHEDULED (1)
+TRIGGER_SERVERSTART (8)
+ 
+
+
+
+","
+Trigger (NotesAgent - LotusScript®)
+
+
+Read-only. Indicates when this agent runs.
+ Note: This property is new with Release 5. 
+ Defined
+in   NotesAgent  
+ Data
+type  Boolean or Constant of type integer 
+ Syntax  To
+get: flagIntegerConstant = notesAgent. Trigger  
+ Usage  This
+property corresponds to the Trigger options in the Runtime section
+of the Agent Properties box. This property determines the target possibilities.
+The TRIGGER_AFTER_MAIL_DELIVERY, TRIGGER_BEFORE_MAIL_DELIVERY, TRIGGER_DOC_PASTED,
+and TRIGGER_DOC_UPDATE triggers have only one target, which returns
+TARGET_NONE. 
+ Legal
+values  For the ""On event"" Trigger option: 
+TRIGGER_AFTER_MAIL_DELIVERY (2) means ""After new mail has arrived""
+TRIGGER_BEFORE_MAIL_DELIVERY (6) means ""Before new mail arrives""
+TRIGGER_DOC_PASTED (3) means ""When documents are pasted""
+TRIGGER_DOC_UPDATE (5) means ""After documents are created or modified""
+TRIGGER_MANUAL (4) means ""Action menu selection"" or ""Agent list
+selection""
+TRIGGER_SERVERSTART (8) means ""When the Domino® server starts""
+TRIGGER_NONE (0) is not used
+ For the ""On schedule"" Trigger option: 
+TRIGGER_SCHEDULED (1) means ""More than once a day,"" ""Daily,"" ""Weekly,""
+""Monthly,"" or ""Never""
+ 
+   Example   
+
+
+
+",
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+validate
+
+
+Where used:
+ 
+ InputValidationOption in NotesDOMParser
+ InputValidationOption in NotesDXLImporter
+ InputValidationOption in NotesSAXParser
+ InputValidationOption in
+NotesXSLTransformer
+ Constants: Note: These constants are new
+with Release 6. 
+VALIDATE_ALWAYS (0)
+VALIDATE_AUTO (1)
+VALIDATE_NEVER (2)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column align
+
+
+Where used:
+ 
+ Alignment in
+NotesViewColumn
+ HeaderAlignment in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_ALIGN_CENTER (2)
+VC_ALIGN_LEFT (0)
+VC_ALIGN_RIGHT (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column attribute
+
+
+Where used:
+ 
+ NumberAttrib in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_ATTR_PARENS (2)
+VC_ATTR_PERCENT (4)
+VC_ATTR_PUNCTUATED (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column date format
+
+
+Where used:
+ 
+ DateFmt in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_MD (2)
+VC_FMT_YM (3)
+VC_FMT_YMD (0)
+VC_FMT_Y4M (6)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column font
+
+
+Where used:
+ 
+ FontStyle in
+NotesViewColumn
+ HeaderFontStyle in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FONT_BOLD (1)
+VC_FONT_ITALIC (2)
+VC_FONT_PLAIN (0)
+VC_FONT_STRIKEOUT (8)
+VC_FONT_STRIKETHROUGH (8)
+VC_FONT_UNDERLINE (4)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column number format
+
+
+Where used:
+ 
+ NumberFormat in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_CURRENCY (3)
+VC_FMT_FIXED (1)
+VC_FMT_GENERAL (0)
+VC_FMT_SCIENTIFIC (2)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column separator
+
+
+Where used:
+ 
+ ListSep in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_SEP_COMMA (2)
+VC_SEP_NEWLINE (4)
+VC_SEP_NONE (0)Note: This constant is new with Release
+6 
+VC_SEP_SEMICOLON (3)
+VC_SEP_SPACE (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column time date format
+
+
+Where used:
+ 
+ TimeDateFmt in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_DATE (0)
+VC_FMT_DATETIME (2)
+VC_FMT_TIME (1)
+VC_FMT_TODAYTIME (3)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column time format
+
+
+Where used:
+ 
+ TimeFmt in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_ALL (3)
+VC_FMT_H (2)
+VC_FMT_HM (0)
+VC_FMT_HMS (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view column time zone format
+
+
+Where used:
+ 
+ TimeZoneFmt in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_ALWAYS (2)
+VC_FMT_NEVER (0)
+VC_FMT_SOMETIMES (1)
+ 
+
+
+
+",,
+"
+Button (LotusScript®)
+
+
+Represents an action, action hotspot, or button on a form
+or document.
+ Note: This class is not supported in COM. 
+Events   Click   ObjectExecute  
+Access  To
+access an action, action hotspot, or button, write a script that responds
+to one of its events. A Button object has no properties or methods. 
+ Usage  The
+Button, Field, and Navigator classes provide entry points to scripts
+from the Notes® UI. So do NotesTimer,
+NotesUIDatabase, NotesUIDocument, and NotesUIView.    
+
+
+
+","
+ObjectExecute (Button class - LotusScript®)
+
+
+Occurs when an action, button, or hotspot is activated
+by an OLE2 server that is FX/Notesflow enabled.
+
+ Defined
+in   Button class  
+ Syntax   ObjectExecute(Source
+As Button, Data As Variant)  
+ Parameters   Source  Button.
+Read-only.  Data  Variant. Handle to the OLE2
+server Dispatch/Automation interface. 
+ Usage  When
+you create a script that responds to this event, Domino® creates the syntax of the event for
+you (including the parameter). You do not need to type it in.  See
+""Using OLE
+custom controls"" example for creating a form action that executes
+when an embedded OLE custom control (a spreadsheet) detects a mouse
+click. 
+
+
+
+","
+LotusScript® constants:
+view spacing
+
+
+Where used:
+ 
+ Spacing in
+NotesView
+ Constants: 
+VW_SPACING_DOUBLE (4)
+VW_SPACING_ONE_POINT_25 (1)
+VW_SPACING_ONE_POINT_50 (2)
+VW_SPACING_ONE_POINT_75 (3)
+VW_SPACING_SINGLE (0)
+ 
+
+
+
+",,"Properties and methods with ECL security
+
+The following tables list the properties and methods affected by an Execution Control List (ECL). These properties cannot be accessed or set, and these methods do not execute on the workstation, unless the marked ECL privileges are granted to the signer of the formula.
+
+The ECL flags listed in the following tables below are:
+
+Access to current file system (file)
+Access to current database (cur)
+Access to environment variables (env)
+Access to external programs (prog)
+Ability to send mail (mail)
+Ability to read other databases (read)
+Ability to modify other databases (mod)
+
+NotesACL
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+CreateACLEntry
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+DeleteRole
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+GetEntry
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+GetFirstEntry
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+GetNextEntry
+
+						
+
+x
+
+	
+
+
+RenameRole
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+Save
+
+		
+
+x
+
+				
+
+x
+
+	
+
+x
+
+NotesACLEntry
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+DisableRole
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+EnableRole
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+IsRoleEnabled
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+New
+
+		
+
+x
+
+				
+
+x
+
+	
+
+
+Remove
+
+		
+
+x
+
+				
+
+x
+
+	
+
+NotesAgent
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+New
+
+						
+
+x
+
+	
+
+
+Remove
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Run
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+RunOnServer
+
+							
+
+x
+
+NotesDatabase
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+Categories (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Close
+
+						
+
+x
+
+	
+
+
+Create
+
+							
+
+x
+
+
+
+
+CreateCopy
+
+							
+
+x
+
+
+
+
+CreateDocument
+
+						
+
+x
+
+	
+
+
+CreateFromTemplate
+
+							
+
+x
+
+
+
+
+CreateReplica
+
+							
+
+x
+
+
+
+
+DelayUpdates (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+FTSearch
+
+						
+
+x
+
+	
+
+
+GetAgent
+
+						
+
+x
+
+	
+
+
+GetDocumentByID
+
+						
+
+x
+
+	
+
+
+GetDocumentByUNID
+
+						
+
+x
+
+	
+
+
+GetDocumentByURL
+
+						
+
+x
+
+	
+
+
+GetForm
+
+						
+
+x
+
+	
+
+
+GetProfileDocument
+
+						
+
+x
+
+	
+
+
+GetURLHeader
+
+						
+
+x
+
+	
+
+
+GetView
+
+						
+
+x
+
+	
+
+
+GrantAccess
+
+						
+
+x
+
+	
+
+
+OpenByReplicaID
+
+						
+
+x
+
+	
+
+
+OpenURLDb
+
+						
+
+x
+
+	
+
+
+OpenWithFailover
+
+						
+
+x
+
+	
+
+
+QueryAccess
+
+						
+
+x
+
+	
+
+
+Remove
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Replicate
+
+						
+
+x
+
+	
+
+
+RevokeAccess
+
+						
+
+x
+
+	
+
+
+Search
+
+						
+
+x
+
+	
+
+
+SizeQuota (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Title (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+UnprocessedFTSearch
+
+						
+
+x
+
+	
+
+
+UpdateFTIndex
+
+						
+
+x
+
+	
+
+NotesDocument
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+AppendItemValue
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+ComputeWithForm
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+ConvertToMIME
+
+		
+
+x
+
+					
+
+
+CopyAllItems
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+CopyItem
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+CopyToDatabase
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+CreateReplyMessage
+
+		
+
+x
+
+			
+
+x
+
+		
+
+x
+
+
+
+
+CreateRTItem
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Encrypt
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+EncryptionKeys (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+MakeResponse
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+New (if new note is created)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+PutInFolder
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Remove
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+RemoveFromFolder
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+RemoveItem
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+RenderToRTItem
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+ReplaceItemValue
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Save
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Send
+
+		
+
+x
+
+			
+
+x
+
+		
+
+x
+
+
+
+
+Sign
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+UniversalID (set)
+
+		
+
+x
+
+					
+
+x
+
+NotesDocumentCollection
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+FTSearch
+
+						
+
+x*
+
+	
+
+
+GetFirstDocument
+
+						
+
+x*
+
+	
+
+
+GetLastDocument
+
+						
+
+x*
+
+	
+
+
+GetNextDocument
+
+						
+
+x*
+
+	
+
+
+GetNthDocument
+
+						
+
+x*
+
+	
+
+
+GetPrevDocument
+
+						
+
+x*
+
+	
+
+
+PutAllInFolder
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+RemoveAll
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+RemoveAllFromFolder
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+StampAll
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+UpdateAll
+
+		
+
+x
+
+					
+
+* For the previously specified methods in the NotesDocumentCollection class, once you give access to read a database, it implies access to elements within the database. It does not explicitly check for ECL privileges.
+
+NotesEmbeddedObject
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+ExtractFile
+
+	
+
+x
+
+						
+
+
+New
+
+				
+
+x
+
+			
+
+
+Remove
+
+		
+
+x
+
+					
+
+NotesForm
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+FormUsers (set)
+
+		
+
+x
+
+					
+
+
+ProtectReaders (set)
+
+		
+
+x
+
+					
+
+
+ProtectUsers (set)
+
+		
+
+x
+
+					
+
+
+Readers (set)
+
+		
+
+x
+
+					
+
+
+Remove
+
+		
+
+x
+
+					
+
+NotesItem
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+Abstract
+
+						
+
+x*
+
+	
+
+
+AppendToTextList
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Contains
+
+						
+
+x*
+
+	
+
+
+CopyToDocument
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+DateTimeValue (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+IsAuthors (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+IsEncrypted (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+IsNames (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+IsProtected (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+IsReaders (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+IsSigned (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+IsSummary (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+New
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Remove
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+SaveToDisk (set)
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+Values (set)
+
+		
+
+x
+
+					
+
+x
+
+* For the Abstract and Contains methods in the NotesItem class, once you give access to read a database, it implies access to elements within the database. It does not explicitly check for ECL privileges.
+
+NotesLog
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+Close
+
+					
+
+x
+
+		
+
+
+LogAction (to database)
+
+							
+
+x
+
+
+
+
+LogAction (to file)
+
+	
+
+x
+
+						
+
+
+LogAction (to mail message)
+
+					
+
+x
+
+		
+
+x
+
+
+
+
+LogAction (to agent)
+
+							
+
+x
+
+
+
+
+LogError (to database)
+
+							
+
+x
+
+
+
+
+LogError (to file)
+
+	
+
+x
+
+						
+
+
+LogError (to mail message)
+
+					
+
+x
+
+		
+
+x
+
+
+
+
+LogError (to agent)
+
+							
+
+x
+
+
+
+
+OpenFileLog
+
+	
+
+x
+
+						
+
+NotesNewsletter
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+FmtMsgWithDoclinks
+
+							
+
+x
+
+
+
+
+FormatDocument
+
+							
+
+x
+
+NotesRichTextItem
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+AddNewLine
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+AddTab
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+AppendDocLink
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+AppendRTItem
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+AppendText
+
+		
+
+x
+
+					
+
+x
+
+
+
+
+EmbedObject (file)
+
+	
+
+x
+
+	
+
+x
+
+					
+
+x
+
+
+
+
+EmbedObject (OLE)
+
+	
+
+x
+
+	
+
+x
+
+		
+
+x
+
+			
+
+x
+
+
+
+
+GetEmbeddedObject(OLE)
+
+				
+
+x
+
+			
+
+
+New
+
+		
+
+x
+
+					
+
+x
+
+NotesSession
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+FreeTimeSearch
+
+						
+
+x
+
+	
+
+
+GetDatabase
+
+						
+
+x
+
+	
+
+
+GetEnvironmentString
+
+			
+
+x
+
+				
+
+
+GetEnvironmentValue
+
+			
+
+x
+
+				
+
+
+SetEnvironmentVar
+
+			
+
+x
+
+				
+
+
+UpdateProcessedDoc
+
+							
+
+x
+
+NotesUIDocument
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+Categorize
+
+		
+
+x
+
+					
+
+
+Clear
+
+		
+
+x
+
+					
+
+
+CreateObject
+
+				
+
+x
+
+			
+
+
+Cut
+
+		
+
+x
+
+					
+
+
+DeleteDocument
+
+		
+
+x
+
+					
+
+
+FieldAppendText
+
+		
+
+x
+
+					
+
+
+FieldClear
+
+		
+
+x
+
+					
+
+
+FieldSetText
+
+		
+
+x
+
+					
+
+
+GetObject
+
+				
+
+x
+
+			
+
+
+Paste
+
+		
+
+x
+
+					
+
+
+Save
+
+		
+
+x
+
+					
+
+
+SaveNewVersion
+
+		
+
+x
+
+					
+
+
+Send
+
+					
+
+x
+
+		
+
+NotesUIWorkspace
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+OpenDatabase
+
+		
+
+x
+
+					
+
+NotesView
+
+	
+
+file
+
+	
+
+cur
+
+	
+
+env
+
+	
+
+prog
+
+	
+
+mail
+
+	
+
+read
+
+	
+
+mod
+
+
+
+
+Aliases
+
+						
+
+x*
+
+	
+
+
+AutoUpdate
+
+		
+
+x
+
+				
+
+x*
+
+	
+
+x
+
+
+
+
+Columns
+
+						
+
+x*
+
+	
+
+
+Created
+
+						
+
+x*
+
+	
+
+
+FTSearch
+
+						
+
+x*
+
+	
+
+
+GetAllDocumentsByKey
+
+						
+
+x*
+
+	
+
+
+GetChild
+
+						
+
+x*
+
+	
+
+
+GetDocumentByKey
+
+						
+
+x*
+
+	
+
+
+GetFirstDocument
+
+						
+
+x*
+
+	
+
+
+GetLastDocument
+
+						
+
+x*
+
+	
+
+
+GetNextDocument
+
+						
+
+x*
+
+	
+
+
+GetNextSibling
+
+						
+
+x*
+
+	
+
+
+GetNthDocument
+
+						
+
+x*
+
+	
+
+
+GetParentDocument
+
+						
+
+x*
+
+	
+
+
+GetPrevDocument
+
+						
+
+x*
+
+	
+
+
+GetPrevSibling
+
+						
+
+x*
+
+	
+
+
+IsCalendar
+
+						
+
+x*
+
+	
+
+
+IsDefaultView
+
+						
+
+x*
+
+	
+
+
+IsFolder
+
+						
+
+x*
+
+	
+
+
+LastModified
+
+						
+
+x*
+
+	
+
+
+Name
+
+						
+
+x*
+
+	
+
+
+Parent
+
+						
+
+x*
+
+	
+
+
+ProtectReaders
+
+		
+
+x
+
+				
+
+x*
+
+	
+
+x
+
+
+
+
+Readers
+
+						
+
+x*
+
+	
+
+x
+
+
+
+
+Refresh
+
+						
+
+x*
+
+	
+
+
+Remove
+
+		
+
+x
+
+				
+
+x*
+
+	
+
+x
+
+
+
+
+UniversalID
+
+						
+
+x*
+
+	
+
+* For all the properties and methods in the NotesView class, once you give access to read a database, it implies access to elements within the database. It does not explicitly check for ECL privileges."

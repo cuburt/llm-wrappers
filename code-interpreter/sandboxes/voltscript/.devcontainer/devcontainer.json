@@ -1,0 +1,15 @@
+{
+    "name": "voltscript-sandbox",
+    "image": "hclcr.io/voltmxgo-ea/voltscript-devcontainer:1.0.0",
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+            "extensions": [
+                "/tmp/vscode-voltscript.vsix",
+                "/tmp/vscode-voltscript-archipelago.vsix"
+            ]
+        }
+    }
+}
+
