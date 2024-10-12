@@ -1,0 +1,1 @@
+"Provide a summary with about two sentences for the following article: {query}"
