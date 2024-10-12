@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatbot
+
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatbot-app
+  template:
+    metadata:
+      labels:
+        app: chatbot-app
+    spec:
+      containers:
+        - name: chatbot-app-container
+          image: us-east4-docker.pkg.dev/hclsw-gcp-xai/img-repo/chatbot:0.3.1
+          resources:
+            requests:
+              memory: 16Gi
+              ephemeral-storage: 20Gi
+            limits:
+              memory: 32Gi
+              ephemeral-storage: 20Gi
