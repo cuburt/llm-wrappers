@@ -19,7 +19,6 @@
 - run /bin/sh build_local.sh
 - supported sandboxes are: python:3.10, javascript, and voltscript. Change the URL parameters accordingly
 - to test, run curl -X POST -H "Content-Type: application/json" -d '{"query": "Print \"Hej!\""}' http://127.0.0.1:8081/sandboxes/voltscript
-- you can access the deployed version at: http://34.145.156.214/sandboxes/voltscript
 
 ### To deploy dind conatiner (sandbox) in K8s (GKE):
 - go to xai/textanalytics/code_interpreter/sandboxes folder

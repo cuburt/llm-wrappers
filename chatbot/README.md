@@ -30,6 +30,3 @@
             "enable_rag": false,
             "query": "Translate this python code to javascript: print('hello world')"
         }
-
-### Note:
-**vectorstores** and **datasets** are located at: https://drive.google.com/drive/folders/1dSZ7GQ9Zv4dFZ4CkZhZS4FlxkXvyyWGZ?usp=drive_link
