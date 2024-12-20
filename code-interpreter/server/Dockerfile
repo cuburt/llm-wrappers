@@ -1,5 +1,4 @@
 FROM python:3.10
-# FROM us-east4-docker.pkg.dev/hclsw-gcp-xai/img-repo/base-image:llm-base0.1
 
 RUN mkdir /data
 RUN mkdir /server

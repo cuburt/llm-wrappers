@@ -13,6 +13,7 @@
   - /models/gemini/tasks/sentiment-analysis:predict
   - /models/gemini/tasks/keyphrase-extraction:predict
   - /models/gemini/tasks/summariser:predict
+  
 ### To build and run with docker locally:
 - (flask server) go to flask-server folder
 - (go server) go to go-server folder

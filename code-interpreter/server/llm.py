@@ -1,7 +1,6 @@
 from typing import Any, List, Mapping, Optional, Dict
 import json
-import subprocess
-import platform
+import os
 import requests
 from langchain.callbacks.manager import CallbackManagerForLLMRun
 from langchain.llms.base import LLM
@@ -10,19 +9,11 @@ from langchain.llms.base import LLM
 class LLMRequest:
     def __call__(self, model_id:str, data:Dict):
         region = "us-central1"
-        api_endpoint = f"{region}-aiplatform.googleapis.com"
-        project_id = "hclsw-gcp-xai"
         assert model_id in ["codechat-bison-32k", "gemini-pro", "text-bison", "multimodalembedding@001"], f"Sorry {model_id} is not currently supported."
 
-        cmd = ['/bin/bash', 'access_token.sh']
-        if platform.system() == 'Windows':
-            cmd = ['C:/Program Files/Git/bin/bash.exe', 'access_token.sh']
-
-        access_token = subprocess.run(cmd, capture_output=True, text=True)
-        assert not access_token.stderr and access_token.stdout, access_token.stderr
-
-        headers = {"Authorization": f"Bearer {access_token.stdout}", "Content-Type": "application/json"}
-        url = f"https://{api_endpoint}/v1/projects/{project_id}/locations/{region}/publishers/google/models/{model_id}:{'streamGenerateContent' if model_id=='gemini-pro' else 'predict'}"
+        access_token = os.getenv("GEMINI_APIKEY")
+        url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent?key={access_token}"
+        headers = {"Content-Type": "application/json"}
         response = requests.post(url=url, headers=headers, data=json.dumps(data)).json()
 
         return response

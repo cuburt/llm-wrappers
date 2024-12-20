@@ -1,27 +1,23 @@
 # Code Interpreter
-### Code Assistant for Volt IQ and Code Copilot/LotusScript-VoltScript conversion Domino.
 
 ### To run inference pipeline locally:
-- go to xai/textanalytics/code_interpreter/server folder
+- go to code_interpreter/server folder
 - run pip install -r requirements
 - run python server.py 
 - or run uvicorn server:server --reload --port 8080 
 - you can now access the following routes in localhost:8080 once server initialization is finished:
-  - /domino/copilot/models/codey:instruct
-  - /domino/copilot/models/codey:translate
-  - /domino/copilot/models/codey:annotate
-  - /voltiq/copilot/models/palm:instruct
-  - /voltiq/copilot/models/palm:translate
-  - /voltiq/copilot/models/palm:annotate
-
+  - /copilot/models/codey:instruct
+  - /copilot/models/codey:translate
+  - /copilot/models/codey:annotate
+  
 ### To build and run sandbox locally in a linux machine:
-- go to xai/textanalytics/code_interpreter/sandboxes folder
+- go to code_interpreter/sandboxes folder
 - run /bin/sh build_local.sh
 - supported sandboxes are: python:3.10, javascript, and voltscript. Change the URL parameters accordingly
 - to test, run curl -X POST -H "Content-Type: application/json" -d '{"query": "Print \"Hej!\""}' http://127.0.0.1:8081/sandboxes/voltscript
 
 ### To deploy dind conatiner (sandbox) in K8s (GKE):
-- go to xai/textanalytics/code_interpreter/sandboxes folder
+- go to code_interpreter/sandboxes folder
 - run /bin/sh deploy_k8s.sh
 
 ### Input payload structure for inference pipeline:

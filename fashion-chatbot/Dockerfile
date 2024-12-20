@@ -1,5 +1,4 @@
-FROM us-east4-docker.pkg.dev/hclsw-gcp-xai/img-repo/base-image:torch-cuda1.13.0
-# FROM python:3.8
+FROM --platform=linux/amd64 python:3.10
 
 # Set the working directory to /app
 RUN mkdir /app

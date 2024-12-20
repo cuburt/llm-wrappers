@@ -16,33 +16,19 @@ PROJECT_ROOT_DIR = str(Path(__file__).parent)
 class GoogleRequest:
     def __call__(self, model_id: str, data: Dict):
         try:
-            google_stream_models = ["gemini-1.0-pro-002", "gemini-1.5-pro-001", "gemini-1.5-flash-001"]
-            google_models = ["codechat-bison-32k", "text-bison"]
-            google_models.extend(google_stream_models)
+            google_models = ["gemini-1.5-pro", "gemini-1.5-flash", "gemma-2-27b-it"]
             if model_id not in google_models:
                 return f"Sorry {model_id} is not currently supported."
-
-            region = "us-central1"
-            api_endpoint = f"{region}-aiplatform.googleapis.com"
-            project_id = "hclsw-gcp-xai"
-            url = f"https://{api_endpoint}/v1/projects/{project_id}/locations/{region}/publishers/google/models/{model_id}:{'streamGenerateContent' if model_id in google_stream_models else 'predict'}"
-            shellscript_file_path = os.path.join(PROJECT_ROOT_DIR, "access_token.sh")
-            bashscript_file_path = os.path.join(PROJECT_ROOT_DIR, "access_token.bash")
-            if platform.system() == 'Windows':
-                cmd = ['C:/Program Files/Git/bin/bash.exe', bashscript_file_path]
-            else:
-                cmd = ['/bin/sh', shellscript_file_path]
-            p_res = subprocess.run(cmd, capture_output=True, text=True)
-            if not p_res.stdout and p_res.stderr:
-                return p_res.stderr
-            access_token = p_res.stdout
-
-            headers = {"Authorization": f"Bearer {access_token}", "Content-Type": "application/json"}
+            access_token = os.getenv("GEMINI_APIKEY")
+            if not access_token:
+                return "Error 401: No Google API-KEY saved."
+            url = f"https://generativelanguage.googleapis.com/v1beta/models/{model_id}:generateContent?key={access_token}"
+            headers = {"Content-Type": "application/json"}
             response = requests.post(url=url, headers=headers, data=json.dumps(data)).json()
             return response
 
         except Exception as e:
-            logging.error(str(e))
+            logger.error(str(e))
 
 class OpenAIRequest:
     def __call__(self, model_id: str, data: Dict):
