@@ -1,0 +1,13 @@
+pandas
+Pillow
+tqdm
+uvicorn[standard]
+faiss-cpu
+langchain-experimental==0.0.61
+langchain==0.2.5
+langchain-community==0.2.5
+langchain-text-splitters
+transformers
+datasets
+open_clip_torch
+streamlit==1.35.0

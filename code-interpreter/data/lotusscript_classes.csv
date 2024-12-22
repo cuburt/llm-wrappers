@@ -1,0 +1,1559 @@
+﻿Text
+"
+LotusScript® constants:
+ACL level
+
+
+Where used:
+ 
+ CreateACLEntry in
+NotesACL
+ InternetLevel in
+NotesACL
+ NotesACLEntry 
+ CurrentAccessLevel in
+NotesDatabase
+ Level in NotesACLEntry
+ GrantAccess in
+NotesDatabase
+ QueryAccess in
+NotesDatabase
+ Constants: 
+ACLLEVEL_AUTHOR (3)
+ACLLEVEL_DEPOSITOR (1)
+ACLLEVEL_DESIGNER (5)
+ACLLEVEL_EDITOR (4)
+ACLLEVEL_MANAGER (6)
+ACLLEVEL_NOACCESS (0)
+ACLLEVEL_READER (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+ACL type
+
+
+Where used:
+ 
+ UserType in
+NotesACLEntry
+ Constants: 
+ACLTYPE_MIXED_GROUP (3)
+ACLTYPE_PERSON (1)
+ACLTYPE_PERSON_GROUP (4)
+ACLTYPE_SERVER (2)
+ACLTYPE_SERVER_GROUP (5)
+ACLTYPE_UNSPECIFIED (0)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+align
+
+
+Where used:
+ 
+ Alignment in
+NotesRichTextParagraphStyle
+ Constants: 
+ALIGN_CENTER (3)
+ALIGN_FULL (2)
+ALIGN_LEFT (0)
+ALIGN_NOWRAP (4)
+ALIGN_RIGHT (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+compact
+
+
+Where used:
+ 
+ CompactWithOptions in
+NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+CMPC_ARCHIVE_DELETE_COMPACT (1)
+CMPC_ARCHIVE_DELETE_ONLY (2)
+CMPC_CHK_OVERLAP (32768)
+CMPC_COPYSTYLE (16)
+CMPC_DISABLE_DOCTBLBIT_OPTMZN (128)
+CMPC_DISABLE_LARGE_UNKTBL (4096)
+CMPC_DISABLE_RESPONSE_INFO (512)
+CMPC_DISABLE_TRANSACTIONLOGGING (262144)
+CMPC_DISABLE_UNREAD_MARKS (1048576)
+CMPC_DISCARD_VIEW_INDICES (32)
+CMPC_ENABLE_DOCTBLBIT_OPTMZN (64)
+CMPC_ENABLE_LARGE_UNKTBL (2048)
+CMPC_ENABLE_RESPONSE_INFO (256)
+CMPC_ENABLE_TRANSACTIONLOGGING (131072)
+CMPC_ENABLE_UNREAD_MARKS (524288)
+CMPC_IGNORE_COPYSTYLE_ERRORS (1024)
+CMPC_MAX_4GB (16384)
+CMPC_NO_LOCKOUT (8192)
+CMPC_RECOVER_INPLACE (8)
+CMPC_RECOVER_REDUCE_INPLACE (4)
+CMPC_REVERT_FILEFORMAT (65536)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+convert rich text
+
+
+Where used:
+ 
+ConvertToMime in
+NotesDocument
+ Constants: 
+CONVERT_RT_TO_HTML (2)
+CONVERT_RT_TO_PLAINTEXT (1)
+CONVERT_RT_TO_PLAINTEXT_AND_HTML (3)
+ 
+
+
+"
+"
+LotusScript® constants:
+color
+
+
+Where used:
+ 
+ NotesColorObject 
+ NotesColor in
+NotesRichTextStyle
+ BackgroundColor in
+NotesView
+ FontColor in
+NotesViewColumn
+ HeaderFontColor in
+NotesViewColumn
+ Constants: 
+COLOR_BLACK (0)
+COLOR_BLUE (4)
+COLOR_CYAN (7)
+COLOR_DARK_BLUE (10)
+COLOR_DARK_CYAN (13)
+COLOR_DARK_GREEN (9)
+COLOR_DARK_MAGENTA (11)
+COLOR_DARK_RED (8)
+COLOR_DARK_YELLOW (12)
+COLOR_GRAY (14)
+COLOR_GREEN (3)
+COLOR_LIGHT_GRAY (15)
+COLOR_MAGENTA (5)
+COLOR_RED (2)
+COLOR_WHITE (1)
+COLOR_YELLOW (6)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+database access privileges
+
+
+    Where
+used: 
+ QueryAccessPrivileges in
+NotesDbDirectory
+ Constants: 
+DBACL_CREATE_DOCUMENTS (1)
+DBACL_DELETE_DOCUMENTS (2)
+DBACL_CREATE_PRIV_AGENTS (4)
+DBACL_CREATE_PRIV_FOLDERS_VIEWS (8)
+DBACL_CREATE_SHARED_FOLDERS_VIEWS (16)
+DBACL_CREATE_SCRIPT_AGENTS (32)
+DBACL_READ_PUBLIC_DOCUMENTS (64)
+DBACL_WRITE_PUBLIC_DOCUMENTS (128)
+DBACL_REPLICATE_COPY_DOCUMENTS (256)
+ 
+
+
+"
+"
+LotusScript® constants:
+database directory
+
+
+Where used:
+ 
+ GetFirstDatabase in
+NotesDbDirectory
+ Constants: 
+DATABASE (1247)
+REPLICA_CANDIDATE (1245)
+TEMPLATE  (1248)
+TEMPLATE_CANDIDATE (1246)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+database option
+
+
+Where used:
+ 
+ GetOption in NotesDatabase
+ SetOption in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+DBOPT_LZCOMPRESSION (65)
+DBOPT_MAINTAINLASTACCESSED (44)
+DBOPT_MOREFIELDS (54)
+DBOPT_NOHEADLINEMONITORS (46)
+DBOPT_NOOVERWRITE (36)
+DBOPT_NORESPONSEINFO (38)
+DBOPT_NOTRANSACTIONLOGGING (45)
+DBOPT_NOUNREAD (37)
+DBOPT_OPTIMIZATION (41)
+DBOPT_REPLICATEUNREADMARKSTOANY (71)   Note: This option is new with Release 6.5. 
+DBOPT_REPLICATEUNREADMARKSTOCLUSTER (70)Note: This
+option is new with Release 6.5. 
+DBOPT_SOFTDELETE (49)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+database modified documents
+
+
+       Where
+used: 
+ GetModifiedDocuments in
+NotesDatabase
+ Constants: Note: These constants are new
+with Release 7. 
+DBMOD_DOC_ACL (64)
+DBMOD_DOC_AGENT (512)
+DBMOD_DOC_ALL (32767)
+DBMOD_DOC_DATA (1)
+DBMOD_DOC_FORM (4)
+DBMOD_DOC_HELP (256)
+DBMOD_DOC_ICON (16)
+DBMOD_DOC_REPLFORMULA (2048)
+DBMOD_DOC_SHAREDFIELD (1024)
+DBMOD_DOC_VIEW (8)
+ 
+
+
+"
+"
+LotusScript® constants:
+database replication priority
+
+
+Where used:
+ 
+Priority in
+NotesReplication
+ Constants: 
+DB_REPLICATION_PRIORITY_HIGH (1549)
+DB_REPLICATION_PRIORITY_LOW (1547)
+DB_REPLICATION_PRIORITY_MED (1548)
+DB_REPLICATION_PRIORITY_NOTSET (1565)Note: This constant
+is obsolete in Release 5.0.1 
+ 
+
+
+
+"
+"
+LotusScript® constants:
+database sign
+
+
+Where used:
+ 
+ Sign in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+DBSIGN_DOC_ACL (64)
+DBSIGN_DOC_AGENT (512)
+DBSIGN_DOC_ALL (32767)
+DBSIGN_DOC_DATA (1)
+DBSIGN_DOC_FORM (4)
+DBSIGN_DOC_HELP (256)
+DBSIGN_DOC_ICON (16)
+DBSIGN_DOC_REPLFORMULA (2048)
+DBSIGN_DOC_SHAREDFIELD (1024)
+DBSIGN_DOC_VIEW (8)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+database type
+
+
+Where used:
+ 
+ Type in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+DBTYPE_ADDR_BOOK (10)
+DBTYPE_IMAP_SVR_PROXY (6)
+DBTYPE_LIBRARY (12)
+DBTYPE_LIGHT_ADDR_BOOK (9)
+DBTYPE_MAILBOX (3)
+DBTYPE_MAILFILE (2)
+DBTYPE_MULTIDB_SRCH (8)
+DBTYPE_NEWS_SVR_PROXY (5)
+DBTYPE_PERS_JOURNAL (11)
+DBTYPE_PORTFOLIO (7)
+DBTYPE_STANDARD (13)
+DBTYPE_SUBSCRIPTIONS (4)
+DBTYPE_WEB_APP (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+DOM node type
+
+
+Where used:
+ 
+ NodeType in
+NotesDOMNode
+ Constants: Note: These constants are new
+with Release 6. 
+DOMNODETYPE_ATTRIBUTE_NODE (2)
+DOMNODETYPE_CDATASECTION_NODE (4)
+DOMNODETYPE_COMMENT_NODE (8)
+DOMNODETYPE_DOCUMENT_NODE (9)
+DOMNODETYPE_DOCUMENTFRAGMENT_NODE (11)
+DOMNODETYPE_DOCUMENTTYPE_NODE (10)
+DOMNODETYPE_ELEMENT_NODE (1)
+DOMNODETYPE_ENTITY_NODE (6)
+DOMNODETYPE_ENTITYREFERENCE_NODE (5)
+DOMNODETYPE_NOTATION_NODE (12)
+DOMNODETYPE_PROCESSINGINSTRUCTION_NODE (7)
+DOMNODETYPE_TEXT_NODE (3)
+DOMNODETYPE_UNKNOWN_NODE (0)
+DOMNODETYPE_XMLDECL_NODE (13)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+DXL import option
+
+
+Where used:
+ 
+ ACLImportOption in
+NotesDXLImporter   
+ DesignImportOption in
+NotesDXLImporter
+ DocumentImportOption in
+NotesDXLImporter
+ Constants: Note: These constants are new
+with Release 6. 
+DXLIMPORTOPTION_CREATE (1)
+DXLIMPORTOPTION_IGNORE (2)
+DXLIMPORTOPTION_REPLACE_ELSE_IGNORE (5)
+DXLIMPORTOPTION_REPLACE_ELSE_CREATE (6)
+DXLIMPORTOPTION_UPDATE_ELSE_IGNORE (9)
+DXLIMPORTOPTION_UPDATE_ELSE_CREATE (10)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+DXL log option
+
+
+    Where
+used: 
+UnknownTokenLogOption in NotesDXLImporter
+ Constants: Note: These constants are new
+with Release 6. 
+DXLLOGOPTION_ERROR (3)
+DXLLOGOPTION_FATALERROR (4)
+DXLLOGOPTION_IGNORE (1)
+DXLLOGOPTION_WARNING (2)
+ 
+
+
+"
+"
+LotusScript® constants:
+effects
+
+
+Where used:
+ 
+ Effects in
+NotesRichTextStyle
+ Constants: 
+EFFECTS_EMBOSS (4)
+EFFECTS_EXTRUDE (5)
+EFFECTS_NONE (0)
+EFFECTS_SHADOW (3)
+EFFECTS_SUBSCRIPT (2)
+EFFECTS_SUPERSCRIPT (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+embedded object type
+
+
+Where used:
+ 
+ Type in
+NotesEmbeddedObject
+ EmbedObject in
+NotesRichTextItem
+ Constants: 
+EMBED_ATTACHMENT (1454)
+EMBED_OBJECT (1453)
+EMBED_OBJECTLINK (1452)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+encoding
+
+
+Where used:
+ 
+ Encoding in
+NotesMIMEEntity
+ EncodeContent in
+NotesMIMEEntity
+ SetContentFromBytes in
+NotesMIMEEntity
+ SetContentFromText in
+NotesMIMEEntity
+ Constants: Note: These constants are new
+with Release 6. 
+ENC_BASE64 (1727)
+ENC_EXTENSION (1731)
+ENC_IDENTITY_7BIT (1728)
+ENC_IDENTITY_8BIT (1729)
+ENC_IDENTITY_BINARY (1730)
+ENC_NONE (1725)
+ENC_QUOTED_PRINTABLE (1726)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+event
+
+
+Where used:
+ 
+ LogEvent in
+NotesLog
+ Constants: 
+EV_ALARM (8)
+EV_COMM (1)
+EV_MAIL (3)
+EV_MISC (6)
+EV_REPLICA (4)
+EV_RESOURCE (5)
+EV_SECURITY (2)
+EV_SERVER (7)
+EV_UNKNOWN (0)
+EV_UPDATE (9)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+fixup
+
+
+Where used:
+ 
+ Fixup in NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+FIXUP_INCREMENTAL (4)
+FIXUP_NODELETE (16)
+FIXUP_NOVIEWS (64)
+FIXUP_QUICK (2)
+FIXUP_REVERT (32)
+FIXUP_TXLOGGED (8)
+FIXUP_VERIFY (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+font
+
+
+Where used:
+ 
+ NotesFont in
+NotesRichTextStyle
+ Constants: 
+FONT_COURIER (4)
+FONT_HELV (1)
+FONT_ROMAN (0)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+full-text index create
+
+
+Where used:
+ 
+ CreateFTIndex in
+NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+FTINDEX_ALL_BREAKS (4)
+FTINDEX_ATTACHED_BIN_FILES (16)
+FTINDEX_ATTACHED_FILES (1)
+FTINDEX_CASE_SENSITIVE (8)
+FTINDEX_ENCRYPTED_FIELDS (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+full-text index frequency
+
+
+Where used:
+ 
+ FTIndexFrequency in
+NotesDatabase
+ Constants: Note: These constants are new
+with Release 6. 
+FTINDEX_DAILY (1)
+FTINDEX_HOURLY (3)
+FTINDEX_IMMEDIATE (4)
+FTINDEX_SCHEDULED (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+full-text search
+
+
+Where used:
+ 
+ FTDomainSearch in
+NotesDatabase
+ FTSearch in NotesDatabase
+ UnprocessedFTSearch in
+NotesDatabase
+ Constants: 
+FT_DATABASE (8192)
+FT_DATE_ASC (64)
+FT_DATE_DES (32)
+FT_DATECREATED_ASC (1543)
+FT_DATECREATED_DES (1542)
+FT_FILESYSTEM (4096)
+FT_FUZZY (16384)
+FT_SCORES (8)
+FT_STEMS (512)
+FT_THESAURUS (1024)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+ID type
+
+
+Where used:
+ 
+ IDType in
+NotesRegistration
+ Constants: 
+ID_CERTIFIER (173)
+ID_FLAT (171)
+ID_HIERARCHICAL (172)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+item type
+
+
+Where used:
+ 
+ Type in
+NotesItem
+ Constants: 
+ACTIONCD (16)
+ASSISTANTINFO (17)
+ATTACHMENT  (1084)
+AUTHORS (1076)COLLATION (2)Note: This constant is
+new with Release 6. 
+DATETIMES (1024)
+EMBEDDEDOBJECT (1090)
+ERRORITEM (256)
+FORMULA (1536)
+HTML (21)
+ICON (6)
+LSOBJECT (20)
+MIME_PART (25)Note: This constant is new with Release
+5 
+NAMES (1074)
+NOTELINKS (7)
+NOTEREFS (4)
+NUMBERS (768)
+OTHEROBJECT (1085)
+QUERYCD (15)
+READERS (1075)
+RFC822TEXT (1282)   
+RICHTEXT (1)
+SIGNATURE (8)
+TEXT (1280)
+UNAVAILABLE (512)
+UNKNOWN (0)
+USERDATA (14)
+USERID (1792)
+VIEWMAPDATA (18)
+VIEWMAPLAYOUT (19)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+mail file
+
+
+Where used:
+ 
+ DeleteUser in
+NotesAdministrationProcess
+ Constants: Note: These constants are new
+with Release 6. 
+MAILFILE_DELETE_ALL (2)
+MAILFILE_DELETE_HOME (1)
+MAILFILE_DELETE_NONE (0)
+ 
+
+
+
+"
+"
+LotusScript® constants: Notes® client
+
+
+Where used:
+ 
+ RegisterNewUser in
+NotesRegistration
+ Constants: 
+NOTES_DESKTOP_CLIENT (175)
+NOTES_FULL_CLIENT (176)
+NOTES_LIMITED_CLIENT (174)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+outline entry class
+
+
+Where used:
+ 
+ EntryClass in
+NotesOutlineEntry
+ Constants: Note: These constants are new
+with Release 5. 
+OUTLINE_CLASS_DATABASE (2194)
+OUTLINE_CLASS_DOCUMENT (2190)
+OUTLINE_CLASS_FOLDER (2197)
+OUTLINE_CLASS_FORM (2192)
+OUTLINE_CLASS_FRAMESET (2195)
+OUTLINE_CLASS_NAVIGATOR (2193)
+OUTLINE_CLASS_PAGE (2196)
+OUTLINE_CLASS_UNKNOWN (2189)
+OUTLINE_CLASS_VIEW (2191)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+outline entry type
+
+
+Where used:
+ 
+ Type in
+NotesOutlineEntry
+ Constants: Note: These constants are new
+with Release 5. 
+OUTLINE_OTHER_FOLDERS_TYPE (1589)
+OUTLINE_OTHER_UNKNOWN_TYPE (1591)
+OUTLINE_OTHER_VIEWS_TYPE (1588)
+OUTLINE_TYPE_ACTION (2188)
+OUTLINE_TYPE_NAMEDELEMENT (2187)
+OUTLINE_TYPE_NOTELINK (2186)
+OUTLINE_TYPE_URL (2185)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+paginate
+
+
+Where used:
+ 
+ Pagination in
+NotesRichTextParagraphStyle
+ Constants: Note: These constants are new
+with Release 5. 
+PAGINATE_BEFORE (1)
+PAGINATE_DEFAULT (0)
+PAGINATE_KEEP_TOGETHER (4)
+PAGINATE_KEEP_WITH_NEXT (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+participant
+
+
+Where used:
+ 
+ GetParticipants in
+NotesUIScheduler
+ Constants: Note: These constants are new
+with Release 6. 
+OPTIONAL_PEOPLE (2)
+OPTIONAL_RESOURCES (32)
+OPTIONAL_ROOMS (8)
+REQUIRED_PEOPLE (1)
+REQUIRED_RESOURCES (16)
+REQUIRED_ROOMS (4)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+participant role
+
+
+Where used:
+ 
+ AddParticipant in
+NotesUIScheduler
+ Constants: Note: These constants are new
+with Release 6. 
+PARTICIPANTROLE_CHAIR (3)
+PARTICIPANTROLE_DELEGEE (12)
+PARTICIPANTROLE_FYIATT (10)
+PARTICIPANTROLE_MAILINDB (60)
+PARTICIPANTROLE_OPTATT (9)
+PARTICIPANTROLE_REMOVED (99)
+PARTICIPANTROLE_REQATT (6)
+PARTICIPANTROLE_RESOURCE (18)
+PARTICIPANTROLE_ROOM (15)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+participant status
+
+
+Where used:
+ 
+ AddParticipant in
+NotesUIScheduler
+ Constants: Note: These constants are new
+with Release 6. 
+PARTICIPANTSTATUS_ACCEPT (6)
+PARTICIPANTSTATUS_COMPLETE (3)
+PARTICIPANTSTATUS_COUNTER (12)
+PARTICIPANTSTATUS_DECLINE (9)
+PARTICIPANTSTATUS_DELEGATE (15)
+PARTICIPANTSTATUS_PENCILIN (7)
+PARTICIPANTSTATUS_REMOVED (24)
+PARTICIPANTSTATUS_WAITING (18)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+participant type
+
+
+Where used:
+ 
+ AddParticipant in
+NotesUIScheduler
+ Constants: Note: These constants are new
+with Release 6. 
+PPARTICIPANTTYPE_PERSON (0)
+PARTICIPANTTYPE_RESOURCE (54)
+PARTICIPANTTYPE_ROOM (53)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+password check
+
+
+Where used:
+ 
+ SetUserPasswordSettings in
+NotesAdministrationProcess
+ Constants: Note: These constants are new
+with Release 6. 
+PWD_CHK_CHECKPASSWORD (1)
+PWD_CHK_DONTCHECKPASSWORD (0)
+PWD_CHK_LOCKOUT (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+picklist
+
+
+Where used:
+ 
+ PickListCollection in
+NotesUIWorkspace
+PickListStrings  in
+NotesUIWorkspace
+ Constants: Note: These constants are new
+with Release 5. 
+PICKLIST_CUSTOM (3)
+PICKLIST_NAMES (0)
+PICKLIST_RESOURCES (2)
+PICKLIST_ROOMS (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+prompt
+
+
+Where used:
+ 
+ Prompt in
+NotesUIWorkspace
+ Constants: Note: These constants are new
+with Release 5. 
+PROMPT_OK (1)
+PROMPT_OKCANCELCOMBO (5)
+PROMPT_OKCANCELEDIT (3)
+PROMPT_OKCANCELEDITCOMBO (6)
+PROMPT_OKCANCELLIST (4)
+PROMPT_OKCANCELLISTMULT (7)
+PROMPT_PASSWORD (10)
+PROMPT_YESNO (2)
+PROMPT_YESNOCANCEL (11)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+register mail owner ACL
+
+
+Where used:
+ 
+ MailOwnerAccess in
+NotesRegistration
+ Constants: Note: These constants are new
+with Release 6. 
+REG_MAIL_OWNER_ACL_DESIGNER (1)
+REG_MAIL_OWNER_ACL_EDITOR (2)
+REG_MAIL_OWNER_ACL_MANAGER (0)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+register mail system
+
+
+Where used:
+ 
+ MailSystem in
+NotesRegistration
+ Constants: Note: These constants are new
+with Release 6. 
+REG_MAILSYSTEM_IMAP (2)
+REG_MAILSYSTEM_INOTES (3)
+REG_MAILSYSTEM_INTERNET (4)
+REG_MAILSYSTEM_NONE (6)
+REG_MAILSYSTEM_NOTES (0)
+REG_MAILSYSTEM_OTHER (5)
+REG_MAILSYSTEM_POP (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+rich text element
+
+
+Where used:
+ 
+FindFirstElement  in
+NotesRichTextNavigator
+ FindLastElement in
+NotesRichTextNavigator
+ FindNextElement in
+NotesRichTextNavigator
+FindNthElement  in
+NotesRichTextNavigator
+GetFirstElement  in
+NotesRichTextNavigator
+GetLastElement  in
+NotesRichTextNavigator
+ GetNextElement in
+NotesRichTextNavigator
+ GetNthElement in
+NotesRichTextNavigator
+ Type in
+NotesRichTextRange
+ Constants: Note: These constants are new
+with Release 6. 
+RTELEM_TYPE_DOCLINK (5)
+RTELEM_TYPE_FILEATTACHMENT (8)
+RTELEM_TYPE_OLE (9)
+RTELEM_TYPE_SECTION (6)
+RTELEM_TYPE_TABLE (1)
+RTELEM_TYPE_TABLECELL (7)
+RTELEM_TYPE_TEXTPARAGRAPH (4)
+RTELEM_TYPE_TEXTRUN (3)
+ The following constants are used only in Type in NotesRichTextRange: 
+RTELEM_TYPE_TEXTPOSITION (10)
+RTELEM_TYPE_TEXTSTRING (11)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+rich text find
+
+
+Where used:
+ 
+ FindAndReplace in
+NotesRichTextRange
+ FindFirstString in
+NotesRichTextNavigator
+FindNextString in
+NotesRichTextNavigator
+ Constants: Note: These constants are new
+with Release 6. 
+RT_FIND_ACCENTINSENSITIVE (4)
+RT_FIND_CASEINSENSITIVE (1)
+RT_FIND_PITCHINSENSITIVE (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+rich text replace
+
+
+Where used:
+ 
+ FindAndReplace in
+NotesRichTextRange
+ Constants: Note: These constants are new
+with Release 6. 
+RT_REPL_ALL (16)
+RT_REPL_PRESERVECASE (8)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+roaming cleanup
+
+
+Where used:
+ 
+ RoamingCleanupSetting in
+NotesRegistration
+ Constants: Note: These constants are new
+with Release 6. 
+ROAMING_CLEANUP_AT_SHUTDOWN (2)
+ROAMING_CLEANUP_EVERY_NDAYS (1)
+ROAMING_CLEANUP_NEVER (0)
+ROAMING_CLEANUP_PROMPT (3)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+ruler
+
+
+Where used:
+ 
+ AppendTable in
+NotesRichTextItem
+ FirstLineLeftMargin in
+NotesRichTextParagraphStyle
+ LeftMargin in
+NotesRichTextParagraphStyle
+ RightMargin in
+NotesRichTextParagraphStyle
+ SetTab in
+NotesRichTextParagraphStyle
+ SetTabs in
+NotesRichTextParagraphStyle
+ Position in
+NotesRichTextTab
+ Constants: Note: These constants are new
+with Release 5. 
+RULER_ONE_CENTIMETER (567)
+RULER_ONE_INCH (1440)
+ The unit of measure used by the preceding constants is a
+""twip,"" where one centimeter is 567 twips and one inch is 1440 twips.
+You can apply arithmetic to the constants to obtain other measurements.
+For example, RULER_ONE_CENTIMETER * 2 for two centimeters or RULER_ONE_INCH
+* 0.75 for three-quarters of an inch. 
+
+
+
+"
+"
+LotusScript® constants:
+search
+
+
+Where used:
+ 
+ GetNextEntity in
+NotesMIMEEntity
+GetPrevEntity  in
+NotesMIMEEntity
+ Constants: Note: These constants are new
+with Release 6. 
+SEARCH_BREADTH (1723)
+SEARCH_DEPTH (1724)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+severity
+
+
+Where used:
+ 
+ LogEvent in
+NotesLog
+ Constants: 
+SEV_FAILURE (2)
+SEV_FATAL (1)
+SEV_NORMAL (5)
+SEV_WARNING1 (3)
+SEV_WARNING2 (4)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+spacing
+
+
+Where used:
+ 
+ InterLineSpacing in
+NotesRichTextParagraphStyle
+ SpacingAbove in
+NotesRichTextParagraphStyle
+ SpacingBelow in
+NotesRichTextParagraphStyle
+ Constants: 
+SPACING_DOUBLE (4)Note: This constant is new with
+Release 5. 
+SPACING_ONE_POINT_25 (1)Note: This constant is new
+with Release 6. 
+SPACING_ONE_POINT_50 (2)Note: This constant is new
+with Release 5. 
+SPACING_ONE_POINT_75 (3)Note: This constant is new
+with Release 6. 
+SPACING_SINGLE (0)Note: This constant is new with
+Release 5. 
+ 
+
+
+
+"
+"
+LotusScript® constants:
+stream read
+
+
+Where used:
+ 
+ ReadText in
+NotesStream
+ Constants: Note: This constant is new with
+Release 6. 
+STMREAD_LINE (0)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+style no change
+
+
+Where used:
+ 
+ Bold in NotesRichTextStyle
+ Effects in
+NotesRichTextStyle
+ FontSize in
+NotesRichTextStyle
+ Italic in
+NotesRichTextStyle
+ NotesColor in
+NotesRichTextStyle
+ NotesFont in
+NotesRichTextStyle
+ PassThruHTML in
+NotesRichTextStyle
+ Strikethrough in
+NotesRichTextStyle
+ Underline in
+NotesRichTextStyle
+ Constants: Note: This constant is new with
+Release 5. 
+STYLE_NO_CHANGE (255)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+tab
+
+
+Where used:
+ 
+ SetTab in
+NotesRichTextParagraphStyle
+ SetTabs in
+NotesRichTextParagraphStyle
+Type  in
+NotesRichTextTab
+ Constants: Note: These constants are new
+with Release 5. 
+TAB_CENTER (3)
+TAB_DECIMAL (2)
+TAB_LEFT (0)
+TAB_RIGHT (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+table style
+
+
+Where used:
+ 
+ Style in
+NotesRichTextTable
+ Constants: Note: These constants are new
+with Release 6. 
+TABLESTYLE_ALTERNATINGCOLS (4)
+TABLESTYLE_ALTERNATINGROWS (5)
+TABLESTYLE_LEFT (3)
+TABLESTYLE_LEFTTOP (1)
+TABLESTYLE_NONE (0)
+TABLESTYLE_RIGHT (7)
+TABLESTYLE_RIGHTTOP (6)
+TABLESTYLE_SOLID (8)
+TABLESTYLE_TOP (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+target
+
+
+Where used:
+ 
+ Target in
+NotesAgent
+ Constants: Note: These constants are new
+with Release 5. 
+TARGET_ALL_DOCS (1)
+TARGET_ALL_DOCS_IN_VIEW (5)
+TARGET_NEW_DOCS (2)
+TARGET_NEW_OR_MODIFIED_DOCS (3)
+TARGET_NONE (0)
+TARGET_RUN_ONCE (8)
+TARGET_SELECTED_DOCS (4)
+TARGET_UNREAD_DOCS_IN_VIEW (6)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+trigger
+
+
+Where used:
+ 
+ Trigger in
+NotesAgent   
+ Constants: Note: These constants are new
+with Release 5. 
+TRIGGER_AFTER_MAIL_DELIVERY (2)
+TRIGGER_BEFORE_MAIL_DELIVERY (6)
+TRIGGER_DOC_PASTED (3)
+TRIGGER_DOC_UPDATE (5)
+TRIGGER_MANUAL (4)
+TRIGGER_NONE (0)
+TRIGGER_SCHEDULED (1)
+TRIGGER_SERVERSTART (8)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+validate
+
+
+Where used:
+ 
+ InputValidationOption in NotesDOMParser
+ InputValidationOption in NotesDXLImporter
+ InputValidationOption in NotesSAXParser
+ InputValidationOption in
+NotesXSLTransformer
+ Constants: Note: These constants are new
+with Release 6. 
+VALIDATE_ALWAYS (0)
+VALIDATE_AUTO (1)
+VALIDATE_NEVER (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column align
+
+
+Where used:
+ 
+ Alignment in
+NotesViewColumn
+ HeaderAlignment in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_ALIGN_CENTER (2)
+VC_ALIGN_LEFT (0)
+VC_ALIGN_RIGHT (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column attribute
+
+
+Where used:
+ 
+ NumberAttrib in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_ATTR_PARENS (2)
+VC_ATTR_PERCENT (4)
+VC_ATTR_PUNCTUATED (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column date format
+
+
+Where used:
+ 
+ DateFmt in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_MD (2)
+VC_FMT_YM (3)
+VC_FMT_YMD (0)
+VC_FMT_Y4M (6)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column font
+
+
+Where used:
+ 
+ FontStyle in
+NotesViewColumn
+ HeaderFontStyle in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FONT_BOLD (1)
+VC_FONT_ITALIC (2)
+VC_FONT_PLAIN (0)
+VC_FONT_STRIKEOUT (8)
+VC_FONT_STRIKETHROUGH (8)
+VC_FONT_UNDERLINE (4)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column number format
+
+
+Where used:
+ 
+ NumberFormat in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_CURRENCY (3)
+VC_FMT_FIXED (1)
+VC_FMT_GENERAL (0)
+VC_FMT_SCIENTIFIC (2)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column separator
+
+
+Where used:
+ 
+ ListSep in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_SEP_COMMA (2)
+VC_SEP_NEWLINE (4)
+VC_SEP_NONE (0)Note: This constant is new with Release
+6 
+VC_SEP_SEMICOLON (3)
+VC_SEP_SPACE (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column time date format
+
+
+Where used:
+ 
+ TimeDateFmt in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_DATE (0)
+VC_FMT_DATETIME (2)
+VC_FMT_TIME (1)
+VC_FMT_TODAYTIME (3)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column time format
+
+
+Where used:
+ 
+ TimeFmt in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_ALL (3)
+VC_FMT_H (2)
+VC_FMT_HM (0)
+VC_FMT_HMS (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view column time zone format
+
+
+Where used:
+ 
+ TimeZoneFmt in
+NotesViewColumn
+ Constants: Note: These constants are new
+with Release 5. 
+VC_FMT_ALWAYS (2)
+VC_FMT_NEVER (0)
+VC_FMT_SOMETIMES (1)
+ 
+
+
+
+"
+"
+LotusScript® constants:
+view spacing
+
+
+Where used:
+ 
+ Spacing in
+NotesView
+ Constants: 
+VW_SPACING_DOUBLE (4)
+VW_SPACING_ONE_POINT_25 (1)
+VW_SPACING_ONE_POINT_50 (2)
+VW_SPACING_ONE_POINT_75 (3)
+VW_SPACING_SINGLE (0)
+ 
+
+
+
+"

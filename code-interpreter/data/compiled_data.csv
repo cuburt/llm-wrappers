@@ -1,0 +1,1497 @@
+Filename,Content
+text_10.txt,"Segment Widget - Introduction
+Volt MX Iris Tutorials
+
+Segment Widget - Introduction
+
+1. Design a Segment
+
+
+Drag the segment widget onto the design canvas.
+
+Position and size the segment widget.
+
+Drag widgets and skin them to design the segment row.
+
+2. Assign Data To Segment
+
+
+Click Master Data property to show the data input dialog.
+
+Provide row data to the segment and use add button to add new data row.
+
+Once data input is complete, see real time reflection on design canvas .
+
+3. Design A Row Template and Assign it to Segment
+
+
+Design a row template by using widgets placed under a flex container.
+
+See the real time reflection on the row template on the device canvas.
+
+Assign the row template to segment.
+
+All the items will use this template to display data uniformly.
+
+4. View prototype on iris application preview
+
+
+"
+text_11.txt,"Segment Widget - Advanced
+Volt MX Iris Tutorials
+
+segment widget - Advanced
+
+1. Assign Data To Segment Through JS API
+
+
+Create a JSON array with data for each row item and the template a row will use to render itself.
+
+Use the setData API to set the JSON data to the segment.
+
+Invoke this function on the form preshow lifecycle event.
+
+2. Add Interactivity To The Segment
+
+
+Use addAll API to add append rows to existing segment data.
+
+Add interactivity to the segment by using the onReachingEnd scrolling event.
+
+On the callback of this event, map the function to append the data.
+
+3. Read, Updated And Delete Data from Segment
+
+
+Define onRowClick event of the segment widget and pass row and section index to callback.
+
+Use data property with selected row index to fetch the selected row data.
+
+Use setDataAt API to update the data at a particular index of the segment data.
+
+Use removeAt API to remove the data at a particular index of the segment data.
+
+4. Run The App On Functional Preview
+"
+text_13.txt,"Working with Named Actions
+Volt MX Iris Tutorials
+
+Working with named actions
+
+1. creating named actions
+
+
+Named Action Creation
+
+Create a new named action for the desired channel.
+
+Action Selection
+
+Select Set Widget Property from the action library to build the named action sequence.
+
+UX Field Selection
+
+Select the desired text box fields that need to be reset.
+
+Action Configuration
+
+Reset the selected text box fields by configuring the text property to a null value.
+
+2. Assigning Named Actions
+
+
+Widget Selection
+
+Select the button widget which is to be associated with the Named Action.
+
+Named Action Selection
+
+Right Click on the Named Action which is to be assigned to button widget.
+
+Assignment
+
+Assign the Named Action to the On Click event of the button.
+
+3. Calling Named Actions
+
+
+Widget Selection
+
+Select the button widget which is to be associated with the Named Action.
+
+Event Selection
+
+Select the On-Click event of the button from the Action tab.
+
+Action Selection
+
+Select Call Action from the action library to build the desired action sequence for the On-Click event.
+
+Named Action Association
+
+Configure the Call Action sequence by selecting the desired Named Action."
+text_12.txt,"Notes and Comments
+Volt MX Iris Tutorials
+
+Notes and Comments
+
+1. Documenting Notes in Iris
+
+
+Widget Selection
+
+Select the widget or form on which one would like to capture and document Notes.
+
+Documenting Notes
+
+Create, Edit and Save notes with respect to the selected widget or form, in rich text format.
+
+Toggle Badges
+
+Switch ON badges to view a graphical representation of the notes documented, on a form.
+
+Publish To Cloud
+
+Publish the application preview to the cloud for collaboration with peers.
+
+2. Reviewers Point of View – Providing Feedback
+
+
+Provide Feedback
+
+Touch screen of Iris App Preview with 2 fingers to provide comments.
+
+Create Comment
+
+Select the ‘create note’ option to provide feedback and comments on the particular form on the mobile application preview.
+
+Post Comment To Designer
+
+Enter the comment and post it to the designer.
+
+3. Designers Point of View – Receiving Feedback
+
+
+Feedback Notifications
+
+View feedback notifications from peers on the Iris console.
+
+View Comments History
+
+View the entire list of comments provided with respect to the particular form in the mobile application.
+
+Respond To Comments
+
+Edit and respond to comments as required or even delete comments as desired."
+text_16.txt,"Volt MX APIs - Touch ID
+Volt MX Iris Tutorials
+
+Volt MX APIs - Touch ID API
+
+1. Link the Touch ID feature to your form
+
+
+Drag a button widget for invoking for invoking touch ID functionality.
+
+Add an onClick action to the button widget.
+
+Through action editor, invoke the function that you will add as part of the next step.
+
+2. Implement the JavaScript code using the Touch ID APIs
+function isTouchIDEnabled() {
+    var status = voltmx.localAuthentication.getStatusForAuthenticationMode(constants.LOCAL_AUTHENTICATION_MODE_TOUCH_ID);
+    if (status == 5000) {
+        voltmx.localAuthentication.authenticate(constants.LOCAL_AUTHENTICATION_MODE_TOUCH_ID, touchID_return, {
+            ""promptMessage"": ""Place your finger on the home button to login""
+        });
+    } else {
+        var msg = ""Touch ID is not enabled on your device"";
+        voltmx.ui.Alert({
+            message: msg,
+            alertType: constants.ALERT_TYPE_INFO,
+            yesLabel: ""Close""
+        }, {});
+    }
+}
+
+function touchID_return(status, message) {
+    if (status == 5000) {
+        frmDashboard.show();
+    } else {
+        var return_message = status + "":"" + message;
+        voltmx.ui.Alert({
+            message: return_message,
+            alertType: constants.ALERT_TYPE_INFO,
+            yesLabel: ""Close""
+        }, {});
+    }
+}
+Invoke the API to check if the Touch ID is enabled.
+
+If Touch ID is enabled, call the authentication API to invoke the Touch ID prompt.
+
+The call back function of the Authenticate API, where you will implement the logic for the authentication success and failure scenarios.
+
+3. Application preview when the authentication API is invoked.
+
+
+Configure the expression for the If condition. If the Widget Property confirmpasswordtxt.text is Not Equal to passwordtxt.text.
+
+In the Action Editor that opens up, click on If Condition listed under the Conditions group.
+
+An If condition is added to the action sequence."
+text_17.txt,"Package Web Content Locally
+Volt MX Iris Tutorials
+
+Package Web Content locally
+
+1. Import Web Assets
+
+
+Right click on Localfiles under Web and Click on Import to Import the required web content.
+
+Web assets can also be directly copied into the Resource Location.
+
+Once Imported these Assets appear under the Localfiles node.
+
+2. edit hTML content
+
+
+To modify the web content, click the file to open it in Code Editor.
+
+Make the required changes to the content.
+
+Changes reflect instantly in the Live Preview tab.
+
+3. Assign The Source to browser widget
+
+
+Navigate to the Browser widget Properties.
+
+Edit the Master Data property. Set the Type to Local and specify index.html in the URL field.
+
+Right click on the browser widget and enable Javascript Execution to see a live rendering on the browser widget.
+
+4.App Preview
+
+
+Login into App Preview and launch the app.
+
+Clicking on Add button in the Claims form opens the Signature Capture form.
+
+Clicking on Add button in the Claims form opens the Signature Capture form."
+text_15.txt,"Internationalization
+Volt MX Iris Tutorials
+
+Internationalization
+
+1. Enable Internationalization
+
+
+Click on Project Settings.
+
+In the Project Settings dialogue that opens up, click Enable i18n. Click Edit to configure the required locales.
+
+2. Add Locales
+
+
+Click Configure Locales button to add locales to the application.
+
+Select all the required locales. If the locale you are looking for is not available in the predefined locales, go to the Custom tab and define the required locale.
+
+Once the locales are selected, go back to the Configure Internationalization tab and add the required keys.
+
+3. Assign Keys
+
+
+Once internationalization is enabled in the application a drop down to assign the i18n key will appear in the Look panel. Select an widget and assign the required i18 key to the widget.
+
+Locale can be switched right from canvas.
+
+4. App Preview
+"
+text_14.txt,"Working with the Browser Widget
+Volt MX Iris Tutorials
+
+Working with the browser widget
+
+1. Setup the browser widget to link a web URL
+
+
+Widget Selection
+
+Drag the browser widget onto the design canvas.
+
+Widget Properties
+
+Navigate to the master data properties.
+
+HTML Content Selection
+
+Select the URL option to render remotely hosted web content.
+
+Widget Configuration
+
+Provide the URL of the web page and select the get method to retrieve information.
+
+Save Configurations
+
+Submit the configuration and save the design settings.
+
+2. Setup the browser widget to embed static HTML content in rich text
+
+
+Widget Selection
+
+Drag the browser widget onto the design canvas.
+
+Widget Properties
+
+Navigate to the master data properties.
+
+HTML Content Selection
+
+Select the Content option to embed static HTML content.
+
+Widget Configuration
+
+Provide the HTML content into the rich text area and submit.
+
+Additional Configurations
+
+Enable the Zoom in/out option in the browser and save all configurations.
+
+3. View prototype on iris application preview
+
+
+Log in into Iris App Preview.
+
+Enter the short code of the published app.
+
+View working prototype of the application."
+text_2.txt,"Working with Named Actions
+Volt MX Iris Tutorials
+
+Working with named actions
+
+1. creating named actions
+
+
+Named Action Creation
+
+Create a new named action for the desired channel.
+
+Action Selection
+
+Select Set Widget Property from the action library to build the named action sequence.
+
+UX Field Selection
+
+Select the desired text box fields that need to be reset.
+
+Action Configuration
+
+Reset the selected text box fields by configuring the text property to a null value.
+
+2. Assigning Named Actions
+
+
+Widget Selection
+
+Select the button widget which is to be associated with the Named Action.
+
+Named Action Selection
+
+Right Click on the Named Action which is to be assigned to button widget.
+
+Assignment
+
+Assign the Named Action to the On Click event of the button.
+
+3. Calling Named Actions
+
+
+Widget Selection
+
+Select the button widget which is to be associated with the Named Action.
+
+Event Selection
+
+Select the On-Click event of the button from the Action tab.
+
+Action Selection
+
+Select Call Action from the action library to build the desired action sequence for the On-Click event.
+
+Named Action Association
+
+Configure the Call Action sequence by selecting the desired Named Action."
+text_3.txt,"APIs - API Management
+A Volt MX Foundry app comprises a group of services, shared and non-shared services. With API Management, you can manage (create, edit, and delete) shared services (identity, integration, orchestration, and objects) without linking or configuring them within an app. After configuring the services in the APIs page, you can edit, clone, view a sample code, and delete a service. When you create the services in the APIs page, the services are not linked to apps automatically. You can link the services across any apps created for that account in Volt MX Foundry Console. The APIs page also allows you to view the list of apps or services that are using or referencing a given service. When you make changes to the services in the APIs page, the changes will be reflected in the services associated with other apps.
+
+Note:  You can edit a service. When you make a change to the service, the changes will be reflected in the services associated with other apps.
+
+You cannot delete a service if it is associated with an app or a service.
+
+To create services through the APIs page, follow these steps:
+
+In the Volt MX Foundry Console, in the left-pane, click the API Management tab to display the services tabs such as APIs, Custom Code, and Custom Data Adapters. By default the Identity service tab is selected under the APIs tab.
+
+
+
+Under the APIs page, the Identity, Integration, Orchestration, and Objects tabs appear and display list the existing services (if any). Under the APIs, the Identity, Integration, Orchestration, and Objects views display the following columns:
+
+Column	Description
+NAME	Displays the Name of the service.
+URL	Displays the URL of the service.
+Note: The URL column is displayed only for identity service.
+ENDPOINT TYPE / SERVICE TYPE	Displays the type of the service. The TYPE column is displayed only for identity service.
+Note:  The SERVICE TYPE column is displayed only for the Integration service. And the ENDPOINT TYPE column is displayed only for the Objects service.
+ASSOCIATED APPS	Displays the View hyperlink. When you click the View link, the system displays the Associated Apps page. The Associated Apps page displays the number of apps associated with a particular service. For more details, refer to Associated Apps
+MODIFIED BY	Displays the name of the user.
+MODIFIED ON	Displays the date and time of the modified service.
+From the APIs page, follow these steps to create services:
+
+Identity
+
+Integration
+
+Orchestration
+
+Objects
+
+Identity Service
+Volt MX Foundry identity services help you secure your application by adding an authentication layer.
+
+How to Create an Identity Service in APIs
+In Volt MX Foundry Console, select API Management from the left navigation panel. The Identity page in the API tab appears by default. The Identity page appears and lists the existing identity services (if any). The fields for an identity service are displayed such as NAME, URL, TYPE, ASSOCIATED APPS, MODIFIED BY, and MODIFIED ON.
+Click CONFIGURE NEW. A new identity service is added.
+Configure the details for the identity service. For more details, refer to Identity.
+Note:
+
+You can perform different actions on an existing service such as edit and delete. For more details, refer to Context Based Options.
+You can configure a default timeout for the apps globally in API Management. For more details, refer to Service Configuration > Identity Timeout Settings.
+Enabling cross-origin resource sharing (CORS) allows external web applications on domains to access the identity services in your Volt MX Foundry account. For more details, refer to Identity Service Security Settings.
+Integration Service
+An Integration Service is an application component that represents the application interaction with an external system or data source.
+
+How to Create an Integration Service in APIs
+In Volt MX Foundry Console, select API Management from the left navigation panel.
+In the APIs page, click the Integration tab.
+The Integration page appears and lists the existing integration services (if any). The fields for an integration service are displayed such as NAME, SERVICE TYPE, ASSOCIATED APPS, VERSION, MODIFIED BY, and MODIFIED ON.
+Click CONFIGURE NEW. A service definition tab is added.
+Configure the details for the integration service. For more details, refer to Integration.
+
+Note:  After creating an integration service in the APIs, you can perform different actions on an existing service such as edit, clone, view a sample code, delete all versions of a service, manage versions of a service, and export an integration service. For more details, refer to Context Based Options.
+Services created under the APIs page are not linked to apps. You can link or unlink services to an app only through the Existing Services dialog while you are adding apps.
+
+Orchestration Service
+An Orchestration service leverages the concept of combining multiple integration services into a single orchestration service to reduce the complexity and number of calls from the app to the backend.
+
+How to Create an Orchestration Service in APIs
+In Volt MX Foundry Console, select API Management from the left navigation panel.
+In the APIs page, click the Orchestration tab.
+The Orchestration page appears and lists the existing orchestration services (if any). The fields for an orchestration service are displayed, such as NAME, ASSOCIATED APPS, VERSION, MODIFIED BY, and MODIFIED ON.
+Click CONFIGURE NEW. A service definition tab is added.
+Configure the details for the orchestration service. For more details, refer to Orchestration.
+
+Note:  After creating an orchestration service in the APIs, you can perform different actions on an existing service such as edit, clone, view a sample code, delete all versions of a service, manage versions of a service, and export an orchestration service. For more details, refer to Context Based Options.
+
+Services created under the APIs page are not linked to apps. You can link or unlink services to an app only through the Existing Services dialog while you are adding apps.
+
+Object Service
+Volt MX Foundry Object Services enable model-driven application design and development by following a microservices architectural approach to create reusable components and link them to fit into your solution.
+
+How to Create an Object Service in APIs
+In the APIs page, click the Objects tab.
+The Objects page appears and lists the existing objects services (if any). The fields for an object service are displayed, such as NAME, ENDPOINT TYPE, VERSION, MODIFIED BY, and MODIFIED ON.
+Click CONFIGURE NEW. A service definition tab is added.
+Configure the details for the object service. For more details, refer to Objects.
+
+Note:  After creating an object service in the APIs, you can perform different actions on an existing service such as edit, clone, clone app data model, sample code, unlink an object service or delete a specific version of a service. For more details, refer to Context Based Options.
+
+Services created under the APIs page are not linked to apps. You can link or unlink services to an app only through the Existing Services dialog while you are adding apps.
+
+How to View Associated Apps in APIs
+After you link services (identity, integration, orchestration, and objects) created in the APIs page, you can view the list of apps that are associated to the services through the Associated Apps page. From the Associated Apps page, you can edit the app and unlink the app from the service.
+
+To view associated apps, follow these steps:
+
+In the APIs page, click the service (identity, integration, orchestration, objects) tab to display the service details page.
+
+
+
+Click the View link under the ASSOCIATED APPS column to view the apps associated to the service. The Associated Apps dialog appears with the list of apps linked to the service for the current version. You can change the version of the service if required.
+
+
+
+From the Associated Apps page, you can perform operations such as edit the app and unlink the app from the service. For identity services, from the Associated Apps page you can also enable SSO for the application.
+
+To edit the app through the Associated Apps page, hover your cursor over the required service, click the Settings button, and then click Edit.
+To enable SSO for the app through the Associated Apps page, hover your cursor over the required service, click the Settings button, and then click Enable SSO. You must republish the app for this new setting to take effect. For more information about SSO for applications, refer to Application SSO.
+To unlink the app through the Associated Apps page, hover your cursor over the required service, click the Settings button, and then click Unlink app. When you click the Unlink app button, the app is disassociated from a particular service.
+Context Based Options
+You can perform various actions on an existing service from the API Management page.
+
+In the API Management page, click the contextual menu of the required service. It contains the following options:
+
+Edit: Opens a service in the console and allows you to edit the service definition and operations. After you edit a service, you need to republish all the apps that are using the service to apply the changes.
+Note: If a service is a part of a published app, you can rename that service only after the app is unpublished.
+
+Edit Configuration: For objects services, opens the service in the console and allows you to edit the objects service definition and operations.
+Clone: Duplicates an existing service. Clone a service to create a different version of the service. Changes made to a cloned service will not affect the original service. The name of a cloned service indicates that it is a copy of an existing service.
+Clone App Data Model: For objects services, duplicates an existing app data model of an objects service. Clone a service to create a different version of the service. Changes made to a cloned service will not affect the original service. The name of a cloned service indicates that it is a copy of an existing service.
+Publish Service: Republishes a service. Refer Publishing Individual Services
+Sample Code: Generates dynamic code for each SDK type based on the configuration of a service. You can use the code in your mobile app. For example, generate the sample code for an integration or orchestration service from Volt MX Foundry. Then use that code in the mobile app to invoke the orchestration service instance.
+Delete all versions: Deletes all versions of a service. You cannot delete a version of the service that is in use. A service in use is a service that is referenced by a Volt MX Foundry app or another service or a Sync scope.
+
+Click the Delete all versions button to display the Delete Service dialog.
+
+Click DELETE. If the current of the service is not linked to any apps, the versions is deleted. Otherwise, the Error warns you that you are trying to delete the current version of the service that cannot be unlinked or deleted as it is being used by the following apps or services or Sync scopes: [App Name]
+
+Note: If a service is a part of a published app, you can delete that service only after you unlink the service from all the published app.
+
+Manage versions: Delete one or more versions of a service.
+
+Click the Manage versions button to display the Manage versions dialog lists versions of the service.
+
+Hover your cursor over the required version, and click the Delete button. When you click the Delete button, the Delete Service dialog appears.
+To confirm the deletion of the version, click DELETE. If the current version of the service is not linked to any apps, the versions is deleted. Otherwise, the Error warns you that you are trying to delete the current version of the service that cannot be unlinked or deleted as it is being used by the following apps or services or Sync scopes: [App Name]
+
+Important: You cannot remove the current version of a service from a service level.
+For example, If you are in the Service Definition tab of a service from APIs and try to delete a version of a service, you can delete all the versions of a service except the current version.
+
+Audit Logs helps you to capture all the user activities performed in a service. Object Name, Object Type and Modified On fields are prepopulated with the Service Name, Services, and Last 7 Days respectively.
+
+For more information on Audit Logs, refer to Audit Logs documentation.
+
+Note: This feature is applicable only for Integration, Orchestration, and Object Services.
+
+Console Access Control: Controls the access to the applications and services of apps.
+Export as XML: Exports an existing version of a service to an XML file.
+Export: Exports an existing version of a service to a zip file. You can import the service to an existing app in the Volt MX Foundry Console. For more information, refer Exporting and Importing an Application.
+Validate: Validates the service definition of an objects service."
+text_1.txt,"Photoshop Conversion Extension
+Volt MX Iris Tutorials
+
+Photoshop conversion extension
+
+1. Access The Extension
+
+
+Install the Volt MX Iris Extension from VoltMX.com.
+
+Once installed you can access the extension from Window > Extensions.
+
+2. Global Configurations
+
+
+Open the PSD file to be imported. Global configuration tab allows us to specify properties applicable to the entire PSD file.
+
+Select the Iris project location. This points directly to a project inside your Iris workspace directory.
+
+3. Layer Configurations
+
+
+In case we need to override the global configuration for a layer, select the particular layer.
+
+Select the Layer configuration tab. The layer specific properties are listed. Select the required configuration. This configuration will override the Global configurations for that layer.
+
+Click on Export.
+
+4. Open in iris
+
+
+Open the exported project in Iris.
+
+Notice all the layers converted to corresponding Iris widgets."
+text_0.txt,"ntroduction to Action Editor
+Volt MX Iris Tutorials
+
+Introduction to action editor
+
+1. Navigation Actions
+
+
+Right click on the button and associate an action to the onClick event.
+
+In the Action Editor that opens up, click on Navigate to Form Action.
+
+All the configurable properties for the selected action are shown in the bottom pane, choose the required form to Navigate to. Select the URL option to render remotely hosted web content.
+
+2. Conditional Operations
+
+
+Associate an action to the onTextChange event of Confirm Password text box.
+
+In the Action Editor that opens up, click on If Condition listed under the Conditions group.
+
+An If condition is added to the action sequence.
+
+3. Expression Editor
+
+
+Configure the expression for the If condition. If the Widget Property confirmpasswordtxt.text is Not Equal to passwordtxt.text.
+
+In the Action Editor that opens up, click on If Condition listed under the Conditions group.
+
+An If condition is added to the action sequence.
+
+4. Animations
+
+
+Click on Flex Move Animation Action and associate to the Action Sequence.
+
+Configure the Animation by providing the positional properties and the timing of the animation
+
+5. App Preview
+
+
+Log in into App Preview
+
+Key in machine information and click on Launch App.
+
+Notice all the validations being performed and Animation being triggered"
+text_4.txt,"Components Overview
+Components provide a powerful way to create complex applications quickly. You can download a rich assortment of components from HCL Forge , or create your own reusable components, and then drag and drop the components into your application to create sophisticated, full-featured applications without writing all of the code.you can also leverage several Data & Services panel features for components.
+
+For example, suppose you want to create a digital application that lets users log in to their account and display an account overview. You can build a log-in screen by downloading a log-in component from HCL Forge , and then dragging and dropping it onto a form.
+
+First, navigate to the HCL Forge site, either by selecting Browse from the HCL Forge menu in Volt MX Iris or opening the site in your web browser. Then download the Login component.
+
+
+
+You can easily import the component into your Volt MX Iris library, and then drag and drop it onto a form.
+
+You could then create an account overview component that can be used in multiple applications, and drag and drop that component onto a form to display an account overview in your application. Your library can contain multiple collections of components that can be used and reused, serving as building blocks for your applications.
+
+
+
+If you are familiar with earlier versions of Volt MX Iris, you may recognize components as an extension of masters. Masters helped streamline digital application developing by letting you define multiple user interface elements and action sequences as a single entity. Components extend that ability by providing self-contained and reusable entities that include:
+
+Code modules
+Volt MX Foundry services
+A component contract to simplify usage and enable rapid digital application development
+Because components are self-contained entities, you can:
+
+Reuse a component within a project, or across projects in your workspace.
+Download components created by the HCL Forge Assets team and other developers from HCL Forge , and use them in your projects.
+Share your components with a wider audience via HCL Forge or a local share.
+Components are also fully customizable. You can choose which properties, events, and methods of a component are exposed to users, or create your own custom properties, events and methods.
+
+For example, you can specify which properties of the Login component are exposed to users by enabling them in the Manage Properties dialog box:
+
+
+
+These are called pass through properties.
+
+The Login component also includes custom properties. You can specify custom properties on the Custom tab of the Manage Properties dialog box, and then define their behavior in the component's controller module, loginController.js:
+
+
+
+Here is the code that defines the passwordValidationMsg property:
+
+
+
+There are two types of Volt MX Iris components:
+
+Components with a contract.
+Components without a contract.
+The contract is a JSON file that specifies the component's exposed properties, events, and methods. You specify those properties, events, and methods within the Iris interface using the Manage Properties, Manage Events, and Manage Methods dialog boxes. You can then define the behavior of custom properties, events, and methods by adding code to the component's controller module.
+
+You can also create a component without contract. A component without contract is similar to a master in earlier versions of Volt MX Iris, except that it includes a controller module. You can publish either a component with contract or a component without contract to HCL Forge , but not a master. However, you can convert a master into either a component with contract or a component without component.
+
+For more information about using components, refer Using Components. For details about creating a component, refer Creating a Component."
+text_5.txt,"Foundry Integration
+Volt MX Iris Tutorials
+
+Foundry Integration
+
+1. Invoke Foundry from within Iris
+
+
+Invoke Foundry from within Iris Enterprise.
+
+Click here to get back to the Iris Canvas at any time.
+
+2. Defining the Foundry Service and Operation
+
+
+Specify the URL that the Foundry Operation will access to retrieve information.
+
+Define the data parameters that will be propagated to the mobile application and assign values to it by parsing and extracting it from the service response using XPath.
+
+3. Publish Foundry Application
+
+
+Select the option to publish the Foundry application to a Foundry run-time environment.
+
+Select the target Foundry run-time environment to publish the application just created.
+
+Publish Foundry Application.
+
+Ensure that the Foundry application has gone live successfully.
+
+4. Map Service Results to Form
+
+
+Select the On Click event of the widget which will trigger the Foundry service call.
+
+Select Invoke Asynchronous Service action.
+
+Include the Add Mapping action to the call back of the asynchronous service call.
+
+Configure the Add Mapping action by mapping.
+
+5. Run Application
+
+
+Run application on simulator and view the Foundry service information appearing in the mobile application forms."
+text_7.txt,"Introduction to Forms and Widgets
+Volt MX Iris Tutorials
+
+Introduction to Forms and Widgets
+
+1. Create a Form
+
+
+Create a flex form using the Forms > New menu item in the project explorer.
+
+Turn off the Title Bar for this form.
+
+Turn off the App Menu for this form.
+
+2. Assign Image Background And Layout Login Container
+
+
+Drag drop flex container which we will use for the form background.
+
+Drag drop another flex container which we will use for laying out the log in UI elements. Position this container to be at fixed position from left and right edges of form.
+
+Place an image on the parent flex container and assign it the logo image.
+
+3. Layout Login Fields
+
+
+Place flex containers on the log in container as holders.
+
+Place text fields and button on the these holders, position and skin the widgets.
+
+Place a switch widget on the log in container.
+
+4. View Prototype on Iris Application Preview
+  "
+text_6.txt,"Getting Started with Iris
+Volt MX Iris Tutorials
+
+Getting Started with Iris
+
+1. Create a Green Button
+
+
+Create a form under Mobile channel.
+
+Drag the button widget from the Widgets pane and drop it onto the canvas area. Position the button on canvas using mouse or by setting the properties in Look tab.
+
+Click on Skin tab and set the background color to green using color picker and border property to complete rounded corner.
+
+2. Add Interactivity
+
+
+Right click on the button and click on the onClick Action.
+
+In the Action Editor that opens up, click on Navigate To Form Action and select the desired form.
+
+3. Publish To Cloud
+
+
+Click on Publish. If you are not already signed in you will be prompted to sign in.
+
+Select the required channels to publish the App Preview.
+
+Click on the Cloud tab in App Preview and enter the short code generated to download and preview the app.
+
+4. Preview App
+
+
+Download Volt MX Iris App from App Store.
+
+Log in into the App Preview using your Volt MX Credentials.
+
+Click on the Local tab and enter the details to launch the Application."
+text_8.txt,"Introduction to Flex Layout
+Volt MX Iris Tutorials
+
+Introduction to flex layout
+
+1. Understanding Flex Container Layouts
+
+
+
+Free Form
+
+This is the default container layout. In this layout widgets are positioned in absolute space relative to the parent container or form.
+
+Flow Vertical
+
+In this layout the vertical positioning of a widget is relative to its sibling widget in the container, whereas the horizontal positioning is absolute (relative to the parent container).
+
+Flow Horizontal
+
+In this layout the horizontal positioning of a widget is relative to its sibling widget in the container, whereas the vertical positioning is absolute (relative to the parent container).
+
+2. Understanding Flex Properties and Rules
+
+
+
+Widget Positioning
+
+Position a widget at the bottom of the flex container by configuring the bottom value to 0.
+
+Flex Rule Override
+
+Override the flex rule of - prioritizing and looking at the top position value, by deleting any entries in the top position. Now the bottom position entry will be respected and will override the top position.
+
+Relative Widget Height
+
+Set the top and bottom position of the widget to a value in order to configure a widget to span across the height of a flex container.
+
+Flex Rule Override
+
+Override the flex rule of - prioritizing and looking at the Height value of a widget, by deleting any entries in this field. Now the height of the widget will be defined by the top and bottom position of the widget.
+
+3. Switching Off Form Scroll
+
+
+
+Set Enable Scrolling and Bounces to OFF, in order to disable form scrolling and avoid interference with child scrolling containers.
+4. Configuring the Vertical Flex Scrolling Container
+
+
+Configure the dimensions of the flex scrolling container to span vertically by setting the top and bottom parameters.
+
+Enable scrolling parameter for the flex scroll container and set the value of scrolling direct to Vertical.
+
+5. Configuring Horizontal Flex Scrolling Container with Pagination
+
+
+Configure the flex scroll container by setting the scroll direction to ‘Horizontal’ and switching the Paging parameter to ON."
+text_9.txt,
+text_19.txt,"Embedding Cordova Application
+Volt MX Iris Tutorials
+
+Import an existing cordova application
+
+1. enable cordova development
+
+
+Navigate to Project Settings Check the Enable Cordova checkbox.
+
+Choose the specific version of Cordova to be used for this project.
+
+In case Cordova is installed globally check the Use globally installed Cordova version checkbox.
+
+2. import cordova assets
+
+
+Select File -> Import Cordova Project and select the project to be imported.
+
+Once the project is imported it is available under Cordova node underneath Web in Project Explorer.
+
+3. assign the cordova source to a cordova browser widget
+
+
+Drag and Drop a Cordova Browser widget on the form.
+
+Double click on the Cordova Browser widget, in the Master Data popup assign index.html to URL.
+
+Right click on the Cordova Browser widget and enable javascript on the browser widget to see a live rendering on canvas.
+
+4. test on a simulator
+
+
+Run the application on a simulator.
+Cordova application is embedded inside a Volt MX application and runs on a simulator."
+text_25.txt,"User Guide: Introduction
+
+Object Services
+Introduction
+Object Services is a feature of Volt MX Foundry that enables model-driven application design and development by following a microservices architectural approach to create reusable components and link them to fit into your solution. Using Object Services, you can define your preferred data model, which defines how your application wants to interact with its data. There is a clear separation between the data model and how it maps to the back-end systems of record. The defined data model and mappings encapsulate the back-end data and APIs, and abstract the complexity of the API from your client application.
+
+You can use Object Services to create data models from line-of-business (LOB) objects and define service-driven objects from existing APIs in your enterprise. You can access LOB objects by using Volt MX Foundry business adapters. These business adapters enable you to visually discover and select the entities exposed by the LOB system. You can create a service-driven object from a set of existing Volt MX Foundry Integration/Orchestration Services. These Integration services connect to existing API endpoints or to Volt MX Foundry Orchestration Services, which combine multiple APIs into a new composite or aggregate API.
+
+The Object Services feature enables you to control your API calls and data in a better manner.
+
+For simplistic applications, the use of integration services may be sufficient for you to get the job done.
+As you start to build bigger and more complex applications, re-usability plays a vital role. In such scenarios, the use of Objects Services will help make your job easier.
+Object Services, as the name suggests, allows you to create and operate on an object for referencing your data. It helps you interact with your back-end data by using the Object data model you mentioned earlier. This feature makes it possible for you to develop applications in a faster and more intuitive manner.
+
+Note: For more hands-on approach on how to use Object Services, import and preview the Employee Directory app on to your Volt MX Iris.
+
+How do Objects work?
+Object Services makes application development easy by creating a data model to serve as a bridge between your back-end data and the client application.
+
+The data model is the definition of your object. In the object-oriented world, an Object contains a set of Data fields and operations defined on that data. For example, if you want to build an application to display employee records and their contact information, you can create an “Employee” data model. This data model stores the attributes of an employee. You can then perform operations on the employee object and get a response in the format of the defined data model. For example, if you want to search for a particular employee by Employee ID, you can invoke a “getEmployeeById” method that is defined on your Object Service and get the response in the structure of the Employee data model.
+
+Once your data model is defined, you can start to build your application around it. On the back-end side of things, you can map your data model to your data source. The strength of data models is that you can easily reuse your data model across applications, and easily switch to other data sources with a few changes in the front-end application.
+
+Note: Offline Objects feature helps you with a simplified approach to synchronize data to a client app for offline access. The Offline Objects feature connects directly with Object Services and does not require a sync run-time server. You can use the Offline Objects feature with apps that have been created by using Volt MX Iris along with apps developed in native iOS and Android by using Volt MX Foundry SDKs. For more information on Offline Enabled Object Services. refer Offline Enabled Object Services.
+
+Why should I use Object Services?
+A quick comparison of Objects Services with traditional Integration services is as follows:
+
+Object Services	Traditional approach to APIs
+Focus on designing the data model and mapping it to back-end data.	Focus on designing and invoking REST APIs.
+Independent development of front end and back end.	Tightly coupled interactions between the front end and back end development.
+Focus on application logic and enthralling user features.	Energy spent on creating back-end interactions.
+Ease of service creation and invocation.	More code required, more prone to errors.
+Reuse of same data model across different applications.	Does not encourage pattern-driven development.
+Easy maintenance, code is generated automatically.	Tough to maintain varies with each developer’s coding style.
+Three times faster releases by reusing the same data model. Facilitates long-term savings!	No reuse – each application must invoke services from scratch.
+Four times faster integration. Focus on configuring connectors to access your data.	Requires massive amount of custom code.
+The process of application development is a volatile endeavor, comprising many variable factors. The two most important facets of your application consist of the front-end application and the back-end services. It is vital that these two facets communicate in the simplest manner possible, to pave your path to an awesome application.
+
+Object Services tries to facilitate this communication by helping you create an interim bridge between these two facets. This is achieved by creating a data model, which acts as a contract between front-end and back-end developers.
+
+Object Services View
+You can navigate to the Object Services View from the Objects tab in your application or from the API Management View. From there, you can create your services or use existing ones already added in your account.
+
+To create an Object Service, you must understand the following basic components:
+
+Data Model
+Back-end Service Provider
+Mapper
+
+Data Model is the core component of an Object Service and development plan. It functions as a vital contract between a client application and the back-end development team. As the first step of your application design, you need to create a data model that works for both your client application and the back-end provider. Once this model is finalized, both the development teams can proceed with their respective development processes without disrupting the other team.
+
+Note: To lock fields (read-only fields) in a data model of Object Services, refer to Configuring Read-only Fields for Object Services through MFCLI.
+
+Back-end Provider refers to the source of data for your application. Object Services allow you to connect to multiple back-end providers such as SAP, Salesforce, RDBMS and so on. You also have the option to create your own database schema using the storage connector.
+
+Mapper helps you map data model and back-end service provider. Visual Mapper provides an intuitive way to connect to do the mapping.
+
+
+Note: To walk-through creating an Object service with Volt MX Foundry, take a look at our hands-on tutorial for Object Services Overview
+
+Workflow of Object Services
+The following workflow describes the various stages of Object services:
+
+"
+text_24.txt,"User Guide: Benefits of using Volt MX Identity
+
+Identity
+Volt MX Foundry identity services help you secure your application by adding an authentication layer.
+
+You can set up an identity service based on the type of the users who are allowed to access your application. To restrict access to your company's internal audience, use Microsoft Active Directory authentication. To allow access of your application to a larger audience, you can use enterprise identity providers (Microsoft Active Directory, Volt MX SAP Gateway, Open LDAP, OAuth 2.0, Salesforce, Custom Identity Service, SAML 2.0, Siteminder ) and social identity providers (Google, Linkedin, Instagram, Amazon, Microsoft, Yahoo, BOX, Facebook.)
+
+Benefits of using Volt MX Identity
+Volt MX Foundry’s Identity Service User Interface eliminates coding backend authentication mechanisms into your app.
+All the auth token handling is done at Volt MX Foundry layer to make applications more secure.
+Workflow of Volt MX Identity Services
+The following workflow describes the various stages of Identity services:
+
+
+
+Supported Identity Providers
+Volt MX Foundry Identity Services support connectivity to the following different identity providers.
+
+Enterprise Identity Providers	Social Identity Providers
+(OAuth 2.0)
+Microsoft Active Directory
+Salesforce
+Open LDAP
+SAML 2.0
+Siteminder
+VoltMX SAP Gateway
+VoltMX User Repository (User Store)
+(Support is deprecated from V8 SP4 AprilFP onwards)
+(The Volt MX User Repository identity service is available in every Volt MX Foundry account by default. You are allocated only a single instance of the Volt MX User Repository for a single Volt MX Foundry account. Volt MX User Repository stores meta-data of all users in the account, such as Email, First Name, Last Name, and Password, and Groups.)
+User Repository Identity Service
+(You are allocated to create multiple instances in a one Volt MX Foundry Account. User Repository stores meta-data of users in the account, such as Email, First Name, Last Name, and Password, and Groups.)
+VoltMX Custom Identity Service
+Facebook
+VoltMX Foundry OAuth 2.0
+OAuth Provider
+Application SSO"
+text_18.txt,"Native Hybrid Communication
+Volt MX Iris Tutorials
+
+native hybrid communication
+
+1. enable native communication
+
+
+Select the browser widget. Navigate to the Browser tab in Properties sheet.
+
+Set the Native Communication property to ON.
+
+2. execute javascript in hybrid context
+
+
+Assign an onClick function to the Native button in frmSignature form.
+
+In the onClick function, construct the javascript function to be called in the hybrid context.
+
+Invoke ExecuteJavaScript on the browser widget passing the javascript string to evaluate.
+
+3. pass context and data to native context
+
+
+In the Local HTML file, after capturing the required data, invoke ExecuteInNativeContext to pass data and control back to the native context.
+
+Receive the data in the Volt MX Native context, and assign it to the image widget.
+
+4. App Preview
+
+
+On clicking Add in the New Claims form we are taken to the Signature Capture form.
+
+After capturing the signature, on click of Accept we are taken back to the New claim form.
+
+Notice the signature being captured and assigned to the Image Widget."
+text_26.txt,"Working with Named Actions
+
+Volt MX Iris Tutorials
+
+Working with named actions
+
+
+1. creating named actions
+
+
+
+Named Action Creation
+Create a new named action for the desired channel.
+Action Selection
+Select Set Widget Property from the action library to build the named action sequence.
+UX Field Selection
+Select the desired text box fields that need to be reset.
+Action Configuration
+Reset the selected text box fields by configuring the text property to a null value.
+2. Assigning Named Actions
+
+
+
+Widget Selection
+Select the button widget which is to be associated with the Named Action.
+Named Action Selection
+Right Click on the Named Action which is to be assigned to button widget.
+Assignment
+Assign the Named Action to the On Click event of the button.
+3. Calling Named Actions
+
+
+
+Widget Selection
+Select the button widget which is to be associated with the Named Action.
+Event Selection
+Select the On-Click event of the button from the Action tab.
+Action Selection
+Select Call Action from the action library to build the desired action sequence for the On-Click event.
+Named Action Association
+Configure the Call Action sequence by selecting the desired Named Action."
+text_23.txt,"User Guide: Orchestration Service
+
+Orchestration
+Overview
+Orchestration Services leverage the concept of combining multiple integration services, object services or orchestration services into a single service to simplify business logic in client apps and reduce the number of service invocations.
+
+Use Case
+An HR executive wants to fill a vacancy in the company available for a developer with 3-6 years of experience. The HR uses an HR tool to search for the suitable candidates. The tool sends the initial request to an Orchestration service which then invokes other services that connect to various data sources, for example, Naukri, LinkedIn, Monster, Indeed and get the list of suitable candidates.
+
+Finally, the orchestration service gets the list of eligible candidates suitable for the vacancy and the data is displayed in the HR tool.
+
+Orchestration Service Operations
+Operations are the functional entities that are invoked from the client-side core functions that define the capabilities of any service. Operations in an orchestration service can be defined to invoke operations from multiple services. You can create Orchestration service operations from the existing Integration service operations, Object service operations, and other Orchestration service operations; and assign an execution strategy to these operations so that they are executed in the defined order.
+
+There are two major execution types for Orchestration service Operations:
+
+Composite – The Composite execution type allows you to combine multiple operations and execute the operations added to the Orchestration service. There are two execution modes for this execution type:
+
+Composite Concurrent - This executes the operations added in a service simultaneously, and there is no order in the way the operations are executed. For example, in the provided use case, the service calls made to different data sources are executed simultaneously.
+
+Composite Sequential - This mode executes the operations added in a service in a specified order, and you can also use the output response of one service as input request for the next service.
+For example, a weather app with Orchestration service gets the Geolocation of the device first, then gets the Pin code based on the input from the Geolocation, and then calls a weather service to get the temperature based on Pin code.
+
+Looping – You can add only one operation in the orchestration service if you want to select looping execution type. It allows you to execute the operation repeatedly in a loop using a delimited set of inputs or until a specified condition is met. You have to define the following parameters if you want to execute the operation in a loop:
+
+Looping Concurrent - When you select this mode, the operation is executed simultaneously “n” number of times based on the loop count value. The output value of the Orchestration Service will be the list of responses of each loop.
+
+
+Looping Sequential - When you select this mode, the operation is executed sequentially in a loop till the break loop parameter or loop count is met. The output value of the Orchestration Service will be the list of responses of each loop.
+
+Important: You cannot add any service to an Orchestration Service in which the Enable Pass-through feature is enabled.
+
+Orchestration Service Tab
+To go to the Orchestration tab from the Volt MX Foundry Console dashboard, click Add New or select any existing app > Configure Services > Orchestration.
+
+If you have not configured any Orchestration service before, the Volt MX Foundry displays a message that there are no Orchestration services configured on the Orchestration tab landing page.
+
+You can do the following from the Orchestration service landing page:
+
+Create a new Orchestration service
+
+Use existing Orchestration services in the account to create a new Orchestration service
+
+Manage the available Orchestration services
+
+Create a New Orchestration Service
+Note: If you want to create an Orchestration service without associating it with any Volt MX Foundry app, from the side menu, click API Management > APIs > Orchestration > Configure New. For more information on API Management, refer API Management.
+
+To configure a new Orchestration service, you must first create a service definition and add operations to that service definition.
+
+Create a Service Definition
+To create a new Service Definition, in the Orchestration page click Configure New or in the left pane click the “+” icon and select Add New Service. The Volt MX Foundry displays the Service Definition screen. You can do the following on the Service Definition screen:
+
+In the Name box, type a unique name for the new Orchestration service. The name of the service must not match with any of the existing service names.
+
+Note: The service name should not contain special characters, must begin with a letter, and should be between 4 and 30 characters. The service name can include underscore ( _ ) and dash (-) characters.
+
+The version of the Orchestration service is mentioned by default in the Version list. To know more about service versions, click here.
+
+In the Description box, type the required definition for the new service. This field is optional.
+
+In Volt MX Foundry, you can upload a custom code library in the form of a .jar file. These uploaded files can be used across all the services.
+
+If you want to associate this new service with a custom code library or apply a throttling limit, expand the Advanced section. This section contains two tabs, which are Custom Code and Throttling. By default, the Custom Code tab is selected.
+
+Custom Code
+
+From the Custom Code tab, you can select the .jar file you want to associate with your new service. You can do the following to select the .jar file:
+
+Important: If you have access to multiple accounts in Volt MX Foundry Console, the uploaded .jar files are available only in that account where they were uploaded. The .jar files uploaded in one account will not be available in another account. These files will be accessible to anyone who has access to that accounts.
+
+If you do not have the required .jar file available in the account, click Upload New and select the required .jar file from your local machine.
+
+If you have the required .jar file available in the accounts, click Select existing JAR list and select the required file.
+
+Throttling
+
+From the Throttling tab, you can provide the number of times you want to invoke an API per minute. If the API exceeds its throttling limit, it will not return the service responses. You can do the following to provide the throttling limit:
+
+In the Total Rate Limit box, type a required value. This value limits the total number of requests processed by the API.
+
+In the Rate Limit per IP box, type a required value. The value limits the number of requests made from an IP address. If the device exceeds the limit set, the API returns an appropriate error message.
+
+Note: If both the values are given, the throttling limit which is met first will take precedence.
+
+Once all the required parameters are configured in the Service Definition page, click Save if you want to save the new service and add operations to it later. Click Save and Add Operation if you want to add operations to that service immediately.
+
+The new service is added to the All Services list and to the Orchestration tab landing page.
+
+Create an Operation
+If you have clicked Save on the Service Definition page, Volt MX Foundry displays an Operations List tab when you open the service next time. Select the Operations List tab and click Add Operation or in the left pane, click the “+” icon and select Add New Operation. Volt MX Foundry displays the NewOperation tab.
+
+If you have clicked Save and Add Operation in the Service Definition page, it directly opens the NewOperation tab.
+
+You can do the following to add an operation to the service:
+
+In the Name box, type a unique name for the new operation. The name of the operation must not match with any of the existing operation names.
+
+From the Operation Execution Type list, select the required execution type. The available execution types are as follows:
+
+Composite Concurrent
+
+Composite Sequential
+
+Looping Concurrent
+
+Looping Concurrent
+
+If you select a looping operation, the following fields appear:
+
+Loop Count: It denotes the number of times the service included in the looping service must get executed.
+
+Loop Separator: Specifies the character that separates the input parameters of a service.
+For example: When the input parameter for the operations you add in the Orchestration Service are different, then the character provided here will act as a separator for the input parameters like “,”.
+
+Break Loop Parameter Name: Specifies if there are any breakout parameters for the execution of the looping service. The breakout parameter is a part of the result returned from the service call within a loop.
+For example: If you want a particular Key Value pair in the response as the break loop parameter, then mention the name of the Key here.
+
+Break Loop Parameter Value: Specifies the value for the breakout parameter of the looping service. If the value of the breakout parameter returned from the service matches with the given value, the operation exits the loop.
+For example: If you want a particular Key Value pair in the response as the break loop parameter, then mention the Value here.
+
+From the Operation Security Level list, select the required authentication type. It defines the way a client must authenticate to access this operation. The available execution types are as follows:
+
+Authenticated App User – It restricts the access to clients who have successfully authenticated using an Identity Service associated with the app.
+Anonymous App User – It allows the access from trusted clients that have the required App Key and App Secret. Authentication through an Identity Service is not required.
+Public – It allows any client to invoke this operation without any authentication. This setting does not provide any security to invoke this operation and you should avoid this authentication type if possible.
+Private - It blocks the access to this operation from any external client. It allows invocation either from an Orchestration/Object Service, or from the custom code in the same run-time environment.
+From the Front End HTTP Method list, select the required request method you want to use to invoke the service operation from a HTTP Client. The available request methods are as follows:
+
+GET
+
+POST
+PUT
+DELETE
+For example, Iris and Other SDKs use POST method for communicating with Volt MX Foundry.
+
+In the Description box, type the required definition for the new service which you are creating now. This field is optional.
+
+The Operation Mapping > Available Services section lists all the services from Integration and Object services. These services contain all the operations associated with them, and you can map the operations you want to use for the new Orchestration service. Do the following to map the operations:
+
+Expand the required services and select the required operations of that service.
+
+Drag and drop them into the right pane in the Operation Mapping section.
+
+In the Enable pass-through section, select the required parameter type. This field is optional. If you select any parameter type, the related parameter variables are shown as is from the client server. The types of parameter available are: Input, Header, and Output.
+
+For example, if you have used multiple Integration service operations to create an Orchestration service, and selected the Input check box in Enable pass-through section. The Request Input parameter variables configured for those operations will be ignored, and they will be shown as is from the client server.
+
+Note: This filter will be applicable to all the operations which you have dropped in the right pane of Operation Mapping.
+
+If you want to check the service functionality, from the Environments list, select the environment to which you want to publish the app, and then click Save and Fetch Response. The responses from the client server are displayed. For more information, refer to Test an Orchestration Service Operation.
+
+Click Save Operations. The new operation is added in the Operations tab of that Orchestration service.
+
+Use Existing Service to Create a New Orchestration Service
+This feature helps you to use an existing Orchestration service in a Volt MX Foundry account and use it to configure a new Orchestration service. You can either clone or add existing services and make changes to them accordingly.
+
+To create a new Orchestration service from the available services, perform the following steps:
+
+In the Orchestration service tab, click Use Existing or in the left pane click the “+” icon and select Use Existing. The Existing services screen is displayed.
+
+Select the required services from the Existing services screen and click Clone or Add. The Clone Service or Add Service status screen appears.
+
+Clone: It creates a duplicate of the selected service. The changes made to the duplicate service will not affect the original service.
+
+Add: It adds the selected service to the new Volt MX Foundry app. The changes made to the service will affect all the apps using the service.
+If the service is part of any published app, you must unpublish the service to rename it.
+
+Note: If the list is long, you can search for the required service with Search option.
+
+After the Clone or Add process is complete, the service is added to the Orchestration services list.
+
+Click the newly added service or open the Contextual menu and click Edit to configure the details of the service. For more information on configuring the details, refer to Create a Service Definition and Create an Operation.
+
+Manage Services
+All the services related to a service type are listed on the landing page of the respective service type. You can manage the details of a service from the Contextual menu available adjacent to each service. The following options are available in the Contextual Menu:
+
+Edit – Click to edit the details of a selected service. After you edit a service, republish all the apps that use this service to apply the changes.
+
+Clone - Duplicates an existing service. Clone a service to create a different version of the same service. Changes made to a cloned service will not affect the original service. The name of a cloned service indicates that it is a copy of an existing service.
+
+Sample Code - Generates dynamic code for each SDK type based on the configuration of a service. You can use the code in your mobile app. For example, generate the sample code for an orchestration service from Volt MX Foundry. Then use that code in the mobile app to invoke the orchestration service instance.
+Unlink - Removes a service from the Orchestration tab of an app. Unlink a service when you don’t want to associate the service with the Volt MX Foundry app.
+Delete - Deletes a selected service from Volt MX Foundry Console. You cannot delete a service if the service is in use. A service in use is a service that is referenced by a Volt MX Foundry app or another service or a Sync scope.
+
+Note: When you delete a service that has multiple versions, only the active version is deleted.
+
+Console Access Control – You can manage the users who can access this service from here. To know more, refer to Console Access Control.
+
+Export as XML - Exports the current version of a service in the form of an XML file.
+Export – Exports the service details in the form of a zip file. You can import this zip file to another Volt MX Foundry app and use it. For more information, refer to Export and Import an Application.
+Service Versions
+You can use Service Versioning if you want to save the changes made to a service as another version of the same service. When you create a new version for a service, the Volt MX Foundry app associated with the service will use the latest version of the service automatically.
+
+Note: A Volt MX Foundry app can be associated with only one version of an orchestration service.
+
+You can do the following in the Service Definition (link) tab to create a new version for a service:
+
+In the Version list, select Save as New Version. The Save as screen is displayed.
+
+In the Version box, type the required version number. This field is mandatory.
+
+Note: The format for version number is major.minor. The value of major can be between 1 to 999, and the value of minor can be between 0 to 99. For example, 1.0 or 999.99.
+
+In the Description box, type the required notes for the new version. This field is optional.
+
+Click OK. The version of the service is updated to the latest version number.
+
+If you want to select any previous versions, in the Version list, select the required version and then click OK on the Alert dialog box. The version of the service is updated."
+text_22.txt,"User Guide: Integration > Overview
+
+Integration
+Overview
+An Integration Service is an application component that represents the application interaction with an external system or data source. A service definition comprises the meta-data or the configurations required to exchange data with the external system or data source. For example, the configurations can be service type, Endpoint URL, service ID, type (HTTP/HTTPS), request parameters, response parameters, preprocessors and postprocessors, and authentication credentials if required.
+
+For more hands-on approach on how to implement Integration Services, import and preview the News and Weather app using Volt MX Iris.
+
+
+Use Cases
+If you want to develop an app which enables users to browse through news headlines with different categories such as Top Stories, World, Science, Technology, Sports, weather conditions and so on. In this scenario, you need to use Integration services of Volt MX Foundry to fetch data from 3rd party news and weather APIs, which populates the same data in the front end of the app.
+
+Workflow of Integration Services
+The following workflow describes the various stages of Integration services:
+
+
+
+Service Request flow
+a. Request A client sends a request to Volt MX Foundry.
+b. Filter
+c. Message Parser (JSON, Form Encoded)
+d. Pre-Processor After Volt MX Foundry receives the call from the device, Volt MX Foundry executes custom Java/JS code based on the configured Pre-Processor before making any outbound calls.The custom Java/JS code is typically used to decide on what service to call. The custom code can also perform data validation on the request input.
+e. Request Builder (Velocity Template) For adapters (such as XML, JSON), user can format the request sent to an enterprise backend by defining a velocity template.
+f. Adapters An adapter is the component that communicates to the backend. it takes the formatted request from the request builder and sends it to the enterprise backend. In addition to the out of the box adapters, we can import adapters from VoltMX Marketplace.
+Note: You can select the Enable pass-through check box in the Request Input tab for Volt MX Foundry to forward the headers and body of clients request to the back end as is.
+Service Response flow
+a. Adapters An adapter receives the response from the enterprise backend for further processing in Volt MX Foundry.
+b. Response Builder Volt MX Foundry extracts data from the backend payload using XPath or JSON Path in the form of response parameters.
+c.Post-Processor After extracting the data, Foundry executes the custom Java/JS code based on the configured Post-Processor.The custom Java/JS code is typically used to process the data before returning the data to the client. The custom code can also determine whether Foundry needs to make additional service calls.
+c. Message Formatter (JSON)
+e. Filter
+f. Response Volt MX Foundry sends the transformed response (in JSON) to the client.
+Note: You can select the Enable pass-through check box in the Response Output tab for Volt MX Foundry to forward the response from the back end as is to clients.
+Supported Endpoint Adapters
+Volt MX Integration supports back-end connectivity to Web services such as XML, JSON, JavaScript, Database, Salesforce and so on. If external data sources do not expose the services to these well-known interfaces, you can build a Java service with a custom code.
+
+Out of the box Volt MX Foundry Integration Services support connectivity to the following different endpoint adapters.
+
+Endpoint Type	Description	Endpoint Configuration
+XML	An XML Adapter communicates with an external data source using an XML endpoint over the HTTP protocol.
+Configure XML Endpoint Adapter
+Create Operations for XML
+Configure Request Operation for XML
+Configure Response Operation for XML
+SOAP	Simple Object Access Protocol (SOAP) is a messaging protocol that uses WSDL to describe the functionality of a SOAP based web service.
+Configure SOAP Endpoint Adapter
+Create Operations for SOAP
+Configure Request Operation for SOAP
+Configure Response Operation for SOAP
+JSON	JavaScript Object Notation (JSON) communicates with an external data source over the HTTP protocol, and returns a response in JSON format.
+Configure JSON Endpoint Adapter
+Create Operations for JSON
+Configure Request Operation for JSON
+Configure Response Operation for JSON
+Java	Java Adapter interacts with the software application that does not support restful APIs using a custom Java code.
+Configure Java Endpoint Adapter
+Create Operations for Java
+Configure Request Operation for Java
+Configure Response Operation for Java
+JavaScript	JavaScript integrates plain JavaScript services to applications in Volt MX Foundry.
+Configure JavaScript Endpoint Adapter
+Create Operations for JavaScript
+Configure Request Operation for JavaScript
+Configure Response Operation for JavaScript
+API Proxy	API Proxy forwards the request and response without intermediate transformation (without affecting the actual request and response).
+Configure API Proxy Endpoint Adapter
+Create Operations for API Proxy
+Mock Data	The Volt MX Mock Data adapter capability helps you to continue to develop apps when the back-end services that an app connects to are not ready to be leveraged.
+Configure Mock Data Endpoint Adapter
+Create Operations for Mock Data
+Configure Request Operation for Mock Data
+Configure Response Operation for Mock Data
+VoltMX SAP Gateway	Volt MX SAP Gateway communicates with external SAP services over supported HTTP methods.
+Configure VoltMX SAP Gateway Endpoint Adapter
+Create Operations for VoltMX SAP Gateway
+Configure Request Operation for VoltMX SAP Gateway
+Configure Response Operation for VoltMX SAP Gateway
+MuleSoft	MuleSoft (Anypoint Platform™) is a platform that helps app developers to design custom APIs and deploy to a Mule Enterprise Service Bus runtime (ESB). With MuleSoft integration service in Volt MX Foundry, developers can interact with more than 50 types of adapters.
+Configure MuleSoft Endpoint Adapter
+Create Operations for MuleSoft
+Configure Request Operation for MuleSoft
+Configure Response Operation for MuleSoft
+AWS API Gateway	AWS API Gateway connects to the services configured and deployed under API Gateway Service in Amazon Web Services.
+Configure AWS API Gateway Endpoint Adapter
+Create Operations for AWS API Gateway
+Configure Request Operation for AWS API Gateway
+Configure Response Operation for AWS API Gateway
+Database	With Volt MX Foundry database adapter, you can connect to your own database as an endpoint. After you configure the database adapter in Volt MX Foundry Console, you can perform create, read, update, and delete (CRUD and Binary CRUD) operations on data in the tables and invoke stored procedures, functions, and views.
+Configure Database Endpoint Adapter
+Create CRUD Operations for Database Adapter
+Configure CRUD Operations for a Database Adapter
+Create a Database Record with Create Operation
+Query a Database and Display Information with Read Operation
+Update a Database Record with Update Operation
+Delete a Database Record with Delete Operation
+MongoDB	With Volt MX Foundry MongoDB database adapter, you can connect to your own MongoDB database as an endpoint. After you configure the MongoDB adapter, you can perform create, read, update, and delete (CRUD) operations on MongoDB collections and documents.
+Configure MongoDB Adapter
+Create and Configure CRUD Operations for a MongoDB Adapter
+RAML	RESTful API Modeling Language (RAML) is a YAML-based language for describing RESTful APIs.
+Configure RAML Endpoint Adapter
+Create Operations for RAML
+Configure Request Operation for RAML
+Configure Response Operation for RAML
+Salesforce	Salesforce uses a protocol-specific adapter to connect to an external system and access its data.
+Configure Salesforce Endpoint Adapter
+Create Operations for Salesforce
+Configure Request Operation for Salesforce
+Configure Response Operation for Salesforce
+IBM MQ	IBM MQ server 9.0.0 version is a messaging middleware that simplifies and accelerates the integration of diverse applications and business data across multiple platforms. Volt MX uses the IBM MQ service to secure the message delivery and reduce the risk of data loss.
+Configure IBM MQ Endpoint Adapter
+Create Operations for IBM MQ
+Configure Request Operation for IBM MQ
+Configure Response Operation for IBM MQ
+SAP JCo	Volt MX Foundry allows you to access and use the external SAP services using custom SAP Connector. You must load the required Business Application Programming Interface (BAPI) functions to define an SAP service. The BAPI files contain the SAP methods and functions.
+Configure SAP JCo Endpoint Adapter
+Create Operations for SAP JCo
+Configure Request Operation for SAP JCo
+Configure Response Operation for SAP JCo
+Open API (Swagger)	Swagger is a powerful open API specification framework backed by a large ecosystem of tools that helps you design, build, document, and consume your RESTful APIs.
+Configure Open API (Swagger) Endpoint Adapter
+Create Operations for Open API (Swagger)
+Configure Request Operation for Open API (Swagger)
+Configure Response Operation for Open API (Swagger)
+Email Adapter	The Email Adapter is used to send emails from the client app. You can also view the status of the emails that were sent by using the Email service. The email requests are sent to the Volt MX Foundry server which in-turn redirects them to the Volt MX Engagement server.
+Configure the Email Adapter
+Create Operations for the Email Adapter
+Request Input Parameters
+Response Output Parameters
+AWS S3	The AWS S3 service on Volt MX Foundry connects to the specified S3 bucket, and also performs supported operations.
+Configure the AWS S3 adapter
+Create Operations for AWS S3
+Configure Request Operation for AWS S3
+Configure Response Operation for AWS S3
+Cloudian	The Cloudian service on Volt MX Foundry connects to the specified S3 bucket on a HyperStore, and also performs supported operations.
+Configure the Cloudian Adapter
+Create Operations for Cloudian
+Configure Request Operation for Cloudian
+Configure Response Operation for Cloudian
+Foundry Admin Adapter	The Foundry Admin Adapter is used to perform administrative tasks (exposed via secure APIs) on a Foundry run-time server. With the adapter, external systems can invoke the provided APIs to read or modify settings on the Foundry server.
+Step 1: Configure a Rules Service and publish it to an environment
+Step 2: Configure an Integration Service using the Foundry Admin adapter
+Step 3: Configure the Operations for Managing the Rules
+Step 4: Publish the Foundry app containing the Integration Service to that environment
+Operations supported for Foundry Admin Adapter
+Red Hat PAM	The Red Hat PAM adapter in Foundry Console exposes the services and operations that are created by using the Red Hat PAM Business Central Interface.
+Configure Service Definition for Red Hat PAM Adapter
+Create and Configure Operations for the Red Hat PAM Adapter
+Text	Text Adapter forwards the request that has Text data and gives response without intermediate transformation (without affecting the actual request and response).
+Configure Text Adapter
+Create Operations for Text Adapter"
+text_20.txt,"Volt MX Foundry
+
+Volt MX User Guide
+Volt MX Foundry is a back-end service provider that helps developers build omni-channel digital applications. Volt MX Foundry allows you to define the back-end to build native mobile apps for iOS, Android, and Windows and SPAs and Responsive web apps for browsers. Volt MX Foundry ensures that developers build mobile applications quickly and obtain secured back-end services instantly. Volt MX Foundry has multiple features, such as - Identity, Integration, Objects, Orchestration, and Engagement Services. These features can be accessed through a common, centralized VoltMXFoundry Console.
+
+The document helps you familiarize with the Volt MX Foundry and provide procedural information to perform various tasks required to build your application.
+
+Note: For more details, take a look at our hands-on tutorial for An Overview of Volt MX Foundry and Volt MX Cloud.
+
+This document helps you How To use functionality in Volt MX Foundry Console:
+
+Accessing Volt MX Foundry Console - Cloud
+Environments - Volt MX Cloud
+Limiting the Size of Storage Services - Environments in Cloud for Starter Edition
+HCL AppFactory Cloud
+Account Settings for Default User Access Control Lists (ACLs) on New Apps and Services'
+VoltMX Foundry Updates on Cloud
+Accessing Volt MX Foundry Console - On-premises
+Environments - On-Premises
+Viewing Applications Published to a Runtime Environment and EAS
+VoltMX Enterprise App Store (EAS) Service for Digital App Distribution
+Features
+VoltMX SDKs
+Settings - Volt MX Cloud
+Settings - On-Premises
+VoltMX Support
+Telemetry
+You can also access the Preface, Revision History, Tutorials, Appendix - Sync Strategy, Appendix - App Services, Appendix - Frequently Asked Questions (FAQs), and Limitations
+
+For more hands-on approach on how to implement Object Services, import and preview the Employee Directory app on to your Volt MX Iris."
+text_21.txt,"User Guide: Features
+
+Features
+Following are the features of Volt MX Foundry:
+
+Adding Applications: You can provide the basic details of an app, such as the name and icon. You can add the following services to the app:
+Identity: This feature allows you to define the type of authentication used for granting access to your application.
+Integration: This feature allows you to define various back-end services for your application.
+Orchestration: Service orchestration is the coordination or integration of several services and exposing them as a single service. This feature allows you to create two types of orchestration services.
+Objects: Allows you to create app models for LOB objects, storage objects, and Service-Driven Objects.
+Offline sync: This feature allows you to define the synchronization services for your application. Sync supports only Web Services, except SAP Sky.
+Engagement: This feature allows you to send push notifications, email, SMS and passes to subscribed applications.
+API Management: Configure and manage (create, edit, and delete) app services (identity, integration, and orchestration) without linking or configuring them within an app.
+Export and Import Apps: Export apps from one workspace (VoltMX account) and import them to different workspaces of Volt MX Foundry Console.
+Manage Client App Assets: Manage client binaries through Volt MX Foundry Console such as creating mobile applications, publishing the apps to a Volt MX Management Environment and Server.
+Publish: After adding the required services, publish your app."

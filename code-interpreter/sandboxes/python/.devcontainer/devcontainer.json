@@ -1,0 +1,4 @@
+{
+    "name": "python-sandbox",
+    "image": "python:3.10"
+}

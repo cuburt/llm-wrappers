@@ -1,0 +1,7 @@
+{
+    "name": "sandbox-server",
+    "build": {
+                 "dockerfile": "Dockerfile"
+             },
+    "forwardPorts": [8081]
+}

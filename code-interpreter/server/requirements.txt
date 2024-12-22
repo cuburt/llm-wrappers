@@ -1,0 +1,12 @@
+sentence-transformers
+pinecone-client==2.2.4
+langchain==0.0.336
+pandas
+Pillow
+tqdm
+e2b==0.13.13
+fastapi
+uvicorn
+requests
+faiss-cpu
+nest_asyncio
